@@ -1,0 +1,47 @@
+/* ==========================================================================
+   #LIST-STYLED
+   ========================================================================== */
+
+.list-styled {
+
+  li {
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      @include pseudo(true);
+      top: 0.5em;
+      left: 0;
+      width: 5px;
+      height: 5px;
+    }
+  }
+}
+
+.list-styled--chevrons {
+
+  li::before {
+    border-top: 2px solid $color-border-brand;
+    border-right: 2px solid $color-border-brand;
+    transform: rotate(45deg);
+  }
+}
+
+.list-styled--square {
+
+  li::before {
+    background-color: rgba(#222, .2);
+  }
+}
+
+.list-styled--accent {
+
+  li::before {
+    background-color: $color-bg-brand;
+  }
+}
+
+.list-styled__title {
+  font-weight: 500;
+  margin-bottom: 12px;
+}

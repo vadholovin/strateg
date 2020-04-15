@@ -1,0 +1,32 @@
+//- Все примеси в этом файле должны начинаться c имени блока (flag)
+
+mixin flag(mods)
+
+  //- Parameters:
+  //-   mods  {string} - list of modificators
+  //- Call:
+        +flag('top')
+          +flag-img
+            +icon('someicon')
+          +flag-body
+
+  -
+    // list of modificators
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' flag--' + modsList[i].trim();
+      }
+    }
+
+  .flag(class=allMods)&attributes(attributes)
+    block
+
+mixin flag-img
+  .flag__img
+    block
+
+mixin flag-body(text)
+  .flag__body!= text
+    block

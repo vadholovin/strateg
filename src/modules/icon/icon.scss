@@ -1,0 +1,22 @@
+/* ==========================================================================
+   #ICON
+   ========================================================================== */
+
+.icon {
+  display: inline-flex;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  pointer-events: none;
+
+  > svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.icon--stroked {
+  fill: none;
+  stroke: currentColor;
+}

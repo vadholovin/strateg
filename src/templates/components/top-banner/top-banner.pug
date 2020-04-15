@@ -1,0 +1,39 @@
+.top-banner(style="background-image: url(assets/img/backgrounds/bg-hero.jpg)")
+  .container
+    +grid().top-banner__grid
+      +col({md: 7}).top-banner__col-left
+        h1.top-banner__title.
+          Наши стратегии<br>
+          работают
+        ul.top-banner__list.list-styled.list-styled--chevrons
+          li Защита должника
+          li Банкротство юридических лиц
+          li Банкротство физического лица
+
+        button.top-banner__btn.btn.btn--primary() Начать сотрудничество
+
+      +col({md: 5}).top-banner__col-right
+        ul.top-banner__cards
+          li.top-banner__card
+            p.top-banner__card-title Команда стратегов
+            p.top-banner__card-text.
+              Специалисты любого направления - арбитражные 
+              управляющие, адвокаты, аудиторы, оценщики.
+          li.top-banner__card
+            p.top-banner__card-title Вы платите не за процесс, а за результат
+            p.top-banner__card-text.
+              Проектами занимается команда из 3-4 человек, 
+              не один «многопрофильный юрист».
+          li.top-banner__card
+            p.top-banner__card-title Управляем сроками
+            p.top-banner__card-text.
+              Понятные сроки решения проблем и снятия 
+              финансовых ограничений.
+
+  .top-banner__foot#top-banner-foot
+    .container
+      .top-banner__foot-inner
+        p.top-banner__foot-message Работаем стабильно, несмотря на COVID-19. Обсудите банкротство
+        span.lamp Онлайн
+        p.top-banner__foot-note Окно закроется: <span id="top-banner-timer">9</span> сек.
+        button.btn.top-banner__foot-btn() Сотрудничать online

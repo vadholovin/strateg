@@ -1,0 +1,25 @@
+/* ==========================================================================
+   #CONTACT-LIST
+   ========================================================================== */
+
+.contact-item {
+  position: relative;
+  padding-left: 30px;
+}
+
+.contact-item .icon {
+  position: absolute;
+  top: 1px;
+  left: 0;
+}
+
+.contact-item__text {
+  text-decoration: none;
+}
+
+a.contact-item__text {
+  @include basic-transition((opacity));
+  @include on-event {
+    opacity: 0.7;
+  }
+}

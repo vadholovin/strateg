@@ -1,0 +1,39 @@
+//- Mixin to add a social list
+
+//- Using:
+//-       +social('footer')
+//-         +social-item('Facebook', '//facebook.com/blabla...')
+//-           +icon('facebook')
+
+mixin social(mods)
+
+  //- Parameters:
+  //-   mods  {string} - list of modificators
+  //- Call:
+  //-   +social('footer')
+  //-     +social-item('Facebook', '//facebook.com/blabla...')
+  //-       +icon('facebook')
+
+  -
+    // list of modificators
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' social--' + modsList[i].trim();
+      }
+    }
+
+  ul.social(class=allMods)&attributes(attributes)
+    block
+
+mixin social-item(name, link)
+  li.social__item
+    a.social__link(
+      class='social__link--' + name,
+      href= link,
+      aria-label= name,
+      rel='noopener',
+      target='_blank'
+    )
+      block

@@ -1,0 +1,17 @@
+/* ==========================================================================
+   #LINKS
+   ========================================================================== */
+
+a {
+  @include basic-transition((color, opacity));
+  @include on-event {
+    color: $color-dark;
+    text-decoration: none;
+  }
+
+  color: $color-dark;
+}
+
+[href^=tel] {
+  white-space: nowrap;
+}

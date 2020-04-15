@@ -1,0 +1,49 @@
+footer.footer
+  .container
+    +grid()
+      +col({md: 3})
+        a.logo-wrap.footer__logo-wrap(href="")
+          img.logo.logo--footer(src="assets/img/general/logo.svg", alt="")
+        .footer__copyright © 2020 Все права защищены.
+        +messengers.footer__messengers
+          +messengers-item
+            +icon('email')
+          +messengers-item
+            +icon('telegram')
+          +messengers-item
+            +icon('phone-call')
+          +messengers-item
+            +icon('whatsapp')
+          +messengers-item
+            +icon('messenger')
+
+      +col({md: 3})
+        ul.footer__contact-list.contact-list
+          li.contact-item
+            +icon('phone')
+            a.contact-item__text(href="tel:+7 (495) 255-25-25") +7 (495) 255-25-25
+          li.contact-item
+            +icon('envelope-retro')
+            a.contact-item__text(href="mailto:info@strateg.moscow") info@strateg.moscow
+          li.contact-item
+            +icon('placemark')
+            .contact-item__text.
+              Москва, Ленинградский<br>
+              проспект д. 31а, стр 1, 12 этаж.,<br>
+              Бизнес-центр Монарх
+
+      +col({md: 3})
+        ul.footer-menu
+          li.footer-menu__item
+            a(href="") Политика конфиденциальности
+          li.footer-menu__item
+            a(href="") Работа со СМИ
+          li.footer-menu__item
+            a(href="") Как к нам доехать
+          li.footer-menu__item
+            a(href="") Блог
+
+      +col({md: 3})
+        .footer__actions
+          button.btn.btn--primary.btn--upper.btn--fz-sm() Спросить стратега
+          button.btn.btn--light.btn--upper.btn--fz-sm() Обратный звонок

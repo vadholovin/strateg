@@ -1,0 +1,25 @@
+/* ==========================================================================
+   #DOTS
+   ========================================================================== */
+
+.dots {
+  position: absolute;
+}
+
+.dots-top {
+  top: 100px;
+}
+
+.dots-bottom {
+  bottom: 20px;
+}
+
+.dots-left {
+  left: -75px;
+  transform: translateX(-100%);
+}
+
+.dots-right {
+  right: -28px;
+  transform: translateX(100%);
+}

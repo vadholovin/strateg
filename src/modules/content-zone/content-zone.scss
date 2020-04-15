@@ -1,0 +1,176 @@
+.content-zone {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  $b: &;
+
+  h1 {
+    max-width: 500px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: rem(32px);
+    line-height: 1.2;
+
+    @include mq($from: sm) {
+      font-size: rem(36px);
+    }
+    @include mq($from: md) {
+      font-size: rem(48px);
+    }
+  }
+
+  h2, h3, h4, h5, h6 {
+
+    &:not(:first-child) {
+      margin-top: 50px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  h2, h3, h4, h5, h6 {
+    font-size: rem(24px);
+    line-height: 1.5;
+  }
+
+  p {
+    line-height: 1.8;
+
+    &:not(:first-child) {
+      margin-top: 24px;
+    }
+
+    small {
+      display: block;
+      font-size: 0.75em;
+    }
+  }
+
+  a {
+    // color: $color-main;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  blockquote {
+    padding-left: 40px;
+    border-left: 2px solid black;
+    display: block;
+
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:not(:first-child) {
+      margin-top: 30px;
+
+      @include mq($from: md) {
+        margin-top: 60px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+
+      @include mq($from: md) {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  figure {
+    &:not(:first-child) {
+      margin-top: 30px;
+
+      @include mq($from: md) {
+        margin-top: 60px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+
+      @include mq($from: md) {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  > ul, > ol {
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  ul, ol {
+
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    li {
+      padding-left: 20px;
+      position: relative;
+    }
+  }
+
+  ul {
+
+    li {
+
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '•';
+      }
+    }
+  }
+
+  ol {
+    counter-reset: list1;
+
+    li {
+
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        counter-increment: list1;
+        content: counter(list1) '.';
+      }
+    }
+  }
+
+  li + li {
+    margin-top: 20px;
+  }
+
+  hr {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: 0;
+    border-top: 1px solid $color-grey-100;
+  }
+}

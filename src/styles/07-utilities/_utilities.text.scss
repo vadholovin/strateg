@@ -1,0 +1,31 @@
+/* ==========================================================================
+   #TEXT-UTILITIES
+   ========================================================================== */
+
+.text-upper {
+  text-transform: uppercase !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.color-dark {
+  color: $color-dark !important;
+}
+
+.color-white {
+  color: #fff !important;
+}
+
+.color-accent {
+  color: $color-secondary !important;
+}
+
+.color-highlight {
+  color: $color-primary !important;
+}
+
+.font-w-normal {
+  font-weight: normal !important;
+}

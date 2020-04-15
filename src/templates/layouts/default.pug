@@ -1,0 +1,16 @@
+include _externalIncludes
+include _internalIncludes
+block variables
+
+doctype html
+html(class="no-js", lang="ru")
+  include head
+  body(class=bodyClass)
+    block content
+    include ../components/factoid/factoid
+    //- include ../components/modals/modals
+    
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script(src="js/libs.min.js")
+    script(src="js/app.js")
+    block script

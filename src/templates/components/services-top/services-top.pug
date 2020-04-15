@@ -1,0 +1,96 @@
+include ../services/services.data.pug
+
+
+.services-top
+  .container
+    img.dots.dots-top.dots-right(src="assets/img/content/dots-rectangle-dark.svg", alt="")
+    img.dots.dots-bottom.dots-left(src="assets/img/content/dots-square-dark.svg", alt="")
+    +grid().services-top__head
+      +col({md: 5})
+        p.services-top__cite.
+          Наша цель не провест<br>
+          банкротство, наша цель –<br>
+          сохранить вам бизнес
+      +col({md: 7})
+        ul.services-top__list.list-styled.list-styled--square.list-styled--accent
+          li
+            .list-styled__title.
+              Ни кто не застрахован<br>
+              от банкротства
+            .list-styled__text.
+              Это цивилизованная процедура избавления 
+              от долгов, а не приговор бизнесу.
+          li
+            .list-styled__title.
+              Банкротство <br>
+              минимизирует риски
+            .list-styled__text.
+              Правильно проведенная процедура избавит 
+              вас от возникновеня долгов в будущем.
+    
+    ul.services-pro-cons
+      li.services-pro-cons__item
+        .services-pro-cons__item-head
+          img.services-pro-cons__icon(src="assets/img/icons/plus-large.svg", alt="")
+        ul.services-pro-cons__list.list-styled.list-styled--square.list-styled--accent
+          li
+            .list-styled__title Исключение из ЕГРЮЛ
+            .list-styled__text.
+              Предприятию, которого нет, никто 
+              не предъявит дополнительных исков
+          li
+            .list-styled__title Все долги будут списаны
+            .list-styled__text.
+              Предприятию, которого нет, никто 
+              не предъявит дополнительных исков
+          li
+            .list-styled__title Снятие ответственности
+            .list-styled__text.
+              Предприятию, которого нет, никто 
+              не предъявит дополнительных исков
+    
+      li.services-pro-cons__item
+        .services-pro-cons__item-head
+          img.services-pro-cons__icon(src="assets/img/icons/minus-large.svg", alt="")
+        ul.services-pro-cons__list.list-styled.list-styled--square.list-styled--accent
+          li
+            .list-styled__title Реорганизация
+            .list-styled__text.
+              Предприятию, которого нет, никто 
+              не предъявит дополнительных исков
+          li
+            .list-styled__title Доначисление налогов и пенни
+            .list-styled__text.
+              Предприятию, которого нет, никто 
+              не предъявит дополнительных исков
+          li
+            .list-styled__title Отвественность определяет суд
+            .list-styled__text.
+              Предприятию, которого нет, никто 
+              не предъявит дополнительных исков
+
+
+    +grid().services-list
+      each item in services
+        +col({md: 4}).services-list__cell
+          .services-tile.services-tile--invert
+            .services-tile__inner
+              .services-tile__label= item.label
+              .services-tile__head
+                .services-tile__heading
+                  h3.services-tile__title!= item.title
+                  +icon(item.icon)
+                .services-tile__subheading!= item.subheading
+              .services-tile__btn.services-tile__btn--more.is-active
+                | Полные условия
+              .services-tile__body
+                .services-tile__body-main
+                  ul.list-styled.list-styled--square
+                    each listItem in item.list
+                      li= listItem
+              .services-tile__body-foot
+                  h4 Результат:
+                  p= item.result
+              button.services-tile__btn.services-tile__btn--choose.js-services-choose(
+                data-form-subject= item.subject
+              ) Выбрать услугу

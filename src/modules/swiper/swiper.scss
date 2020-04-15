@@ -1,0 +1,53 @@
+/* ==========================================================================
+   #SWIPER
+   ========================================================================== */
+
+.swiper-block {
+  position: relative;
+}
+
+.swiper-slide {
+  box-sizing: border-box;
+}
+
+.swiper-buttons {
+  display: flex;
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+  }
+
+  .swiper-button-prev {
+    margin-right: 8px;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  font-size: 15px;
+  opacity: 1;
+  color: $color-body;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: none;
+}
+
+.swiper-button-lg {
+  font-size: 30px;
+}

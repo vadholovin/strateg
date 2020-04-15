@@ -1,0 +1,13 @@
+extends ../layouts/default
+
+block variables
+  - var pageTitle = 'Наши услуги'
+  - var bodyClass = 'inner-page'
+
+block content
+  include ../components/header/header
+  main.wrapper
+    include ../components/services-top/services-top
+    include ../components/plan/plan
+    include ../components/questions/questions
+  include ../components/footer/footer

@@ -1,0 +1,148 @@
+/* ==========================================================================
+   #RESULTS
+   ========================================================================== */
+
+.results {
+  padding-top: 110px;
+  padding-bottom: 680px;
+  @include background;
+  background-color: $color-bg-dark;
+  background-image: url('../assets/img/backgrounds/bg-2.png');
+}
+
+.results-block {
+  position: relative;
+}
+
+.results-block__img-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(58%, -60%);
+}
+
+.results-slide {
+  padding: 36px;
+  background-color: #fff;
+
+  @include mq($from: xl) {
+    padding: 45px 55px;
+  }
+
+  hr {
+    margin-top: 40px;
+    margin-bottom: 35px;
+    border-top: 0.5px solid rgba(#222222, .2);
+  }
+}
+
+.results-slide__body {
+  max-width: 720px;
+}
+
+.results-slide__title {
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: rem(24px);
+  line-height: 130%;
+
+  @include mq($from: xl) {
+    margin-bottom: 40px;
+    font-size: rem(30px);
+  }
+}
+
+.results-slide__subtitle {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: rem(12px);
+  line-height: 130%;
+}
+
+.results-slide__desc {
+  margin-bottom: 24px;
+  font-size: rem(14px);
+  line-height: 140%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include mq($from: xl) {
+    margin-bottom: 30px;
+  }
+}
+
+.results-slide__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-right: 70px;
+}
+
+.results-slide__btn {
+  margin-right: 36px;
+  padding: 15px 25px;
+  font-size: rem(14px);
+
+  @include mq($from: xl) {
+    margin-right: 50px;
+  }
+}
+
+.results-slide__foot-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.results-slide__foot-text {
+  margin-right: 36px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+
+  @include mq($from: xl) {
+    margin-right: 50px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+}
+
+.results-slider {
+
+  .swiper-buttons {
+    position: absolute;
+    right: 60px;
+    bottom: 55px;
+  }
+}
+
+.results-thumb {
+  padding: 25px 30px;
+  background-color: #fff;
+  overflow: hidden;
+
+  &.swiper-slide-active {
+    background-color: $color-bg-brand;
+  }
+}
+
+.results-thumb__title {
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.15;
+}
+
+.results-thumb__desc,
+.results-thumb__date {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.results-thumb__desc {
+  margin-bottom: 25px;
+}

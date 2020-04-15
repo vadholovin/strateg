@@ -1,0 +1,30 @@
+include ./solution.data.pug
+
+section.solution
+  .container
+    .solution__heading.heading
+      .heading__module
+        p.heading__subtitle Решение проблем
+        h2.heading__title Сложная ситуация в бизнесе?
+      .heading__module
+        .heading__desc.
+          Каждый предприниматель может оказаться 
+          в трудном положении, когда оптимальным 
+          способом решения проблем будет банкротство.
+    
+    .solution-slider.swiper-container#solution-slider
+      .swiper-buttons
+        .swiper-button-prev
+          +icon('chevron-left', 'stroked')
+        .swiper-button-next
+          +icon('chevron-right', 'stroked')
+      .swiper-wrapper
+        each item, index in data
+          .swiper-slide
+            .solution-card.card
+              figure.card-img-wrap
+                img.card-img.swiper-lazy(data-src= item.img, alt="")
+              .card-body
+                .card-meta 230 дел
+                h3.card-title= item.title
+                p.card-text= item.text

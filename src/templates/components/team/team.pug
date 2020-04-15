@@ -1,0 +1,46 @@
+include ./team.data.pug
+
+
+section.team
+  .container
+    .team__heading.heading.heading--invert
+      .heading__module
+        p.heading__subtitle наша команда
+        h2.heading__title Давайте знакомиться
+      .heading__module
+        .heading__desc.
+          С вами будут работать именно эти люди –
+          опытные юристы и адвокаты, которые провели
+          не один десяток дел.
+
+    .team-slider__wrap.swiper-block#team-slider-wrap
+      .team-slider.swiper-container#team-slider
+        .swiper-wrapper
+          each item, index in team
+            .swiper-slide.team-slide
+              .team-tile
+                figure.team-tile__picture
+                  img.swiper-lazy(data-src=item.img, alt='Дмитрий Краснощёк')
+                .team-tile__body
+                  h3.team-tile__title Дмитрий Краснощёк
+                  .team-tile__subtitle= item.subtitle
+                .team-tile__info
+                  .team-tile__info-body
+                    .team-tile__info-name Дмитрий Краснощёк
+                    .team-tile__info-about= item.subtitle
+                    ul.team-tile__contacts
+                      li.team-tile__contact
+                        .team-tile__contact-label e-mail
+                        a.team-tile__contact-link(href="mailto:d.krasnoshchek@strateg.moscow") d.krasnoshchek@strateg.moscow
+                      li.team-tile__contact
+                        .team-tile__contact-label телефон
+                        a.team-tile__contact-link(href="tel:+7 (495) 255-25-25") +7 (495) 255-25-25
+                        span , доб. (222)
+                  button.team-tile__btn.btn.btn--primary.btn--block(
+                    data-form-subject= item.subject
+                  ) Написать сообщение
+
+      .swiper-button-prev.swiper-button-lg
+        +icon('chevron-left-slim', 'stroked')
+      .swiper-button-next.swiper-button-lg
+        +icon('chevron-right-slim', 'stroked')

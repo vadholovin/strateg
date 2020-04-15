@@ -1,0 +1,29 @@
+///* ==========================================================================
+//   #COLOR-VARIABLES
+//   ========================================================================== */
+
+$color-dark: #222;
+$color-brand: #eac58d;
+$color-gold: #c8ab78;
+$color-blue: #36b;
+$color-red: #d80027;
+
+$color-blue-100:  #eceff2;
+
+$color-grey-500: #888;
+$color-grey-100: #d5d5d5;
+
+$color-primary: $color-brand !default;
+$color-secondary: $color-dark !default;
+$color-danger: $color-red !default;
+
+$color-body: $color-dark !default;
+$color-body-secondary: $color-grey-500 !default;
+
+$color-bg-dark: $color-dark !default;
+$color-bg-brand: $color-brand !default;
+$color-bg-danger: $color-red !default;
+
+$color-border-primary: $color-grey-500 !default;
+$color-border-brand: $color-brand !default;
+$color-border-dark: $color-dark !default;

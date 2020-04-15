@@ -1,0 +1,34 @@
+/* ==========================================================================
+   #FONTS
+   ========================================================================== */
+
+// How to add fonts
+
+// Mixin:
+// font-face($font-name, $font-path-name, $font-weight, $font-style, $font-path, $support-required)
+
+// Usage:
+// @include font-face('Corbel', 'CorbelBold', 700, italic, '../fonts/', 'oldie')
+
+// $support-required options:
+// 'oldie' - for older browsers
+// 'recent' - for recent browsers
+// 'modern' - for modern browsers (default)
+
+// Weights:
+// 100 — Thin
+// 200 — Extra Light, Ultra Light
+// 300 — Light
+// 400 — Normal, Book, Regular (default)
+// 500 — Medium
+// 600 — Semi Bold, Demi Bold
+// 700 — Bold
+// 800 — Extra Bold, Ultra Bold
+// 900 — Black, Heavy
+
+@include font-face('SF Pro Display', 'SFProDisplay-Regular');
+@include font-face('SF Pro Display', 'SFProDisplay-Thin', 100);
+@include font-face('SF Pro Display', 'SFProDisplay-Light', 300);
+@include font-face('SF Pro Display', 'SFProDisplay-Medium', 500);
+@include font-face('SF Pro Display', 'SFProDisplay-Semibold', 600);
+@include font-face('SF Pro Display', 'SFProDisplay-Bold', 'bold');

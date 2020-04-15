@@ -1,0 +1,22 @@
+/* ==========================================================================
+   #INPUTBOX
+   ========================================================================== */
+
+  .inputbox {
+    display: block;
+    position: relative;
+  }
+  
+  .inputbox__wrapper {
+    position: relative;
+  }
+  
+  .inputbox__label {
+    line-height: 1.2;
+  }
+  
+  .inputbox__label--block {
+    display: block;
+    margin-bottom: 10px;
+  }
+  

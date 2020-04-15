@@ -1,0 +1,55 @@
+include ./plan.data.pug
+
+section.plan
+  .container
+    .plan__heading.heading
+      .heading__module
+          p.heading__subtitle план действий
+          h2.heading__title Как проходит работа?
+      .heading__module
+        .heading__desc.
+          Каждое конкретное банкротство индивидуально.
+          Но процесс начала работ регламентирован
+          и достаточно прост
+
+    +grid().steps-grid
+      each item, index in steps
+        if index == 0
+          +col({md: 4}).steps-grid__cell
+            .steps-tile.steps-tile--accent
+              .steps-tile__head
+                .steps-tile__head-left
+                  h3.steps-tile__title!= item.title
+                  p.steps-tile__subtitle!= item.subtitle
+                .steps-tile__head-right
+                  span.steps-tile__count= (index + 1)
+              .steps-tile__note
+                p!= item.note
+              +form().steps-form
+                .form__row
+                  +inputbox
+                    +label.hidden-visually(for='form-phone') Номер телефона
+                    +input-wrapper
+                      +input.input--icon-phone.js-input-phone(
+                        type='tel'
+                        name='form-phone'
+                        id='form-phone'
+                        autocomplete='off'
+                        placeholder="+7 999 999-99-99")
+                  button.steps-form__btn
+                    +icon('chevron-right', 'stroked')
+                p.form__note!= item.agreement
+
+        else
+          +col({md: 4}).steps-grid__cell
+            .steps-tile
+              .steps-tile__head
+                .steps-tile__head-left
+                  h3.steps-tile__title!= item.title
+                .steps-tile__head-right
+                  span.steps-tile__count= (index + 1)
+              .steps-tile__note
+                +icon('dialog')
+                p!= item.note
+              .steps-tile__body
+                p.steps-tile__text!= item.text

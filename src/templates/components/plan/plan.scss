@@ -1,0 +1,179 @@
+/* ==========================================================================
+   #PLAN
+   ========================================================================== */
+
+.plan {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.steps-grid {
+  margin-top: -36px;
+
+  @include mq($from: xl) {
+    margin-left: -18px;
+    margin-right: -18px;
+  }
+}
+
+.steps-grid__cell {
+  display: flex;
+  flex-direction: column;
+  padding-top: 36px;
+
+  @include mq($from: xl) {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+.steps-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 45px 35px;
+  background-color: #fff;
+  box-shadow: $global-shadow;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.steps-tile__head {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.steps-tile__head-left {
+  flex-grow: 1;
+  padding-left: 16px;
+}
+
+.steps-tile__title {
+  font-weight: 600;
+  font-size: rem(22px);
+  line-height: 120%;
+
+  @include mq($from: xl) {
+    font-size: rem(28px);
+  }
+}
+
+.steps-tile__subtitle,
+.steps-tile__note {
+  font-weight: 600;
+  font-size: rem(14px);
+  line-height: 140%;
+
+  @include mq($from: xl) {
+    font-size: rem(16px);
+  }
+}
+
+.steps-tile__subtitle {
+  margin-top: 12px;
+  color: rgba(#fff, 0.5);
+}
+
+.steps-tile__count {
+  position: relative;
+  display: block;
+  margin-top: -30px;
+  font-weight: 800;
+  font-size: 100px;
+  line-height: 1.15;
+  color: rgba(0,0,0,0.1);
+
+  @include mq($from: lg) {
+    font-size: 110px;
+  }
+  @include mq($from: xl) {
+    font-size: 144px;
+  }
+}
+
+.steps-tile__note {
+  color: $color-body-secondary;
+
+  .icon {
+    margin-bottom: 16px;
+    font-size: 33px;
+    color: $color-body;
+  }
+}
+
+.steps-tile__body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: $color-bg-brand;
+  background-image: url('../assets/img/icons/sheet.svg');
+  background-repeat: no-repeat;
+  background-position: right 10px bottom -35px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+
+  @include basic-transition((opacity, visibility));
+
+  .steps-tile:hover & {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+.steps-tile--accent {
+  background-color: $color-bg-dark;
+
+  .steps-tile__head {
+    margin-bottom: 16px;
+  }
+
+  .steps-tile__title {
+    color: #fff;
+  }
+
+  .steps-tile__count {
+    color: rgba(#464646, .5);
+  }
+}
+
+.steps-form {
+
+  .inputbox {
+    margin-right: 10px;
+    max-width: 250px;
+  }
+
+  .form__row {
+    margin-bottom: 24px;
+  }
+
+  .form__note,
+  a {
+    color: $color-body-secondary;
+  }
+}
+
+.steps-form__btn {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #525252;
+  border-radius: $global-radius;
+  cursor: pointer;
+
+  @include basic-transition((background-color));
+  @include on-event {
+    background-color: #fff;
+  }
+}

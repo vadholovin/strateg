@@ -1,0 +1,83 @@
+header.header(class= (bodyClass == 'home-page') ? 'header--abs header--transparent' : '')
+  .header__top
+    .container.header__inner
+      .header__top-left
+        .area.area--header
+          span.area-text Работаем по всей России
+          +icon('flag', '', '', true)
+
+        +messengers.header__messengers.header__messengers--top
+          //- +messengers-item
+          //-   +icon('email')
+          +messengers-item
+            +icon('telegram')
+          //- +messengers-item
+          //-   +icon('phone-call')
+          +messengers-item
+            +icon('whatsapp')
+          +messengers-item
+            +icon('messenger')
+
+      .header__top-right
+        ul.header__contact-list.header__contact-list--top.contact-list
+          li.contact-item
+            +icon('envelope-o', 'stroked')
+            a.contact-item__text(href="mailto:info@strateg.moscow") info@strateg.moscow
+          li.contact-item
+            +icon('phone-o', 'stroked')
+            a.contact-item__text(href="tel:+7 (499) 123-45-67") +7 (499) 123-45-67
+
+        button.btn.btn--primary.btn--fz-xs() Задать вопрос стратегу
+
+  .header__main
+    .container.header__inner
+      .header__logo-container
+        a.logo-wrap(href="")
+          .logo
+            <svg viewBox="0 0 159 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.89018 18.5243C1.53022 18.5243 0 14.6143 0 9.38519C0 4.15612 1.53022 0.246094 7.84236 0.246094H15.3022V2.9784H9.51604C5.02102 2.9784 3.63426 4.39166 3.63426 9.38519C3.63426 14.3316 5.02102 15.792 9.51604 15.792H15.5891V18.5243H7.89018Z" fill="white"/>
+            <path d="M24.1494 18.5265V3.02772H16.9287V0.29541H34.9088V3.02772H27.6402V18.5265H24.1494Z" fill="white"/>
+            <path d="M36.4863 3.02772C36.4863 0.954933 37.5862 0.29541 39.1642 0.29541H48.3933C52.3623 0.29541 53.1274 3.02772 53.1274 6.18401C53.1274 9.29319 52.4102 12.1197 48.3933 12.1197H39.9771V18.5736H36.4863V3.02772ZM46.6718 9.3403C49.0628 9.3403 49.4932 8.25679 49.4932 6.1369C49.4932 4.017 49.0628 3.02772 46.6718 3.02772H41.3161C40.264 3.02772 39.9771 3.31037 39.9771 4.34677V9.3403H46.6718Z" fill="white"/>
+            <path d="M58.8659 2.13138C59.5354 0.57679 60.2527 0.0585938 61.9263 0.0585938C63.5044 0.0585938 64.3173 0.57679 64.9868 2.13138L71.9684 18.5252H68.2863L66.3735 13.9086H57.4313L55.5664 18.5252H51.8843L58.8659 2.13138ZM58.3399 11.4589H65.465L62.4523 4.01573C62.3567 3.73308 62.1654 3.26199 61.9263 3.26199C61.6872 3.26199 61.496 3.73308 61.4003 4.01573L58.3399 11.4589Z" fill="white"/>
+            <path d="M76.0815 18.5265V3.02772H68.8608V0.29541H86.8409V3.02772H79.5723V18.5265H76.0815Z" fill="white"/>
+            <path d="M103.289 18.5265H91.1427C89.5647 18.5265 88.4648 17.867 88.4648 15.7942V3.02772C88.4648 0.954933 89.5647 0.29541 91.1427 0.29541H103.193V3.02772H93.2468C92.1948 3.02772 91.9078 3.31037 91.9078 4.34676V7.87992H102.906V10.6122H91.9078V14.5223C91.9078 15.5587 92.1948 15.8413 93.2468 15.8413H103.289V18.5265Z" fill="white"/>
+            <path d="M105.681 18.5265V3.02772C105.681 0.954933 106.781 0.29541 108.359 0.29541H120.361V3.02772H110.463C109.411 3.02772 109.124 3.31037 109.124 4.34677V18.5736H105.681V18.5265Z" fill="white"/>
+            <path d="M136.046 18.5245L136.19 4.67453C136.19 4.39188 136.142 4.06212 135.903 4.06212C135.711 4.06212 135.52 4.43899 135.233 4.91008L127.63 17.017C127.104 17.8179 126.578 18.7601 124.713 18.7601C122.035 18.7601 121.987 16.6873 121.987 15.6509V0.293415H125.526L125.43 13.9079C125.43 14.3318 125.478 14.7558 125.765 14.7558C125.956 14.7558 126.1 14.4732 126.291 14.1905L133.751 2.13066C134.707 0.528959 135.568 0.10498 136.859 0.10498C139.633 0.10498 139.68 2.46042 139.68 3.4026V18.5716H136.046V18.5245Z" fill="white"/>
+            <path d="M155.605 18.5262V4.34651C155.605 3.31012 155.318 3.02746 154.266 3.02746H148.623C146.424 3.02746 145.993 3.96964 145.993 6.04243C145.993 8.11521 146.28 9.38715 148.193 9.38715H151.78C152.832 9.38715 153.358 9.90534 153.358 10.612V11.036C153.358 11.5541 152.879 12.1666 152.497 12.5905L146.519 18.5262H142.024L148.528 12.2608V12.1195H146.663C143.555 12.1195 142.359 9.76402 142.359 5.99532C142.359 2.36794 143.555 0.248047 146.998 0.248047H156.322C157.9 0.248047 159 0.90757 159 2.98036V18.4791H155.605V18.5262Z" fill="white"/>
+            </svg>
+      nav.main-nav
+        ul.main-menu
+          li.main-menu__item
+            a(href="") Наши услуги
+          li.main-menu__item
+            a(href="") Кейсы
+          li.main-menu__item
+            a(href="") Вопросы о банкротстве
+          li.main-menu__item
+            a(href="") Новости
+          li.main-menu__item
+            a(href="") О компании
+          li.main-menu__item
+            a(href="") Контакты
+
+      +messengers.header__messengers.header__messengers--bottom
+        +messengers-item
+          +icon('email')
+        +messengers-item
+          +icon('telegram')
+        +messengers-item
+          +icon('phone-call')
+        +messengers-item
+          +icon('whatsapp')
+        +messengers-item
+          +icon('messenger')
+
+      ul.header__contact-list.header__contact-list--bottom.contact-list
+        li.contact-item
+          +icon('phone-o', 'stroked')
+          a.contact-item__text(href="tel:+7 (499) 123-45-67") +7 (499) 123-45-67
+
+      button.header__main-btn.btn.btn--primary.btn--fz-xs() ?
+
+
+

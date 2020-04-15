@@ -1,0 +1,159 @@
+/* ==========================================================================
+   #FLAG
+   ========================================================================== */
+
+.flag {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.flag__img {
+  flex-shrink: 0;
+  padding-right: $global-spacing-unit;
+}
+
+.flag__img > img {
+  max-width: none;
+}
+
+.flag__body {
+  width: auto;
+  flex-grow: 1;
+  flex-basis: 0;
+
+  &,
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+/* Size variants
+   ========================================================================== */
+
+.flag--flush {
+
+  > .flag__img {
+    padding-right: 0;
+    padding-left:  0;
+  }
+
+}
+
+
+.flag--tiny {
+
+  > .flag__img {
+    padding-right: $global-spacing-unit-tiny;
+  }
+
+  &.flag--reverse {
+
+    > .flag__img {
+      padding-right: 0;
+      padding-left: $global-spacing-unit-tiny;
+    }
+
+  }
+
+}
+
+
+.flag--small {
+
+  > .flag__img {
+    padding-right: $global-spacing-unit-small;
+  }
+
+  &.flag--reverse {
+
+    > .flag__img {
+      padding-right: 0;
+      padding-left: $global-spacing-unit-small;
+    }
+
+  }
+
+}
+
+
+.flag--large {
+
+  > .flag__img {
+    padding-right: $global-spacing-unit-large;
+  }
+
+  &.flag--reverse {
+
+    > .flag__img {
+      padding-right: 0;
+      padding-left: $global-spacing-unit-large;
+    }
+
+  }
+
+}
+
+
+.flag--huge {
+
+  > .flag__img {
+    padding-right: $global-spacing-unit-huge;
+  }
+
+  &.flag--reverse {
+
+    > .flag__img {
+      padding-right: 0;
+      padding-left: $global-spacing-unit-huge;
+    }
+
+  }
+
+}
+
+
+
+
+
+/* Reversed flag
+    ========================================================================== */
+
+/**
+* 1. Swap the rendered direction of the object…
+* 2. …and reset it.
+* 3. Reassign margins to the correct sides.
+*/
+
+.flag--reverse {
+  direction: rtl; /* [1] */
+
+  > .flag__img,
+  > .flag__body {
+    direction: ltr; /* [2] */
+  }
+
+  > .flag__img {
+    padding-right: 0; /* [3] */
+    padding-left: $global-spacing-unit; /* [3] */
+  }
+
+}
+
+
+/* Alignment variants
+    ========================================================================== */
+
+/**
+* Vertically align the image- and body-content differently. Defaults to middle.
+*/
+
+.flag--top {
+  align-items: flex-start;
+}
+
+
+.flag--bottom {
+  align-items: flex-end;
+}

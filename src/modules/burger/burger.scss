@@ -1,0 +1,93 @@
+// В этом файле должны быть стили для БЭМ-блока burger, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+$toggler-part-width:          14px !default;
+$toggler-part-height:         2px !default;
+$toggler-part-bg-color:       $color-body !default;
+$toggler-width:               40px !default;
+$toggler-height:              40px !default;
+
+
+.burger {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 0;
+  width: $toggler-width;
+  height: $toggler-height;
+  background: transparent;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+
+  @include basic-transition((opacity));
+
+  @include on-event {
+    outline: none;
+    opacity: 0.5;
+  }
+
+  > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    width: $toggler-part-width;
+    height: $toggler-part-height;
+    font-size: 0;
+    color: transparent;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    background-color: $toggler-part-bg-color;
+    pointer-events: none;
+    
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: $toggler-part-height;
+      background-color: $toggler-part-bg-color;
+      transform-origin: center;
+
+      @include basic-transition((transform));
+    }
+
+    &:before {
+      transform: translateY(-5px);
+    }
+
+    &:after {
+      transform: translateY(5px);
+    }
+  }
+
+  &--close {
+
+    > span {
+      background: transparent;
+
+      @include basic-transition((background));
+
+      &:before,
+      &:after {
+        @include basic-transition((transform));
+      }
+
+      &:before {
+        transform: rotate3d(0, 0, 1, 45deg);
+      }
+
+      &:after {
+        transform: rotate3d(0, 0, 1, -45deg);
+      }
+    }
+  }
+}

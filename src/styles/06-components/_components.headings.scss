@@ -1,0 +1,62 @@
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+
+.heading {
+  display: flex;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 80px;
+}
+
+.heading__module {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &:first-child {
+    margin-right: 100px;
+
+    @include mq($from: xl) {
+      margin-right: 150px;
+    }
+  }
+}
+
+.heading__subtitle {
+  margin-bottom: 20px;
+  font-size: rem(14px);
+  line-height: 1.2;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $color-body-secondary;
+}
+
+.heading__title {
+  font-weight: normal;
+  font-size: rem(32px);
+  line-height: 1.15;
+}
+
+.heading__desc {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  padding-left: 20px;
+
+  &::before {
+    @include pseudo(true);
+    top: 0.5em;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    background-color: $color-bg-brand;
+  }
+}
+
+.heading--invert {
+  .heading__subtitle,
+  .heading__title,
+  .heading__desc {
+    color: #fff;
+  }
+}

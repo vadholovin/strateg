@@ -1,0 +1,37 @@
+/* ==========================================================================
+   #MESSENGERS
+   ========================================================================== */
+
+.messengers {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.messengers__item {
+  margin-right: 7px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.messengers__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $color-border-brand;
+  border-radius: 50%;
+  font-size: 10px;
+  color: $color-primary;
+  background-color: transparent;
+  text-decoration: none;
+
+  @include basic-transition((color));
+  @include on-event {
+    outline: none;
+    color: $color-body;
+    background-color: $color-bg-brand;
+  }
+}

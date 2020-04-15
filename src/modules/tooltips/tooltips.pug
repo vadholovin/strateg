@@ -1,0 +1,13 @@
+mixin tooltips(mod, content)
+  -
+    // list of modificators
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' social--' + modsList[i].trim();
+      }
+    }
+
+  button.tooltips(class=allMods, data-tippy-content=content)&attributes(attributes)
+    block

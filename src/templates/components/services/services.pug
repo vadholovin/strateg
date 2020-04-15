@@ -1,0 +1,39 @@
+include ./services.data.pug
+
+
+section.services
+  .container
+    .services__heading.heading.heading--invert
+      .heading__module
+          p.heading__subtitle Наши услуги
+          h2.heading__title Что мы предлагаем?
+      .heading__module
+        .heading__desc.
+          Мы предоставляем максимальный пакет услуг,  который обеспечивает эффективное банкротство 
+          и максимальное сохранение ваших  активов
+    
+    +grid().services-list
+      each item in services
+        +col({md: 4}).services-list__cell
+          .services-tile.services-tile--accent
+            .services-tile__inner
+              .services-tile__head
+                .services-tile__heading
+                  h3.services-tile__title!= item.title
+                  +icon(item.icon)
+                .services-tile__subheading!= item.subheading
+              button.services-tile__btn.services-tile__btn--more.js-services-more
+                | Полные условия
+                +icon('plus', 'stroked')
+              .services-tile__info
+                .services-tile__body.js-services-body
+                  .services-tile__body-main
+                    ul.list-styled.list-styled--square
+                      each listItem in item.list
+                        li= listItem
+                  .services-tile__body-foot
+                    h4 Результат:
+                    p= item.result
+                button.services-tile__btn.services-tile__btn--choose.js-services-choose(
+                  data-form-subject= item.subject
+                ) Выбрать услугу

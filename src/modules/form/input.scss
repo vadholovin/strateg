@@ -1,0 +1,35 @@
+.input {
+  padding: 0 25px;
+  height: 50px;
+  border: 1px solid $color-border-primary;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1;
+  color: $color-body;
+  border-radius: $global-radius;
+  min-height: 0;
+  background-color: white;
+  box-shadow: none;
+
+  @include on-event {
+    outline: none;
+    border-color: $color-border-brand;
+  }
+}
+
+.textarea {
+  @extend .input;
+
+  padding-top: 13px;
+  padding-bottom: 13px;
+  min-height: 164px;
+  resize: vertical;
+}
+
+.input--icon-phone {
+  padding-left: 45px;
+  background-image: url('../assets/img/icons/flag.svg');
+  background-repeat: no-repeat;
+  background-position: 15px 50%;
+  background-size: 19px 13px;
+}

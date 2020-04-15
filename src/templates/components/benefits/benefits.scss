@@ -1,0 +1,131 @@
+/* ==========================================================================
+   #BENEFITS
+   ========================================================================== */
+
+
+.benefits {
+  position: relative;
+  margin-top: -165px;
+  padding-top: 285px;
+  padding-bottom: 540px;
+  @include background;
+  background-color: $color-bg-dark;
+  background-image: url('../assets/img/backgrounds/bg-1.png');
+}
+
+.benefits-block {
+  position: relative;
+  background-color: rgba(0,0,0,.5);
+}
+
+.benefits-block__img-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(58%, -60%);
+}
+
+.benefits-block__img-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-120%);
+}
+
+.benefits-block__top {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.benefits-block__top-left {
+  width: 100%;
+  width: 54%;
+}
+
+.benefits-block__top-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  width: 46%;
+  padding: 40px;
+}
+
+.benefits-block__top-text {
+  max-width: 80%;
+  font-weight: 500;
+  font-size: rem(28px);
+  line-height: 130%;
+  color: #FFFFFF;
+
+  @include mq($from: lg) {
+    font-size: rem(24px);
+  }
+  @include mq($from: xl) {
+    max-width: 70%;
+    font-size: rem(32px);
+  }
+}
+
+.benefits-block__main {
+  padding: 60px 80px;
+}
+
+.benefits-block__list {
+  margin-top: -70px;
+
+  @include mq($from: xl) {
+    margin-left: -36px;
+    margin-right: -36px;
+  }
+
+  > * {
+    display: flex;
+    flex-direction: column;
+    
+    @include mq($from: xl) {
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+  }
+}
+
+.benefits-block__item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  padding-left: 36px;
+  margin-top: 70px;
+
+  &::before {
+    @include pseudo(true);
+    top: 0.4em;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-color: $color-bg-brand;
+  }
+}
+
+.benefits-block__item-inner {
+  height: 100%;
+  width: 100%;
+  max-width: 350px;
+  padding-bottom: 30px;
+  border-bottom: 0.5px solid #FFFFFF;
+  color: #fff;
+}
+
+.benefits-block__item-title {
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: rem(18px);
+  line-height: 1.2;
+}
+
+.benefits-block__item-text {
+  font-size: rem(14px);
+  line-height: 1.4;
+}

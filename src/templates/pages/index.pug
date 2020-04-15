@@ -1,0 +1,18 @@
+extends ../layouts/default
+
+block variables
+  - var pageTitle = 'Главная страница'
+  - var bodyClass = 'home-page'
+
+block content
+  include ../components/header/header
+  main.wrapper
+    include ../components/top-banner/top-banner
+    include ../components/solution/solution
+    include ../components/benefits/benefits
+    include ../components/services/services
+    include ../components/plan/plan
+    include ../components/results/results
+    include ../components/team/team
+    include ../components/questions/questions
+  include ../components/footer/footer

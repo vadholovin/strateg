@@ -1,0 +1,35 @@
+/* ==========================================================================
+   #ACTION
+   ========================================================================== */
+
+.action {
+  padding-top: 70px;
+  padding-bottom: 60px;
+}
+
+.action-picture__caption {
+  left: 4%;
+}
+
+.action__title {
+  margin-bottom: 30px;
+  padding-top: 24px;
+  font-size: rem(48px);
+  line-height: 120%;
+}
+
+.action__desc {
+  margin-bottom: 60px;
+
+  p + p {
+    margin-top: 20px;
+  }
+}
+
+.action .btn {
+  margin-right: 30px;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+}

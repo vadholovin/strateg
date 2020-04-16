@@ -13,7 +13,7 @@
   color: $color-body;
   text-align: center;
   text-decoration: none;
-  border: 1px solid currentColor;
+  border: 1px solid $color-border-primary;
   border-radius: $global-radius;
 
   @include on-event {

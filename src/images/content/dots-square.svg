@@ -1,0 +1,23 @@
+<svg width="105" height="90" viewBox="0 0 105 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="105" height="90">
+<rect x="104.762" width="89.8843" height="104.762" transform="rotate(90 104.762 0)" fill="#EAC58D"/>
+</mask>
+<g mask="url(#mask0)">
+<circle cx="10.5379" cy="30.994" r="1.85967" fill="#EAC58D"/>
+<circle cx="10.5379" cy="2.47943" r="1.85967" fill="#EAC58D"/>
+<circle cx="67.5677" cy="30.994" r="1.85967" fill="#EAC58D"/>
+<circle cx="67.5677" cy="2.47943" r="1.85967" fill="#EAC58D"/>
+<circle cx="39.0535" cy="30.994" r="1.85967" fill="#EAC58D"/>
+<circle cx="39.0535" cy="2.47943" r="1.85967" fill="#EAC58D"/>
+<circle cx="96.0823" cy="30.994" r="1.85967" fill="#EAC58D"/>
+<circle cx="96.0823" cy="2.47943" r="1.85967" fill="#EAC58D"/>
+<circle cx="10.5369" cy="88.0235" r="1.85967" fill="#EAC58D"/>
+<circle cx="10.5369" cy="59.509" r="1.85967" fill="#EAC58D"/>
+<circle cx="67.5667" cy="88.0235" r="1.85967" fill="#EAC58D"/>
+<circle cx="67.5667" cy="59.509" r="1.85967" fill="#EAC58D"/>
+<circle cx="39.0525" cy="88.0235" r="1.85967" fill="#EAC58D"/>
+<circle cx="39.0525" cy="59.509" r="1.85967" fill="#EAC58D"/>
+<circle cx="96.0814" cy="88.0235" r="1.85967" fill="#EAC58D"/>
+<circle cx="96.0814" cy="59.509" r="1.85967" fill="#EAC58D"/>
+</g>
+</svg>

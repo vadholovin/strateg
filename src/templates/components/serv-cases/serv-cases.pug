@@ -1,0 +1,26 @@
+include ./serv-cases.data.pug
+
+
+section.serv-cases
+  .container
+    .serv-cases__heading.heading
+      .heading__module
+          p.heading__subtitle фирменные кейсы
+          h2.heading__title Результаты нашей работы
+      .heading__module
+        .heading__desc.
+          93% были ликвидированы через суд с полным списанием долгов и 7% обратившихся к нам компаний-должников  избежали банкротства, договорившись с кредиторами.
+
+    +grid().serv-cases__grid
+      each item, index in data
+        +col({md: 4}).serv-cases__cell
+          .serv-cases-tile
+            a(href="")
+            .serv-cases-tile__count= '0' + (index + 1)
+            h3.serv-cases-tile__title= item.title
+            .serv-cases-tile__text= item.text
+            .serv-cases-tile__date 02.2020
+      
+      img.dots.dots-bottom.dots-right(src="assets/img/content/dots-angle-dark-rvs.svg", alt="")
+
+    a.btn.btn--wide(href='') Смотреть все кейсы

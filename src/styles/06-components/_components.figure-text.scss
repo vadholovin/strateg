@@ -1,0 +1,27 @@
+/* ==========================================================================
+   #FIGURE-TEXT
+   ========================================================================== */
+
+.figure-text {
+  position: relative;
+}
+
+.figure-text__caption {
+  position: absolute;
+  top: 42px;
+  max-width: 250px;
+  z-index: 1;
+}
+
+.figure-text__title {
+  margin-bottom: 15px;
+  font-size: 22px;
+  line-height: 125%;
+}
+
+.figure-text__subtitle {
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}

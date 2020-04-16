@@ -1,0 +1,24 @@
+include ./guarantees.data.pug
+
+
+section.guarantees
+  .container
+    .guarantees__heading.heading
+      .heading__module
+          p.heading__subtitle гарантии фирмы
+          h2.heading__title Есть ли гарантии успеха?
+      .heading__module
+        .heading__desc.
+          Мы в 100% случаев доводим компанию до ликвидации по решению суда и списанию долгов, за исключением тех случаев, когда предприниматель решает сохранить компанию.
+
+    +grid().guarantees__grid
+      each item, index in guarantees
+        +col({md: 4}).guarantees__cell
+          .guarantees-tile
+            .guarantees-tile__title= item.title
+            .guarantees-tile__text= item.text
+            .guarantees-tile__note= item.note
+
+      img.dots.dots-top.dots-right(src="assets/img/content/dots-square-dark.svg", alt="")
+
+

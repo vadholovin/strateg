@@ -1,0 +1,62 @@
+/* ==========================================================================
+   #GUARANTEES
+   ========================================================================== */
+
+.guarantees {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.guarantees__grid {
+  position: relative;
+  margin-top: -40px;
+}
+
+.guarantees__cell {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.guarantees-tile {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 40px 30px;
+  background-color: #fff;
+  box-shadow: $global-shadow;
+  @include basic-transition((background-color, color));
+
+  &:hover {
+    color: #fff;
+    background-color: $color-bg-dark;
+  }
+}
+
+.guarantees-tile__title {
+  position: relative;
+  margin-bottom: 20px;
+  padding-right: 25px;
+  font-weight: 600;
+  font-size: rem(18px);
+  line-height: 120%;
+
+  &::after {
+    @include pseudo(true);
+    top: 0.5em;
+    right: 5px;
+    width: 10px;
+    height: 10px;
+    transform: translateY(-50%);
+    background-color: $color-bg-brand;
+  }
+}
+
+.guarantees-tile__text {
+  margin-bottom: 20px;
+}
+
+.guarantees-tile__note {
+  margin-top: auto;
+  opacity: 0.5;
+}

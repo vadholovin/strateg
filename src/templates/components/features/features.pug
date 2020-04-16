@@ -1,0 +1,33 @@
+include ./features.data.pug
+
+
+section.features.lozad(data-background-image="assets/img/backgrounds/bg-chess-02.png")
+  .container
+    img.dots.dots-top.dots-right(src="assets/img/content/dots-angle.svg", alt="")
+    img.dots.dots-bottom.dots-left(src="assets/img/content/dots-square.svg", alt="")
+    
+    .features__heading.heading.heading--invert
+      .heading__module
+          p.heading__subtitle преимущества фирмы
+          h2.heading__title Почему нас выбирают
+      .heading__module
+        .heading__desc.
+          56% наших новых клиентов приходят к нам 
+          по рекомендациям тех людей, кто уже сотрудничал 
+          с нами. И вот почему нас рекомендуют ...
+
+    h3.features__subheading Как делаем мы
+    +grid().features__grid
+      each item, index in features1
+        +col({md: 3}).features__cell
+          .features-tile
+            +icon('plus-circle-o', 'stroked')
+            .features-text!= item.text
+
+    h3.features__subheading С чем вы можете столкнуться
+    +grid().features__grid
+      each item, index in features1
+        +col({md: 3}).features__cell
+          .features-tile
+            +icon('minus-circle-o', 'stroked')
+            .features-text!= item.text

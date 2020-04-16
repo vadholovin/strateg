@@ -1,2 +1,32 @@
-section.quiz.lozad(data-background-image='assets/img/backgrounds/bg-3.png')
+section.quiz.lozad(data-background-image='assets/img/backgrounds/bg-chess-05.png')
   .container
+    +grid().quiz__grid
+      +col({md: 6}).quiz__cell
+        .quiz__heading.heading.heading--invert
+          .heading__module
+            p.heading__subtitle онлайн-решение
+            h2.heading__title Нужна ли вашему бизнесу защита?
+
+        .c-quiz
+          .c-quiz-steps
+            .c-quiz-steps__bar
+              .c-quiz-steps__bar-inner(data-fill='33')
+              .c-quiz-steps__dot.c-quiz-steps__dot--0
+              .c-quiz-steps__dot.c-quiz-steps__dot--1.is-active
+              .c-quiz-steps__dot.c-quiz-steps__dot--2
+              .c-quiz-steps__dot.c-quiz-steps__dot--3
+            .c-quiz-steps__text.c-quiz-steps__text--1.is-active Шаг 1
+            .c-quiz-steps__text.c-quiz-steps__text--2 Шаг 2
+            .c-quiz-steps__text.c-quiz-steps__text--3 Шаг 3
+
+
+
+
+
+      +col({md: 6}).quiz__cell
+        figure.quiz-picture.figure-text
+          img(data-src="assets/img/content/dmitri.png", alt="").lozad
+          figcaption.quiz-picture__caption.figure-text__caption
+            .quiz-picture__title.figure-text__title Дмитрий Краснощёк
+            .quiz-picture__subtitle.figure-text__subtitle Адвокат, стаж 20 лет
+

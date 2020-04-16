@@ -232,8 +232,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 /**
+ * LAZY LOAD IMAGES
+ */
+document.addEventListener('DOMContentLoaded', function() {
+  const observer = lozad('.lozad', {});
+  observer.observe();
+});
+
+
+/**
  * 
  */
 $(function () {
   
 });
+

@@ -18,7 +18,7 @@ jQuery(function ($) {
     if ( offsetY > top) {
       $('.header__main').addClass('is-scrolled');
       $('.wrapper--inner').addClass('is-header-scrolled');
-    } else if ( offsetY < top) {
+    } else {
       $('.header__main').removeClass('is-scrolled');
       $('.wrapper--inner').removeClass('is-header-scrolled');
     }
@@ -81,10 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     },
   });
-});
 
 
-document.addEventListener('DOMContentLoaded', function() {
   const teamSlider = new Swiper('#team-slider', {
     lazy: true,
     spaceBetween: 40,
@@ -114,9 +112,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     },
   });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
+
   const questionsSlider = new Swiper('#questions-slider', {
     spaceBetween: 0,
     slidesPerView: 1,
@@ -145,9 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     },
   });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
 
   const resultsThumbs = new Swiper('#results-thumbs', {
     slidesPerView: 3,
@@ -234,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 /**
- * LAZY LOAD IMAGES
+ * LAZY LOAD
  */
 document.addEventListener('DOMContentLoaded', function() {
   const observer = lozad('.lozad', {});
@@ -255,8 +250,6 @@ jQuery(function ($) {
         progressText = $('#quiz-steps-text-1'),
         progressStep = 33.333333,
         status = 'is-active';
-
-  
 
   btnNext.click(function (e) { 
     e.preventDefault();

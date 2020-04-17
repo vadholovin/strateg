@@ -1,0 +1,36 @@
+/* ==========================================================================
+   #ABOUT
+   ========================================================================== */
+
+.about {
+  padding-bottom: 60px;
+}
+
+.about-content {
+  padding-left: 36px;
+  padding-right: 36px;
+  
+  p + p {
+    margin-top: 20px;
+  }
+}
+
+.about__heading {
+  margin-bottom: 30px;
+
+  > * + * {
+    margin-top: 15px;
+  }
+}
+
+.about__title {
+  font-weight: 600;
+  font-size: rem(32px);
+  line-height: 120%;
+}
+
+.about__subtitle {
+  font-weight: 600;
+  font-size: rem(16px);
+  color: #888888;
+}

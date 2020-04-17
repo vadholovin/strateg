@@ -4,7 +4,19 @@
 
 .action {
   padding-top: 70px;
+  background-color: rgba(#E5E5E5, 0.3);
+}
+
+.action__cell:first-child {
+  display: flex;
+  flex-direction: column;
+}
+.action__cell:last-child {
   padding-bottom: 60px;
+}
+
+.action-picture {
+  margin-top: auto;
 }
 
 .action-picture__caption {

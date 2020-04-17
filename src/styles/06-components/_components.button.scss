@@ -15,8 +15,10 @@
   text-decoration: none;
   border: 1px solid $color-border-primary;
   border-radius: $global-radius;
+  cursor: pointer;
 
   @include on-event {
+    outline: none;
     color: $color-body;
     border-color: $color-border-brand;
     background-color: $color-bg-brand;

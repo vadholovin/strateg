@@ -7,12 +7,12 @@ header.header(class= (bodyClass == 'home-page') ? 'header--abs header--transpare
           +icon('flag', '', '', true)
 
         +messengers.header__messengers.header__messengers--top
-          //- +messengers-item
-          //-   +icon('email')
+          +messengers-item
+            +icon('email')
           +messengers-item
             +icon('telegram')
-          //- +messengers-item
-          //-   +icon('phone-call')
+          +messengers-item
+            +icon('phone-call')
           +messengers-item
             +icon('whatsapp')
           +messengers-item
@@ -48,7 +48,7 @@ header.header(class= (bodyClass == 'home-page') ? 'header--abs header--transpare
       nav.main-nav
         ul.main-menu
           li.main-menu__item
-            a(href="") Наши услуги
+            a(href="") Услуги
           li.main-menu__item
             a(href="") Кейсы
           li.main-menu__item
@@ -74,7 +74,7 @@ header.header(class= (bodyClass == 'home-page') ? 'header--abs header--transpare
 
       ul.header__contact-list.header__contact-list--bottom.contact-list
         li.contact-item
-          +icon('phone-o', 'stroked')
+          +icon('phone')
           a.contact-item__text(href="tel:+7 (499) 123-45-67") +7 (499) 123-45-67
 
       button.header__main-btn.btn.btn--primary.btn--fz-xs() ?

@@ -1,0 +1,60 @@
+.contact-block
+  .container
+    +grid().contact-block__grid
+      +col({md: 7}).contact-block__cell
+        h2.contact-block__title Обратная связь
+        +form().contact-block__form
+          .form__row
+            +inputbox
+              +label.hidden-visually(for='form-name') Ваше имя
+              +input-wrapper
+                +input(
+                  type='tel'
+                  name='form-name'
+                  id='form-name'
+                  autocomplete='off'
+                  placeholder="Ваше имя*")
+            
+            +inputbox
+              +label.hidden-visually(for='form-phone') Номер телефона
+              +input-wrapper
+                +input.input--icon-phone.js-input-phone(
+                  type='tel'
+                  name='form-phone'
+                  id='form-phone'
+                  autocomplete='off'
+                  placeholder="+7 999 999-99-99")
+          
+          +inputbox
+            +label.hidden-visually(for='form-message') Ваше сообщение
+            +input-wrapper
+              +textarea(
+                name='form-message'
+                id='form-message'
+                placeholder="Ваше сообщение"
+              )
+
+          button.btn.btn--primary.btn--lg(type='submit') Отправить сообщение
+
+      +col({md: 5}).contact-block__cell
+        h2.contact-block__title Детали
+        p.contact-block__note.
+          Заявки обрабатываются с 10-00 до 17-00, 
+          по будням. Передавая свои данные, вы даете 
+          согласие на <a href=''>обработку персональных данных</a>.
+
+        ul.contact-block__contact-list.contact-list
+          li.contact-item
+            +icon('phone')
+            a.contact-item__text(href="tel:+7 (499) 112-07-57") +7 (499) 112-07-57
+          li.contact-item
+            +icon('email')
+            a.contact-item__text(href="mailto:info@strateg.moscow") info@strateg.moscow
+          li.contact-item
+            +icon('placemark-fat')
+            .contact-item__text.
+              Москва, Ленинградский проспект д. 31а,<br>
+              стр 1, Бизнес-центр Монарх, 12 этаж
+          li.contact-item
+            +icon('metro')(style="font-size: 19px;")
+            .contact-item__text Динамо

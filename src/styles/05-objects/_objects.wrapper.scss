@@ -8,3 +8,11 @@
   flex: 1 0 auto;
   overflow: visible;
 }
+
+.wrapper--inner {
+
+  &.is-header-scrolled {
+    padding-top: 75px;
+  }
+  
+}

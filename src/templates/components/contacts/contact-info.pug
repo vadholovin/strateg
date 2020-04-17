@@ -1,0 +1,44 @@
+.contact-info
+  .container
+    +grid().contact-info__grid
+      +col({md: 4}).contact-info__cell
+        .contact-info-tile
+          .contact-info-tile__title Нам можно позвонить
+          ul.contact-info-tile__contacts
+            li.contact-info-tile__contact
+              a(href="tel:+7 (499) 112-07-57") +7 (499) 112-07-57
+              .contact-info-tile__contact-label Служба поддержки клиентов
+            li.contact-info-tile__contact
+              a(href="tel:+7 (499) 123-45-67") +7 (499) 123-45-67
+              .contact-info-tile__contact-label Финансовый департамент
+
+
+
+      +col({md: 4}).contact-info__cell
+        .contact-info-tile
+          .contact-info-tile__title Нам можно написать
+          +messengers.contact-info__messengers
+            +messengers-item
+              +icon('email')
+            +messengers-item
+              +icon('telegram')
+            +messengers-item
+              +icon('phone-call')
+            +messengers-item
+              +icon('whatsapp')
+            //- +messengers-item
+            //-   +icon('messenger')
+          
+          a(href="") Написать на почту
+
+
+      +col({md: 4}).contact-info__cell
+        .contact-info-tile
+          .contact-info-tile__title голосовое сообщение
+
+          +flag().flag--top.contact-info__flag
+            +flag-img
+              img(src="assets/img/content/qr-code.png", alt="")
+
+            +flag-body('Наведите камеру на QR-код и отправьте голосовое с вашим вопросом или описанием ситуации на любой из мессенджеров.')
+              

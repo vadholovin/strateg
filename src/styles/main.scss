@@ -47,7 +47,9 @@
 
 // 05. Objects
 @import '05-objects/objects.wrapper';
+@import '05-objects/objects.layout';
 @import '05-objects/objects.container';
+@import '05-objects/objects.section';
 // @import '05-objects/objects.grid';
 @import '../modules/grid/grid';
 
@@ -60,6 +62,7 @@
 @import '../modules/breadcrumbs/breadcrumbs';
 @import '../modules/burger/burger';
 @import '../modules/content-zone/content-zone';
+@import '../modules/flag/flag';
 @import '../modules/icon/icon';
 @import '../modules/form/form';
 @import '../modules/form/input';
@@ -82,6 +85,7 @@
 // @import '06-components/components.input';
 @import '06-components/components.list-styled';
 @import '06-components/components.logo';
+@import '06-components/components.map';
 @import '06-components/components.header';
 @import '../templates/components/**/*.scss';
 // @import '06-components/components.header-menu';

@@ -1,0 +1,31 @@
+.about-form-block.form-block
+  .container
+    +form().form--shadow
+      .form__head
+        .form__title Остались вопросы? Давайте обсудим по телефону
+        .form__subtitle Мы подберем успешный пример, походжий на ваш случай из нашего опыта.
+
+      .form__row
+        +inputbox
+          +label.hidden-visually(for='form-name') Ваше имя
+          +input-wrapper
+            +input(
+              type='tel'
+              name='form-name'
+              id='form-name'
+              autocomplete='off'
+              placeholder="Ваше имя*")
+        
+        +inputbox
+          +label.hidden-visually(for='form-phone') Номер телефона
+          +input-wrapper
+            +input.input--icon-phone.js-input-phone(
+              type='tel'
+              name='form-phone'
+              id='form-phone'
+              autocomplete='off'
+              placeholder="+7 999 999-99-99")
+        
+        button.btn.btn--primary.btn--wide(type='submit') Подобрать пример
+
+      p.form__note Передавая свои данные, вы даете согласие на <a href=''>обработку персональных данных</a>

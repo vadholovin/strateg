@@ -2,11 +2,11 @@
    #BREADCRUMBS
    ========================================================================== */
 
-$breadpadding: 35px;
+$breadpadding: 20px;
 
 .breadcrumbs {
   display: block;
-  margin-top: 34px;
+  margin-top: 50px;
 }
 
 .breadcrumbs__item {
@@ -28,7 +28,7 @@ $breadpadding: 35px;
       height: 5px;
       border-width: 1px 1px 0 0;
       border-style: solid;
-      // border-color: $color-grey;
+      border-color: #888;
       transform-origin: center;
       transform: translateX(50%) rotate(45deg);
     }
@@ -41,6 +41,6 @@ $breadpadding: 35px;
 
 .breadcrumbs__link {
   line-height: 1.5;
-  // color: $color-body-secondary;
+  color: #888;
   text-decoration: none;
 }

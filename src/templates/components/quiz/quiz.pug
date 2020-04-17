@@ -7,20 +7,112 @@ section.quiz.lozad(data-background-image='assets/img/backgrounds/bg-chess-05.png
             p.heading__subtitle онлайн-решение
             h2.heading__title Нужна ли вашему бизнесу защита?
 
-        .c-quiz
-          .c-quiz-steps
-            .c-quiz-steps__bar
-              .c-quiz-steps__bar-inner(data-fill='33')
-              .c-quiz-steps__dot.c-quiz-steps__dot--0
-              .c-quiz-steps__dot.c-quiz-steps__dot--1.is-active
-              .c-quiz-steps__dot.c-quiz-steps__dot--2
-              .c-quiz-steps__dot.c-quiz-steps__dot--3
-            .c-quiz-steps__text.c-quiz-steps__text--1.is-active Шаг 1
-            .c-quiz-steps__text.c-quiz-steps__text--2 Шаг 2
-            .c-quiz-steps__text.c-quiz-steps__text--3 Шаг 3
+        .b-quiz
+          .b-quiz-progress#quiz-progress
+            .b-quiz-progress__bar
+              .b-quiz-progress__bar-inner#quiz-bar-inner
+            .b-quiz-progress__dots
+              .b-quiz-progress__dot
+              .b-quiz-progress__dot#quiz-steps-dot-1.is-active
+              .b-quiz-progress__dot#quiz-steps-dot-2
+              .b-quiz-progress__dot#quiz-steps-dot-3
+            .b-quiz-progress__text#quiz-steps-text-1.is-active Шаг 1
+            .b-quiz-progress__text#quiz-steps-text-2 Шаг 2
+            .b-quiz-progress__text#quiz-steps-text-3 Шаг 3
+
+          .b-quiz-content
+            .b-quiz-module#quiz-module-1.is-active
+              .b-quiz-module__title Сумма вашей задолженности?
+              .b-quiz-answers
+                label.b-quiz-answers__item
+                  input.b-quiz-radio.hidden-visually(type="radio", name="quiz-debt", value='a')
+                  .b-quiz-radiomask
+                  span.b-quiz-answers__text 300 тыс. - 1.5 млн. рублей
+
+                label.b-quiz-answers__item
+                  input.b-quiz-radio.hidden-visually(type="radio", name="quiz-debt", value='b')
+                  .b-quiz-radiomask
+                  span.b-quiz-answers__text 1.5 млн. - 5 млн. рублей
+
+                label.b-quiz-answers__item
+                  input.b-quiz-radio.hidden-visually(type="radio", name="quiz-debt", value='c')
+                  .b-quiz-radiomask
+                  span.b-quiz-answers__text 5 млн. - 10 милн. рублей
+
+                label.b-quiz-answers__item
+                  input.b-quiz-radio.hidden-visually(type="radio", name="quiz-debt", value='d')
+                  .b-quiz-radiomask
+                  span.b-quiz-answers__text 10 млн. - 25 млн. рублей
+
+                label.b-quiz-answers__item
+                  input.b-quiz-radio.hidden-visually(type="radio", name="quiz-debt", value='e')
+                  .b-quiz-radiomask
+                  span.b-quiz-answers__text 25 млн. - 50 млн. рублей
+
+                label.b-quiz-answers__item
+                  input.b-quiz-radio.hidden-visually(type="radio", name="quiz-debt", value='f')
+                  .b-quiz-radiomask
+                  span.b-quiz-answers__text свыше 50 млн. рублей
+
+            .b-quiz-module#quiz-module-2
+              .b-quiz-module__title Перед кем задолжность?
+              .b-quiz-answers
+                label.b-quiz-answers__item
+                  input.b-quiz-radio.hidden-visually(type="radio", name="quiz-debt-object", value='a')
+                  .b-quiz-radiomask
+                  span.b-quiz-answers__text Банк
+
+                label.b-quiz-answers__item
+                  input.b-quiz-radio.hidden-visually(type="radio", name="quiz-debt-object", value='b')
+                  .b-quiz-radiomask
+                  span.b-quiz-answers__text Налоговая
+
+                label.b-quiz-answers__item
+                  input.b-quiz-radio.hidden-visually(type="radio", name="quiz-debt-object", value='c')
+                  .b-quiz-radiomask
+                  span.b-quiz-answers__text Контрагенты
+
+                label.b-quiz-answers__item
+                  input.b-quiz-radio.hidden-visually(type="radio", name="quiz-debt-object", value='d')
+                  .b-quiz-radiomask
+                  span.b-quiz-answers__text Физическое лицо
+
+                label.b-quiz-answers__item
+                  input.b-quiz-radio.hidden-visually(type="radio", name="quiz-debt-object", value='e')
+                  .b-quiz-radiomask
+                  span.b-quiz-answers__text Другое
+
+            .b-quiz-module#quiz-module-3
+              figure.b-quiz-result
+                <svg class="b-quiz-result__img" width="393" height="196" viewBox="0 0 393 196" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M391 196C391 88.8568 303.919 2 196.5 2C89.0806 2 2 88.8568 2 196" stroke="url(#paint0_linear)" stroke-width="3"/>
+                <path d="M3 196C3 119.74 47.0011 53.7575 111 22.0552" stroke="url(#paint1_linear)" stroke-width="4"/>
+                <circle cx="110" cy="22" r="9" fill="#EAC58D"/>
+                <circle cx="284" cy="22" r="9" fill="#6F6F6F"/>
+                <circle cx="21" cy="114" r="9" fill="#EAC58D"/>
+                <circle cx="373" cy="114" r="9" fill="#6F6F6F"/>
+                <defs>
+                <linearGradient id="paint0_linear" x1="196.5" y1="2" x2="196.5" y2="196" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6F6F6F"/>
+                <stop offset="1" stop-color="#6F6F6F" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="paint1_linear" x1="100" y1="2" x2="100" y2="196" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#EAC58D"/>
+                <stop offset="1" stop-color="#EAC58D" stop-opacity="0"/>
+                </linearGradient>
+                </defs>
+                </svg>
+
+                figcaption.b-quiz-result__caption 40%
+                  .b-quiz-result__caption--sm проблем у фирмы
+                .b-quiz-result__statuses
+                  span.b-quiz-result__text.text-right#quiz-result-text-1 Бизнес <br> в порядке
+                  span.b-quiz-result__text.text-right.is-active#quiz-result-text-2 Пора решать <br> вашу проблему
+                  span.b-quiz-result__text#quiz-result-text-3 Задумайтесь <br> об оптимизации
+                  span.b-quiz-result__text#quiz-result-text-4 Пора спасать <br> активы
 
 
-
+          button.btn.btn--primary.btn--lg#quiz-next(data-quiz-step='1') Следующий шаг
 
 
       +col({md: 6}).quiz__cell

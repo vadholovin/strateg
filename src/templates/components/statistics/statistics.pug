@@ -1,0 +1,11 @@
+include ./statistics.data.pug
+
+.statistics.section
+  .container
+    +grid().statistics__grid
+      each item, index in data
+        +col({md: 4}).statistics__cell
+          .statistics-item
+            .statistics-item__title!= item.title
+            hr
+            .statistics-item__text!= item.text

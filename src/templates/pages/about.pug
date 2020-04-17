@@ -1,0 +1,20 @@
+extends ../layouts/default
+
+block variables
+  - var pageTitle = 'О компании'
+  - var bodyClass = 'inner-page'
+
+block content
+  include ../components/header/header
+  main.wrapper.wrapper--inner
+    .container
+      img.dots.dots-top-1.dots-left(src="assets/img/content/dots-rectangle-dark.svg", alt="")
+      +breadcrumbs(['Главная', 'Раздел', 'Страница'])
+    .inner-layout
+      include ../components/about/about
+      include ../components/statistics/statistics
+      include ../components/team/about-team
+      include ../components/secrets/secrets
+      include ../components/coverage/coverage
+      include ../components/form-blocks/form-block-team
+  include ../components/footer/footer

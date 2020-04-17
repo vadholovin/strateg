@@ -13,17 +13,20 @@
   padding-left: 15px;
   padding-right: 15px;
 
-  &:first-child {
-    margin-right: 100px;
+  > * + * {
+    margin-top: 20px;
+  }
+}
 
-    @include mq($from: xl) {
-      margin-right: 150px;
-    }
+.heading__module + .heading__module {
+  margin-left: 100px;
+
+  @include mq($from: xl) {
+    margin-left: 150px;
   }
 }
 
 .heading__subtitle {
-  margin-bottom: 20px;
   font-size: rem(14px);
   line-height: 1.2;
   letter-spacing: 0.15em;

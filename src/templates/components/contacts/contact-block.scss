@@ -1,0 +1,84 @@
+/* ==========================================================================
+   #CONTACT-BLOCK
+   ========================================================================== */
+
+.contact-block {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.contact-block__grid {
+  margin-top: -60px;
+}
+
+.contact-block__cell {
+  margin-top: 60px;
+
+  &:last-child {
+
+    @include mq($from: lg) {
+      padding-left: 80px;
+    }
+    @include mq($from: xl) {
+      padding-left: 140px;
+    }
+  }
+}
+
+.contact-block__title {
+  margin-bottom: 56px;
+  font-weight: normal;
+  font-size: rem(32px);
+  line-height: 1.15;
+}
+
+.contact-block__form {
+
+  .inputbox {
+    width: 100%;
+    margin-top: 28px;
+  }
+
+  .form__row {
+    margin-top: -28px;
+    margin-left: -14px;
+    margin-right: -14px;
+
+    .inputbox {
+      width: 100%;
+      width: 50%;
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+  }
+
+  .input,
+  .textarea {
+    border-color: #DADADA;
+  }
+
+  .btn {
+    margin-top: 40px;
+  }
+}
+
+.contact-block__note {
+  margin-bottom: 45px;
+}
+
+.contact-block__contact-list {
+
+  .contact-item {
+    padding-left: 38px;
+  }
+
+  .contact-item + .contact-item {
+    margin-top: 30px;
+  }
+
+  .icon {
+    top: 3px;
+    font-size: 16px;
+    color: $color-primary;
+  }
+}

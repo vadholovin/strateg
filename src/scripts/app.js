@@ -8,7 +8,7 @@
 
 
 /**
- * #HEADER SCROLL
+ * HEADER SCROLL
  */
 jQuery(function ($) {
   $(window).scroll(function() {
@@ -17,15 +17,17 @@ jQuery(function ($) {
 
     if ( offsetY > top) {
       $('.header__main').addClass('is-scrolled');
+      $('.wrapper--inner').addClass('is-header-scrolled');
     } else if ( offsetY < top) {
       $('.header__main').removeClass('is-scrolled');
+      $('.wrapper--inner').removeClass('is-header-scrolled');
     }
   });
 });
 
 
 /**
- * #MENU
+ * MENU
  */
 /*
 (function ($) {
@@ -46,7 +48,7 @@ jQuery(function ($) {
 */
 
 /**
- * #SLIDERS
+ * SLIDERS
  */
 document.addEventListener('DOMContentLoaded', function() {
   const solutionSlider = new Swiper('#solution-slider', {
@@ -182,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 /**
- * 
+ * SERVICES MORE BUTTON
  */
 jQuery(function ($) {
   $('.js-services-more').click(function (e) { 
@@ -241,9 +243,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 /**
- * 
+ * QUIZ
  */
-$(function () {
+jQuery(function ($) {
+  const btnNext = $('#quiz-next'),
+        module_1 = $('#quiz-module-1'),
+        module_2 = $('#quiz-module-2'),
+        progress = $('#quiz-progress'),
+        progressFill = $('#quiz-bar-inner'),
+        progressDot = $('#quiz-steps-dot-1'),
+        progressText = $('#quiz-steps-text-1'),
+        progressStep = 33.333333,
+        status = 'is-active';
+
   
+
+  btnNext.click(function (e) { 
+    e.preventDefault();
+    let step = btnNext.data('quiz-step');
+    
+    if (step == 1 && $('[name=quiz-debt]').is(':checked')) {
+      module_1.removeClass(status).next().addClass(status);
+      btnNext.data('quiz-step', 2);
+      progressDot.next().addClass(status);
+      progressText.next().addClass(status);
+      progressFill.css('transform', 'translateX(' + progressStep*2 + '%)');
+    }
+    
+    if (step == 2 && $('[name=quiz-debt-object]').is(':checked')) {
+      module_2.removeClass(status).next().addClass(status);
+      progress.hide();
+      btnNext.hide();
+    }
+
+  });
+
 });
 

@@ -6,13 +6,16 @@ block variables
 
 block content
   include ../components/header/header
-  main.wrapper
-    include ../components/services-top/services-top
-    include ../components/quiz/quiz
-    include ../components/action/action
-    include ../components/guarantees/guarantees
-    include ../components/plan/plan
-    include ../components/features/features
-    include ../components/serv-cases/serv-cases
-    include ../components/questions/questions
+  main.wrapper.wrapper--inner
+    .container
+      +breadcrumbs(['Главная', 'Раздел', 'Страница'])
+    .inner-layout
+      include ../components/services-top/services-top
+      include ../components/quiz/quiz
+      include ../components/action/action
+      include ../components/guarantees/guarantees
+      include ../components/plan/plan
+      include ../components/features/features
+      include ../components/serv-cases/serv-cases
+      include ../components/questions/questions
   include ../components/footer/footer

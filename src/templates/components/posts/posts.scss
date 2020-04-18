@@ -1,0 +1,121 @@
+/* ==========================================================================
+   #POSTS
+   ========================================================================== */
+
+.posts__grid {
+  margin-top: -50px;
+  
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+
+  @include mq($from: xl) {
+    margin-left: -25px;
+    margin-right: -25px;
+  }
+
+  .posts__cell {
+    margin-top: 50px;
+  
+    @include mq($from: xl) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+}
+
+.posts-grid-with-aside {
+  margin-left: -40px;
+  margin-right: -40px;
+
+  .posts__main-cell,
+  .posts__aside-cell  {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.posts__title {
+  margin-bottom: 50px;
+
+  &:not(:first-child) {
+    margin-top: 70px;
+  }
+}
+
+.posts__btn {
+  padding: 22px 50px;
+}
+
+.post-card {
+  text-decoration: none;
+  @include basic-transition((color, box-shadow, transform));
+
+  .card-img-wrap {
+    padding-top: 58.1395%;
+  }
+
+  .card-meta {
+    font-weight: 600;
+    font-size: rem(11px);
+    color: $color-primary;
+  }
+
+  .card-comments {
+    font-weight: 500;
+    font-size: rem(12px);
+    color: $color-body-secondary;
+  }
+
+  .card-title {
+    font-weight: 500;
+    font-size: rem(18px);
+    line-height: 145%;
+  }
+
+  .card-text {
+    font-size: 14px;
+    color: $color-body-secondary;
+
+  }
+
+  .card-text-ending {
+    color: $color-primary;
+
+    @include on-event {
+      color: currentColor;
+    }
+  }
+
+  .card-link {
+    font-weight: 600;
+    font-size: rem(12px);
+    line-height: 1.15;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $color-primary;
+  }
+
+}
+
+
+.post-card {
+
+  @include on-event {
+    transform: translateY(-5px);
+    box-shadow: $global-shadow;
+
+    .card-text-ending,
+    .card-link {
+      color: currentColor;
+    }
+  }
+}
+
+
+.post-card--case {
+
+  .card-body {
+    padding-top: 30px;
+  }
+}

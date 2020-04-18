@@ -6,12 +6,16 @@
   display: flex;
 }
 
-.flex-content-center {
-  justify-content: center;
+.justify-content-center {
+  justify-content: center !important;
 }
 
-.flex-items-center {
-  align-items: center;
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+.align-items-center {
+  align-items: center !important;
 }
 
 .order-first {

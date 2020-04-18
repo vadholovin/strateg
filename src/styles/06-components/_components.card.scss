@@ -12,9 +12,21 @@
   background-clip: border-box;
 }
 
-.card>hr {
-  margin-right: 0;
-  margin-left: 0;
+.card hr {
+  border: 0;
+  height: 0;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border-top: 1px solid rgba(#D3D3D3, .5);
+
+  @include mq($from: md) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  @include mq($from: xl) {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
 }
 
 .card-body {
@@ -27,15 +39,36 @@
   line-height: 1.15;
 }
 
-.card-meta {
+.card-meta,
+.card-comments {
   margin-bottom: 24px;
   line-height: 1.2;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+
+  .icon {
+    margin-right: 8px;
+  }
+}
+
+.card-meta .icon {
+  font-size: 14px;
+}
+
+.card-comments {
+  margin: 0;
+
+  .icon {
+    font-size: 12px;
+  }
 }
 
 .card-text:last-child {
   margin-bottom: 0;
+}
+
+.card-link {
+  display: inline-block;
 }
 
 .card-link:hover {
@@ -60,7 +93,25 @@
   // border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-.card-img {
+.card-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-img-wrap {
+  position: relative;
   width: 100%;
+  height: 0;
+  padding-top: 100%;
+  overflow: hidden;
+}
+
+.card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }

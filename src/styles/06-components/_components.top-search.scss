@@ -5,3 +5,20 @@
 .top-search {
   margin-bottom: 40px;
 }
+
+.top-search__inner {
+  display: flex;
+
+  > * + * {
+    margin-left: 50px;
+  }
+}
+
+.top-search .select-inputbox {
+  width: 100%;
+  max-width: 308px;
+}
+
+.top-search .search-form {
+  flex-grow: 1;
+}

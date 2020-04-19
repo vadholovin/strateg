@@ -17,13 +17,21 @@
 }
 
 .questions-tile {
+  display: flex;
+  flex-direction: column;
   position: relative;
+  height: 100%;
   padding: 35px;
   background-color: #fff;
+  text-decoration: none;
   @include basic-transition((background-color));
 
   &:hover {
     background-color: $color-bg-brand;
+
+    &::after {
+      color: $color-body;
+    }
   }
 }
 
@@ -34,12 +42,12 @@
   font-weight: bold;
   font-size: 100px;
   line-height: 100%;
-  color: #222222;
+  color: $color-body-secondary;
   opacity: 0.1;
 }
 
 .questions-tile__body {
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .questions-tile__title {
@@ -60,6 +68,7 @@
 
 .questions-tile__foot {
   display: flex;
+  margin-top: auto;
 }
 
 .questions-tile__link {
@@ -72,8 +81,6 @@
 .questions-tile__date {
   font-size: 16px;
 }
-
-
 
 .questions-slider__wrap {
 
@@ -92,4 +99,57 @@
       right: -110px;
     }
   }
+}
+
+
+.questions__grid-top {
+  margin-top: -36px;
+  margin-bottom: 36px;
+
+  @include mq($from: xl) {
+    margin-left: -18px;
+    margin-right: -18px;
+  }
+
+  > [class*=grid__col] {
+    margin-top: 36px;
+
+    @include mq($from: xl) {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
+}
+
+.questions__grid {
+  margin-top: -36px;
+  margin-bottom: 80px;
+
+  @include mq($from: xl) {
+    margin-left: -18px;
+    margin-right: -18px;
+  }
+}
+
+.questions__grid--inner {
+  margin-bottom: 0;
+}
+
+.questions__cell {
+  display: flex;
+  flex-direction: column;
+  margin-top: 36px;
+
+  @include mq($from: xl) {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+.questions__cell-align-self {
+  align-items: flex-start;
+}
+
+.questions__cell .questions-tile {
+  box-shadow: $global-shadow;
 }

@@ -273,3 +273,16 @@ jQuery(function ($) {
 
 });
 
+
+/**
+ * READMORE
+ */
+jQuery(function ($) {
+  $('.js-categories').readmore({
+    collapsedHeight: 200,
+    speed: 300,
+    moreLink: '<a class="show-more" href="#">Еще...</a>',
+    lessLink: '',
+    heightMargin: 16,
+  });
+});

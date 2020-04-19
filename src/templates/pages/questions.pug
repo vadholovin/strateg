@@ -1,0 +1,15 @@
+extends ../layouts/default
+
+block variables
+  - var pageTitle = 'Вопросы по банкротству'
+  - var bodyClass = 'inner-page'
+
+block content
+  include ../components/header/header
+  main.wrapper.wrapper--inner
+    .container
+      img.dots.dots-top.dots-left(src="assets/img/content/dots-rectangle-dark.svg", alt="")
+      +breadcrumbs(['Главная', 'Раздел', 'Страница'])
+    .inner-layout
+      include ../components/posts/questions
+  include ../components/footer/footer

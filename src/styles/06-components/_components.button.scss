@@ -115,3 +115,21 @@
 //     margin-left: 8px;
 //   }
 // }
+
+.btn-search {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  width: 70px;
+  border-top-right-radius: $global-radius;
+  border-bottom-right-radius: $global-radius;
+  color: $color-body-secondary;
+  cursor: pointer;
+
+  @include basic-transition((color, background-color));
+  @include on-event {
+    color: #fff;
+    background-color: $color-bg-brand;
+  }
+}

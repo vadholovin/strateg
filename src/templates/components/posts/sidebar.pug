@@ -1,72 +1,76 @@
 .sidebar
-.sidebar-widget
-  +form().search-form#searchform(role="search" method='get' action='/')
-    +inputbox
-      +label.hidden-visually(for='search-input') Искать
-      +input-wrapper
-        +input.input--search(
-          type="search"
-          name="s"
-          id="search-input"
-          placeholder="Поиск статей..."
-          required
-        )
+  .sidebar-widget
+    +form().search-form#searchform(role="search" method='get' action='/')
+      +inputbox
+        +label.hidden-visually(for='search-input') Искать
+        +input-wrapper
+          +input.input--search(
+            type="search"
+            name="s"
+            id="search-input"
+            placeholder="Поиск статей..."
+            required
+          )
+        button.btn-search(type='submit')
+          span.hidden-visually Поиск
+          +icon('search', '', true)(width='13' height='13')
 
-.sidebar-widget
-  h6 Популярное
-  .small-post-list
-    ul
-      li
-        a.flag.flag--top.small-post(href='')
-          +flag-img
-            img(src="assets/img/content/small-post-img.jpg", alt="")
-          +flag-body
-            .small-post__title Lorem ipsum is placeholder text
-            .small-post__link Читать статью
-              +icon('chevron-right', 'stroked')
-      li
-        a.flag.flag--top.small-post(href='')
-          +flag-img
-            img(src="assets/img/content/small-post-img.jpg", alt="")
-          +flag-body
-            .small-post__title Lorem ipsum is placeholder text
-            .small-post__link Читать статью
-              +icon('chevron-right', 'stroked')
-      li
-        a.flag.flag--top.small-post(href='')
-          +flag-img
-            img(src="assets/img/content/small-post-img.jpg", alt="")
-          +flag-body
-            .small-post__title Lorem ipsum is placeholder text
-            .small-post__link Читать статью
-              +icon('chevron-right', 'stroked')
-            
+  .sidebar-widget
+    h6 Популярное
+    .small-post-list
+      ul
+        li
+          a.flag.flag--top.small-post(href='')
+            +flag-img
+              img(src="assets/img/content/small-post-img.jpg", alt="")
+            +flag-body
+              .small-post__title Lorem ipsum is placeholder text
+              .small-post__link Читать статью
+                +icon('chevron-right', 'stroked')
+        li
+          a.flag.flag--top.small-post(href='')
+            +flag-img
+              img(src="assets/img/content/small-post-img.jpg", alt="")
+            +flag-body
+              .small-post__title Lorem ipsum is placeholder text
+              .small-post__link Читать статью
+                +icon('chevron-right', 'stroked')
+        li
+          a.flag.flag--top.small-post(href='')
+            +flag-img
+              img(src="assets/img/content/small-post-img.jpg", alt="")
+            +flag-body
+              .small-post__title Lorem ipsum is placeholder text
+              .small-post__link Читать статью
+                +icon('chevron-right', 'stroked')
+              
 
-.sidebar-widget.widget_categories
-  h6 Категории
-  ul
-    li.cat-item
-      a(href="") Помощь бизнесу
-    li.cat-item
-      a(href="") Субсидарная ответственность
-    li.cat-item
-      a(href="") Налоги
-    li.cat-item
-      a(href="") Банкротство
-    li.cat-item
-      a(href="") Арест имущества
-    li.cat-item
-      a(href="") Категория 
-    li.cat-item
-      a(href="") Категория
-    li.cat-item
-      a(href="") Категория
+  .sidebar-widget.widget_categories
+    h6 Категории
+    .cats-list.js-categories
+      ul
+        li.cat-item
+          a(href="") Помощь бизнесу
+        li.cat-item
+          a(href="") Субсидарная ответственность
+        li.cat-item
+          a(href="") Налоги
+        li.cat-item
+          a(href="") Банкротство
+        li.cat-item
+          a(href="") Арест имущества
+        li.cat-item
+          a(href="") Категория 
+        li.cat-item
+          a(href="") Категория
+        li.cat-item
+          a(href="") Категория
 
-.sidebar-widget.widget_tag_cloud
-  h6 теги
-  .tagcloud
-    a.btn(href="") Бизнес
-    a.btn(href="") Помощь физ. лицам
-    a.btn(href="") Налоги
-    a.btn(href="") Долги
-    a.btn(href="") Банкротство
+  .sidebar-widget.widget_tag_cloud
+    h6 теги
+    .tagcloud
+      a.btn(href="") Бизнес
+      a.btn(href="") Помощь физ. лицам
+      a.btn(href="") Налоги
+      a.btn(href="") Долги
+      a.btn(href="") Банкротство

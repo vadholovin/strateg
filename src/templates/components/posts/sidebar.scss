@@ -2,9 +2,9 @@
    #SIDEBAR
    ========================================================================== */
 
-.sidebar {
+// .sidebar {
   
-}
+// }
 
 .sidebar-widget {
   margin-bottom: 60px;
@@ -16,99 +16,4 @@
   font-size: rem(16px);
   line-height: 1.2;
   text-transform: uppercase;
-}
-
-.sidebar-widget .search-form {
-
-}
-
-.small-post-list {
-
-  li {
-    padding-bottom: 30px;
-    border-bottom: 0.5px solid #D3D3D3;
-
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
-  }
-}
-
-.small-post {
-  text-decoration: none;
-
-  @include on-event {
-
-    .small-post__link {
-      color: currentColor;
-      transform: translateX(5px);
-    }
-  }
-}
-
-.small-post__title {
-  margin-bottom: 12px;
-  font-weight: normal;
-  font-size: rem(18px);
-  line-height: 1.2;
-}
-
-.small-post__link {
-  font-weight: 500;
-  font-size: rem(14px);
-  line-height: 1.15;
-  color: $color-primary;
-  white-space: nowrap;
-  @include basic-transition((color, transform));
-
-  .icon {
-    margin-left: 6px;
-    font-size: 9px;
-  }
-}
-
-.cat-item {
-
-  a {
-    position: relative;
-    display: block;
-    font-size: 16px;
-    color: $color-body-secondary;
-    text-decoration: none;
-    @include basic-transition((color, transform));
-
-    @include on-event {
-      color: currentColor;
-      transform: translateX(5px);
-    }
-  }
-}
-
-.cat-item + .cat-item {
-  margin-top: 16px;
-}
-
-.tagcloud {
-  margin-top: -12px;
-  font-size: 0;
-}
-
-.tagcloud .btn {
-  margin-right: 10px;
-  margin-top: 12px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-weight: normal;
-  font-size: rem(14px);
-  color: $color-body-secondary;
-  border: 0.5px solid #DADADA;
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  &:hover {
-    color: currentColor;
-    border-color: $color-border-brand;
-  }
 }

@@ -3,7 +3,7 @@
 - var imgPath = 'assets/img/sprites/icons.svg';
 - var externalImgPath = 'assets/img/icons/';
 
-mixin icon(name, mods='', block='', ext='')
+mixin icon(name, mods='', self='', ext='')
   -
     // list of modificators
     var allMods = '';
@@ -14,23 +14,53 @@ mixin icon(name, mods='', block='', ext='')
       }
     }
   
-  if (block)
-    if (mods)
+  //- if (self)
+  //-   if (mods)
+  //-     svg(
+  //-       class="icon icon-" + name + ' ' + allMods,
+  //-       aria-hidden="true",
+  //-       focusable="false"
+  //-     )&attributes(attributes)
+  //-       use(xlink:href= imgPath + "#" + name)
+  //-   else
+  //-     svg(
+  //-       class="icon icon-" + name,
+  //-       aria-hidden="true",
+  //-       focusable="false"
+  //-     )&attributes(attributes)
+  //-       use(xlink:href= imgPath + "#" + name)
+  //- else if (ext)
+  //-   if (mods)
+  //-     img(
+  //-       class="icon icon-" + name + ' ' + allMods,
+  //-       aria-hidden="true",
+  //-       focusable="false",
+  //-       src= externalImgPath + name + '.svg'
+  //-     )&attributes(attributes)
+  //-   else
+  //-     img(
+  //-       class="icon icon-" + name,
+  //-       aria-hidden="true",
+  //-       focusable="false",
+  //-       src= externalImgPath + name + '.svg'
+  //-     )&attributes(attributes)
+  //- else if (mods)
+  //-   span(class="icon icon-" + name + ' ' + allMods)&attributes(attributes)
+  //-     svg(aria-hidden="true", focusable="false")
+  //-       use(xlink:href=imgPath + "#" + name)
+  //- else
+  //-   span(class="icon icon-" + name)&attributes(attributes)
+  //-     svg(aria-hidden="true", focusable="false")
+  //-       use(xlink:href=imgPath + "#" + name)
+  if mods
+    if self
       svg(
         class="icon icon-" + name + ' ' + allMods,
         aria-hidden="true",
         focusable="false"
       )&attributes(attributes)
         use(xlink:href= imgPath + "#" + name)
-    else
-      svg(
-        class="icon icon-" + name,
-        aria-hidden="true",
-        focusable="false"
-      )&attributes(attributes)
-        use(xlink:href= imgPath + "#" + name)
-  else if (ext)
-    if (mods)
+    else if ext
       img(
         class="icon icon-" + name + ' ' + allMods,
         aria-hidden="true",
@@ -38,16 +68,23 @@ mixin icon(name, mods='', block='', ext='')
         src= externalImgPath + name + '.svg'
       )&attributes(attributes)
     else
-      img(
-        class="icon icon-" + name,
-        aria-hidden="true",
-        focusable="false",
-        src= externalImgPath + name + '.svg'
-      )&attributes(attributes)
-  else if (mods)
-    span(class="icon icon-" + name + ' ' + allMods)&attributes(attributes)
-      svg(aria-hidden="true", focusable="false")
-        use(xlink:href=imgPath + "#" + name)
+      span(class="icon icon-" + name + ' ' + allMods)&attributes(attributes)
+        svg(aria-hidden="true", focusable="false")
+          use(xlink:href=imgPath + "#" + name)
+  else if self
+    svg(
+      class="icon icon-" + name,
+      aria-hidden="true",
+      focusable="false"
+    )&attributes(attributes)
+      use(xlink:href= imgPath + "#" + name)
+  else if ext
+    img(
+      class="icon icon-" + name,
+      aria-hidden="true",
+      focusable="false",
+      src= externalImgPath + name + '.svg'
+    )&attributes(attributes)
   else
     span(class="icon icon-" + name)&attributes(attributes)
       svg(aria-hidden="true", focusable="false")

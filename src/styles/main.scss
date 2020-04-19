@@ -65,7 +65,9 @@
 @import '../modules/flag/flag';
 @import '../modules/icon/icon';
 @import '../modules/form/form';
+@import '../modules/form/inputbox';
 @import '../modules/form/input';
+@import '../modules/form/select';
 @import '../modules/messengers/messengers';
 @import '../modules/pagination/pagination';
 @import '../modules/swiper/swiper';
@@ -88,6 +90,7 @@
 @import '06-components/components.logo';
 @import '06-components/components.map';
 @import '06-components/components.top-search';
+@import '06-components/components.widgets';
 @import '06-components/components.header';
 @import '../templates/components/**/*.scss';
 // @import '06-components/components.header-menu';

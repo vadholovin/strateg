@@ -1,0 +1,33 @@
+.posts
+  .container
+    +grid().layout-with-aside
+      +col({md: 8}).layout__main-col
+
+      +col({md: 4}).layout__aside-col
+        .sidebar
+          .sidebar-widget
+            +form().search-form#searchform(role="search" method='get' action='/')
+              +inputbox
+                +label.hidden-visually(for='search-input') Искать
+                +input-wrapper
+                  +input.input--search(
+                    type="search"
+                    name="s"
+                    id="search-input"
+                    placeholder="Поиск статей..."
+                    required
+                  )
+                button.btn-search(type='submit')
+                  span.hidden-visually Поиск
+                  +icon('search', '', true)(width='13' height='13')
+
+          .sidebar-widget
+            h6 Описание кейса
+
+          .sidebar-widget
+            h6 Зказчик
+
+          .sidebar-widget
+            h6 Информация
+
+

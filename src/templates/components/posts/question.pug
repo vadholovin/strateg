@@ -2,29 +2,36 @@
   .container
     +grid().layout-with-aside
       +col({md: 8}).layout__main-col
-        .case
-          .case-content
-            .case-label Кейсы
+        .question
+          .question-content
+            .question__head
+              h1.question__heading Проблемы с НДС, налоговая требует 40 млн. рублей
+              .question__meta Вопрос от пользователя:
+                a(href="")
+                  +icon('user-o', 'stroked')
+                  | Михаил
 
-            h2.case-title Исходная задача
-            .case-text.content-zone
+            h2.question-title Вопрос:
+            .question-text.content-zone
               p.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id porta nibh venenatis cras sed felis eget velit. Non enim praesent elementum facilisis leo vel fringilla est ullamcorper. Interdum velit laoreet id donec. Rhoncus dolor purus non enim praesent elementum facilisis leo vel. Sit amet nulla facilisi morbi. Ac odio tempor orci dapibus ultrices.
 
-            h2.case-title Работа наших специалистов
-            .case-text.content-zone
+            h2.question-title.question-title--accent Ответ специалиста:
+            .question-text.content-zone
               p.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id porta nibh venenatis cras sed felis eget velit. Non enim praesent elementum facilisis leo vel fringilla est ullamcorper. Interdum velit laoreet id donec. Rhoncus dolor purus non enim praesent elementum facilisis leo vel. Sit amet nulla facilisi morbi. Ac odio tempor orci dapibus ultrices.
 
-            h2.case-title Результат
-            .case-text.content-zone
+            h2.question-title Результат
+            .question-text.content-zone
               p Арест с имущества Клиента был снят, как и запрет на выезд за границу.
                 
-          .case-foot.post-foot
+          .question-foot.post-foot
             .post-tags
-              .post-tags__title Категория:
+              .post-tags__title Тэги:
               .post-tags__list
-                a.post-tag(href="") Строительство
+                a.post-tag(href="") Бизнес;
+                a.post-tag(href="") Долги;
+                a.post-tag(href="") Налоги;
 
       +col({md: 4}).layout__aside-col
         .sidebar
@@ -37,7 +44,7 @@
                     type="search"
                     name="s"
                     id="search-input"
-                    placeholder="Кейсы какой отрасли вас интересуют?"
+                    placeholder="Поиск вопроса..."
                     required
                   )
                 button.btn-search(type='submit')
@@ -45,23 +52,16 @@
                   +icon('search', '', true)(width='13' height='13')
 
           .sidebar-widget
-            h6 Описание кейса
-            .case-short-desc.
-              Lorem ipsum is placeholder text commonly 
-              used in the graphic, print, and publishing 
-              industries for previewing layouts 
-              and visual mockups.
+            h6 оТВЕЧАЕТ
+            .answer-author.flag
+              .flag__img
+                img(src="assets/img/content/question-img.jpg", alt="")
+              .flag__body
+                .answer-author__title Елена Баулина
+                .answer-author__subtitle Старший юрист
+                hr
+                a.answer-author__total(href='') 55 ответов на сайте
 
-          .sidebar-widget
-            h6 Заказчик
-            .case-customer Строительная компания “ПИК”
-            a.case-customer-link(href="") Читать отзыв ...
-
-          .sidebar-widget
-            h6 Информация
-            a.case-link(href="" target='_blank')
-              | Дело №2030329-329
-              +icon('external-link-o', 'stroked', true)(width='14' height='14')
               
     include ../form-blocks/form-block-post
     include ../related/related

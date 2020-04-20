@@ -4,7 +4,10 @@
 
 .questions {
   padding-top: 100px;
-  padding-bottom: 120px;
+
+  &--home {
+    padding-bottom: 120px;
+  }
 }
 
 .questions-slider {
@@ -13,6 +16,7 @@
 }
 
 .questions-slide {
+  height: auto;
   box-shadow: $global-shadow;
 }
 

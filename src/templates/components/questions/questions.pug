@@ -1,4 +1,4 @@
-section.questions
+section(class=(bodyClass == 'home-page') ? 'questions questions--home' : 'questions')
   .container
     .questions__heading.heading
       .heading__module
@@ -13,15 +13,18 @@ section.questions
         .swiper-wrapper
           each item, index in [1,1,1,1,1]
             .swiper-slide.questions-slide
-              .questions-tile
+              a.questions-tile(href="")
                 .questions-tile__body
-                  h3.questions-tile__title Можно ли остановить начисление пени и задолженность?
+                  if index%2
+                    h3.questions-tile__title Можно ли остановить начисление пени и задолженность?
+                  else
+                    h3.questions-tile__title Можно ли остановить?
                   p.questions-tile__text.
                     Очевидно, что Юпитер гасит вращательный 
                     зенит. Годовой параллакс последовательно 
                     представляет собой непреложный перигей. [...]
                 .questions-tile__foot
-                  a.questions-tile__link(href="" target='_blank') Читать ответ
+                  .questions-tile__link Читать ответ
 
       .swiper-button-prev.swiper-button-lg
         +icon('chevron-left-slim-o', 'stroked')

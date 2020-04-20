@@ -1,6 +1,6 @@
-// В этом файле должны быть стили для БЭМ-блока pagination, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+/* ==========================================================================
+   #PAGINATION
+   ========================================================================== */
 
 
 .pagination {
@@ -11,10 +11,6 @@
   flex-wrap: wrap;
   margin-top: 1rem;
   margin-bottom: 1rem;
-
-  &:last-child {
-    margin-bottom: 120px;
-  }
 
   &__item {
     display: block;

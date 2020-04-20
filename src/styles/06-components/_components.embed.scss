@@ -1,0 +1,113 @@
+/* ==========================================================================
+   #EMBED
+   ========================================================================== */
+
+.embed {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: percentage(9 / 16); // по умолчанию ожидается вставка в формате 16/9
+  }
+
+  // embed,
+  // object,
+  iframe,
+  video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+
+
+  &--4-3 {
+    // модификатор на случай вставки 4/3
+
+    &::before {
+      padding-top: percentage(3 / 4);
+    }
+  }
+}
+
+.video {
+  background-color: #000000;
+}
+
+.video__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video__link::before {
+  @include pseudo(true);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #222;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.video__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: none;
+  width: 80px;
+  height: 80px;
+  font-size: 80px;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+  @include basic-transition((color));
+
+  .icon {
+    vertical-align: baseline;
+  }
+}
+
+.video__button:focus {
+  outline: none;
+}
+
+.video:hover .video__button,
+.video__button:focus .video__button {
+  color: $color-primary;
+}
+
+/* Enabled */
+
+.video--enabled {
+  cursor: pointer;
+}
+
+.video--enabled .video__button {
+  display: block;
+}

@@ -2,13 +2,6 @@
    #POST
    ========================================================================== */
 
-.post {
-
-  > :last-child {
-    margin-bottom: 120px;
-  }
-}
-
 .post-thumb {
   position: relative;
   width: 100%;
@@ -78,9 +71,10 @@
   display: inline-flex;
 }
 
-.post-tags__list a {
+.post-tag {
   margin-right: 10px;
   color:$color-body-secondary;
+  font-style: italic;
   text-decoration: none;
 
   @include on-event {
@@ -200,4 +194,106 @@
   .btn {
     margin-top: 40px;
   }
+}
+
+/* #POST-RELATED
+   ========================================================================== */
+
+.post-related__title {
+  margin-bottom: 50px;
+  font-weight: 600;
+  font-size: rem(22px);
+  line-height: 130%;
+}
+
+.post-related-slider {
+  padding-bottom: 20px;
+}
+
+.post-related-slide {
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
+}
+
+.post-related-tile {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  padding: 30px;
+  background-color: #fff;
+  text-decoration: none;
+  @include basic-transition((background-color));
+
+  &:hover {
+    background-color: $color-bg-brand;
+
+    hr {
+      border-color: $color-body;
+    }
+
+    .post-related-tile__text,
+    .post-related-tile__link {
+      color: $color-body;
+    }
+  }
+
+  @include mq($from: xl) {
+    padding-right: 60px;
+  }
+}
+
+.post-related-tile__body {
+  margin-bottom: auto;
+}
+
+.post-related-tile__title {
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+}
+
+.post-related-tile__text {
+  font-size: 14px;
+  color: $color-body-secondary;
+}
+
+.post-related-tile hr {
+  height: 0;
+  border: 0;
+  border-top: 1px solid #D3D3D3;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  opacity: 0.5;
+}
+
+.post-related-tile__link {
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-primary;
+}
+
+.post-related-slider__wrap {
+
+  .swiper-button-prev {
+    left: -50px;
+
+    @include mq($from: xl) {
+      left: -110px;
+    }
+  }
+
+  .swiper-button-next {
+    right: -50px;
+
+    @include mq($from: xl) {
+      right: -110px;
+    }
+  }
+}
+
+.post-related-slide {
+  height: auto;
 }

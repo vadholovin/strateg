@@ -1,9 +1,8 @@
 extends ../layouts/default
 
 block variables
-  - var pageTitle = 'Кейс-1203032'
+  - var pageTitle = 'Отзыв'
   - var bodyClass = 'inner-page'
-  - var pageName = 'cases-single'
 
 block content
   include ../components/header/header
@@ -12,5 +11,5 @@ block content
       img.dots.dots-top.dots-left(src="assets/img/content/dots-rectangle-dark.svg", alt="")
       +breadcrumbs(['Главная', 'Раздел', 'Страница'])
     .inner-layout
-      include ../components/posts/case
+      include ../components/posts/review
   include ../components/footer/footer

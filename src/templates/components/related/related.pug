@@ -1,0 +1,27 @@
+.post-related
+  .container
+    if pageName == 'cases-single'
+      h2.post-related__title Похожие кейсы
+    else
+      h2.post-related__title Похожие вопросы
+    .post-related-slider__wrap.swiper-block#post-related-slider-wrap
+      .post-related-slider.swiper-container#post-related-slider
+        .swiper-wrapper
+          each item, index in [1,1,1,1,1]
+            .swiper-slide.post-related-slide
+              a.post-related-tile(href="")
+                .post-related-tile__body
+                  if index%2
+                    h3.post-related-tile__title Cпасти репутацию и имущество клиента стоимостью 70 млн руб.
+                  else
+                    h3.post-related-tile__title Cпасти репутацию
+                  p.post-related-tile__text.
+                    Как избежать субсидиарной ответственности после продажи бизнеса. [...]
+                hr
+                .post-related-tile__foot
+                  .post-related-tile__link читать полностью
+
+      .swiper-button-prev.swiper-button-lg
+        +icon('chevron-left-slim-o', 'stroked')
+      .swiper-button-next.swiper-button-lg
+        +icon('chevron-right-slim-o', 'stroked')

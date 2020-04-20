@@ -1,0 +1,42 @@
+.posts
+  .container
+    +grid().layout-with-aside
+      +col({md: 8}).layout__main-col
+        .review
+          .review-content
+            .review-label отзывы
+            h1.review-title.
+              Отзыв по решению проблемы "Cпасти репутацию и имущество 
+              Клиента стоимостью 70 млн руб."
+            .review-text.content-zone
+              p.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id porta nibh venenatis cras sed felis eget velit. Non enim praesent elementum facilisis leo vel fringilla est ullamcorper. Interdum velit laoreet id donec. Rhoncus dolor purus non enim praesent elementum facilisis leo vel. Sit amet nulla facilisi morbi. Ac odio tempor orci dapibus ultrices. Aliquam purus sit amet luctus. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur. Libero id faucibus nisl tincidunt eget nullam. Urna neque viverra justo nec ultrices dui sapien.
+
+            .review-video.embed.video.js-video
+              a.video__link(href='https://youtu.be/uRQEC7DiPtI')
+                picture
+                  source(srcset='https://i.ytimg.com/vi_webp/uRQEC7DiPtI/maxresdefault.webp', type='image/webp')
+                  img.video__media(src='https://i.ytimg.com/vi/uRQEC7DiPtI/maxresdefault.jpg', alt='')
+              button.video__button(type='button', aria-label='Запустить видео')
+                +icon('play-o', 'stroked', true)
+
+                
+          .case-foot.post-foot
+            .post-tags
+              .post-tags__title Категория:
+              .post-tags__list
+                a.post-tag(href="") Строительство
+
+      +col({md: 4}).layout__aside-col
+        .sidebar
+          .sidebar-widget
+            h6 Решенная задача
+            .case-short-desc.
+              Cпасти репутацию и имущество Клиента стоимостью 70 млн руб.
+            a.case-doc.js-img-pop(href="assets/img/content/doc.png")
+              img(src="assets/img/content/doc.png", alt="")
+
+          .sidebar-widget
+            h6 Заказчик
+            .case-customer Строительная компания “ПИК”
+          a.btn.btn--primary.btn--wide(href="") Смотеть все кейсы

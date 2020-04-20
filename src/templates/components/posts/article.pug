@@ -1,0 +1,108 @@
+.posts
+  .container
+    +grid().layout-with-aside
+      +col({md: 8}).layout__main-col
+        .post
+          .post-content
+            figure.post-thumb
+              img(src="assets/img/content/post-img.jpg", alt="")
+            .post-head
+              .post-cats
+                a.post-cat(href="") Помощь бизнесу
+                a.post-cat(href="") Налоги
+              h1.post-title Lorem ipsum is placeholder text commonly used in the graphic
+            .content-zone
+              p.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id porta nibh venenatis cras sed felis eget velit. Non enim praesent elementum facilisis leo vel fringilla est ullamcorper. Interdum velit laoreet id donec. Rhoncus dolor purus non enim praesent elementum facilisis leo vel. Sit amet nulla facilisi morbi. Ac odio tempor orci dapibus ultrices. Aliquam purus sit amet luctus. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur. Libero id faucibus nisl tincidunt eget nullam. Urna neque viverra justo nec ultrices dui sapien.
+
+              p.
+                Tincidunt dui ut ornare lectus sit amet est placerat. Nunc pulvinar sapien et ligula. Dui sapien eget mi proin sed. Commodo ullamcorper a lacus vestibulum sed arcu non odio. Id donec ultrices tincidunt arcu. Purus sit amet volutpat consequat mauris nunc congue. Pharetra sit amet aliquam id diam maecenas. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Neque egestas congue quisque egestas diam in. Maecenas pharetra convallis posuere morbi leo. Et tortor consequat id porta nibh venenatis cras. Donec et odio pellentesque diam. Ligula ullamcorper malesuada proin libero nunc consequat. Rhoncus dolor purus non enim praesent elementum. Amet mattis vulputate enim nulla aliquet. Et pharetra pharetra massa massa ultricies mi quis hendrerit. Nec sagittis aliquam malesuada bibendum.
+
+              p.
+                Integer malesuada nunc vel risus commodo viverra maecenas accumsan. Odio euismod lacinia at quis risus. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Amet est placerat in egestas erat imperdiet sed. Massa ultricies mi quis hendrerit dolor magna. Ultricies lacus sed turpis tincidunt id aliquet risus feugiat. Viverra suspendisse potenti nullam ac tortor vitae. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. At quis risus sed vulputate odio ut enim. Sit amet tellus cras adipiscing enim eu turpis egestas pretium. Nisl tincidunt eget nullam non nisi est sit amet facilisis. Mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Amet justo donec enim diam vulputate ut. In fermentum posuere urna nec tincidunt praesent. Quam nulla porttitor massa id neque aliquam. Porta nibh venenatis cras sed. Id cursus metus aliquam eleifend. Ac auctor augue mauris augue neque gravida in fermentum. Egestas pretium aenean pharetra magna ac placerat.
+          .post-foot
+            .post-tags
+              .post-tags__title Тэги:
+              .post-tags__list
+                a.post-tag(href="") Бизнес;
+                a.post-tag(href="") Долги;
+                a.post-tag(href="") Налоги;
+          if pageTitle == 'Статья'
+            .comments-area
+              .comments-head
+                h5.comments-title 21 комментариев
+              ol.comments-list
+                li.comment
+                  article.comment-content.flag.flag--top
+                    .flag__img
+                      img(src="assets/img/content/comment-img.jpg", alt="")
+                    .flag__body
+                      .comment-head
+                        .comment-author Jack Richer
+                        .comment-meta Март 29, 2020 - 21:09 PM
+                      .comment-body.content-zone
+                        p.
+                          Integer malesuada nunc vel risus commodo viverra maecenas accumsan. Odio euismod lacinia at quis risus.
+                        p.
+                          Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Amet est placerat in egestas erat imperdiet sed. Massa ultricies mi quis hendrerit dolor magna.
+                  ol.comments-list.comments-list--children
+                    li.comment
+                      article.comment-content.flag.flag--top
+                        .flag__img
+                          img(src="assets/img/content/comment-img.jpg", alt="")
+                        .flag__body
+                          .comment-head
+                            .comment-author Jack Richer
+                            .comment-meta Март 29, 2020 - 21:09 PM
+                          .comment-body.content-zone
+                            p.
+                              Integer malesuada nunc vel risus commodo viverra maecenas accumsan. Odio euismod lacinia at quis risus.
+                
+                li.comment
+                  article.comment-content.flag.flag--top
+                    .flag__img
+                      img(src="assets/img/content/comment-img.jpg", alt="")
+                    .flag__body
+                      .comment-head
+                        .comment-author Jack Richer
+                        .comment-meta Март 29, 2020 - 21:09 PM
+                      .comment-body.content-zone
+                        p.
+                          Integer malesuada nunc vel risus commodo viverra maecenas accumsan. Odio euismod lacinia at quis risus. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Amet est placerat in egestas erat imperdiet sed. Massa ultricies mi quis hendrerit dolor magna.
+
+              .comments-head
+                h5.comments-title Оставить комментарий
+              +form().comments-form
+                .form__row
+                  +inputbox
+                    +label.hidden-visually(for='form-name') Ваше полное имя
+                    +input-wrapper
+                      +input(
+                        type='tel'
+                        name='form-name'
+                        id='form-name'
+                        autocomplete='off'
+                        placeholder="Ваше полное имя*")
+                  
+                  +inputbox
+                    +label.hidden-visually(for='form-phone') E-mail
+                    +input-wrapper
+                      +input(
+                        type='email'
+                        name='form-email'
+                        id='form-email'
+                        placeholder="E-mail*")
+                
+                +inputbox
+                  +label.hidden-visually(for='form-message') Ваш комментарий
+                  +input-wrapper
+                    +textarea(
+                      name='form-message'
+                      id='form-message'
+                      placeholder="Ваш комментарий"
+                    )
+
+                button.btn.btn--primary.btn--lg(type='submit') Отправить сообщение
+
+      +col({md: 4}).layout__aside-col
+        include ./sidebar

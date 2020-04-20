@@ -55,8 +55,8 @@
 
 // 06. Components
 @import 'swiper/css/swiper.min.css';
-// @import 'tippy.js/dist/tippy.css';
-// @import 'tippy.js/themes/light.css';
+@import 'tippy.js/dist/tippy.css';
+@import 'tippy.js/themes/light.css';
 // @import 'nouislider/distribute/nouislider.min.css';
 @import 'magnific-popup/dist/magnific-popup.css';
 @import '../modules/breadcrumbs/breadcrumbs';
@@ -71,6 +71,7 @@
 @import '../modules/messengers/messengers';
 @import '../modules/pagination/pagination';
 @import '../modules/swiper/swiper';
+@import '../modules/tooltips/tooltips';
 // @import 'slick-carousel/slick/slick.scss';
 // @import '06-components/components.slider';
 // @import '06-components/components.breadcrumbs';

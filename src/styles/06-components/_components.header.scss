@@ -233,5 +233,16 @@
 
   .header__main-btn {
     display: inline-block;
+    width: 44px;
+    height: 44px;
+    color: $color-danger;
+    text-align: center;
+    cursor: pointer;
+
+    @include basic-transition((color));
+    @include on-event {
+      outline: none;
+      color: $color-primary;
+    }
   }
 }

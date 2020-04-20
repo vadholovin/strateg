@@ -1,7 +1,7 @@
 .posts
   .container
-    +grid().posts-grid-with-aside
-      +col({md: 8}).posts__main-cell
+    +grid().layout-with-aside
+      +col({md: 8}).layout__main-col
         +grid().posts__grid
           each item in [1,2,3,4,5,6]
             +col({md: 6}).posts__cell
@@ -31,5 +31,5 @@
           +pagination-item('', '/next', '', 'arrow', 'next')
             +icon('chevron-right', 'stroked')
 
-      +col({md: 4}).posts__aside-cell
+      +col({md: 4}).layout__aside-col
         include ./sidebar

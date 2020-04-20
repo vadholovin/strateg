@@ -286,3 +286,13 @@ jQuery(function ($) {
     heightMargin: 16,
   });
 });
+
+
+/**
+ * TOOLTIPS
+ */
+document.addEventListener('DOMContentLoaded', function() {
+  tippy('[data-tippy-content]', {
+    theme: 'light',
+  });
+});

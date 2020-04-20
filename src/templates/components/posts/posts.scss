@@ -2,6 +2,17 @@
    #POSTS
    ========================================================================== */
 
+.layout-with-aside {
+  margin-left: -40px;
+  margin-right: -40px;
+
+  .layout__main-col,
+  .layout__aside-col  {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
 .posts__grid {
   margin-top: -50px;
   
@@ -21,17 +32,6 @@
       padding-left: 25px;
       padding-right: 25px;
     }
-  }
-}
-
-.posts-grid-with-aside {
-  margin-left: -40px;
-  margin-right: -40px;
-
-  .posts__main-cell,
-  .posts__aside-cell  {
-    padding-left: 40px;
-    padding-right: 40px;
   }
 }
 
@@ -61,7 +61,8 @@
     color: $color-primary;
   }
 
-  .card-comments {
+  .card-comments,
+  .card-date {
     font-weight: 500;
     font-size: rem(12px);
     color: $color-body-secondary;

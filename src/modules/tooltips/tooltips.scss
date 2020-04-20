@@ -2,24 +2,10 @@
    #TOOLTIPS
    ========================================================================== */
 
-.tooltips {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  width: 15px;
-  height: 15px;
-  margin-left: 8px;
-  font-size: 15px;
-  line-height: 0;
-
-  @include basic-transition((color));
-
-  @include on-event {
-    outline: none;
-    color: $color-secondary;
-  }
-}
-
 .tippy-box .tippy-content {
   font-size: 13px;
+}
+
+.tippy-box {
+  padding: 12px;
 }

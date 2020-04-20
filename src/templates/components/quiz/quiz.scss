@@ -4,10 +4,10 @@
 
 .quiz {
   background-color: $color-bg-dark;
+  overflow: hidden;
   @include background;
 
   .container {
-    min-height: 744px;
     padding-top: 80px;
   }
 }
@@ -22,7 +22,8 @@
 
 .quiz__cell:first-child {
   padding-top: 40px;
-  padding-bottom: 95px;
+  // display: flex;
+  // flex-direction: column;
 }
 
 .quiz__cell:last-child {
@@ -32,11 +33,17 @@
 
 .quiz-picture {
   margin-top: auto;
+  z-index: 5;
 }
 
 .quiz-picture__caption {
   right: 0;
   color: #fff;
+}
+
+.b-quiz__btn {
+  margin-top: 60px;
+  margin-bottom: 95px;
 }
 
 .b-quiz-progress {
@@ -104,10 +111,6 @@
   &.is-active {
     color: $color-primary;
   }
-}
-
-.b-quiz-content {
-  margin-bottom: 60px;
 }
 
 .b-quiz-module {
@@ -187,7 +190,8 @@
   position: relative;
   width: 100%;
   max-width: 600px;
-  padding-top: 40px;
+  margin-bottom: 25px;
+  padding-top: 30px;
   padding-left: 88px;
   padding-right: 88px;
   color: #6F6F6F;
@@ -236,7 +240,7 @@
 
 .b-quiz-result__text:nth-child(2),
 .b-quiz-result__text:nth-child(3) {
-  top: 5%;
+  top: 0%;
 }
 
 .b-quiz-result__text:nth-child(1) {
@@ -255,12 +259,68 @@
   left: 70%;
 }
 
+.b-quiz-form__wrap {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &::before {
+    @include pseudo(true);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 200vw;
+    transform: translateX(-50%);
+    background-color: $color-bg-dark;
+    z-index: 1;
+  }
+}
 
 .b-quiz-form {
+  position: relative;
+  z-index: 2;
+
+  .form__row {
+    margin-top: -24px;
+    margin-bottom: 24px;
+
+    > * {
+      margin-top: 24px;
+    }
+  }
 
   .inputbox {
     width: 100%;
     max-width: 240px;
     margin-right: 20px;
+  }
+
+  .input {
+    background-color: transparent;
+    color: #fff;
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+
+  .btn {
+    height: 50px;
+    font-weight: 500;
+    font-size: rem(13px);
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .form__note {
+    color: $color-body-secondary;
+    
+    a {
+      text-decoration: underline;
+
+      @include on-event{
+        text-decoration: none;
+      }
+    }
   }
 }

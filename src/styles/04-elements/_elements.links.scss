@@ -5,11 +5,11 @@
 a {
   @include basic-transition((color, opacity));
   @include on-event {
-    color: $color-dark;
+    color: inherit;
     text-decoration: none;
   }
 
-  color: $color-dark;
+  color: inherit;
 }
 
 [href^=tel] {

@@ -40,8 +40,8 @@
 }
 
 .card-meta,
-.card-comments {
-  margin-bottom: 24px;
+.card-comments,
+.card-date {
   line-height: 1.2;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -51,12 +51,15 @@
   }
 }
 
+.card-meta {
+  margin-bottom: 24px;
+}
+
 .card-meta .icon {
   font-size: 14px;
 }
 
 .card-comments {
-  margin: 0;
 
   .icon {
     font-size: 12px;

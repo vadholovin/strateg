@@ -8,6 +8,7 @@
   "dependencies": {
     "@popperjs/core": "^2.1.1",
     "cleave.js": "^1.5.8",
+    "countup.js": "^2.0.4",
     "flickity": "^2.2.1",
     "inputmask": "^5.0.3",
     "ismobilejs": "^1.0.3",

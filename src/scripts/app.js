@@ -31,14 +31,14 @@ jQuery(function ($) {
  */
 /*
 (function ($) {
-  $('.js-menu-toggler').click(function (e) { 
+  $('.js-menu-toggler').click(function (e) {
     e.preventDefault();
     $('.mobile-nav').toggleClass('is-open');
     $('.page-mask').toggleClass('is-visible');
     $('body').toggleClass('is-nav-mobile-open');
   });
 
-  $('.js-mobile-nav-close, .js-page-mask').click(function (e) { 
+  $('.js-mobile-nav-close, .js-page-mask').click(function (e) {
     e.preventDefault();
     $('.mobile-nav').removeClass('is-open');
     $('.page-mask').removeClass('is-visible');
@@ -175,20 +175,29 @@ document.addEventListener('DOMContentLoaded', function() {
     slidesPerView: 3,
     spaceBetween: 26,
     direction: 'vertical',
+    touchRatio: 0.2,
+    slideToClickedSlide: true,
+    // centeredSlides: true,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
     keyboard: {
       enabled: true,
     },
     breakpoints: {
       320: {
+        slidesPerView: 3,
         spaceBetween: 8
       },
       1024: {
+        slidesPerView: 3,
         spaceBetween: 26
       }
     },
   });
 
   const resultsSlider = new Swiper('#results-slider', {
+    loop: true,
     effect: 'fade',
     fadeEffect: {
       crossFade: true
@@ -201,7 +210,6 @@ document.addEventListener('DOMContentLoaded', function() {
       swiper: resultsThumbs
     }
   });
-  
 });
 
 
@@ -209,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function() {
  * SERVICES MORE BUTTON
  */
 jQuery(function ($) {
-  $('.js-services-more').click(function (e) { 
+  $('.js-services-more').click(function (e) {
     e.preventDefault();
     const button = $(this);
     const block = button.parents('.services-tile').find('.js-services-body');
@@ -278,10 +286,10 @@ jQuery(function ($) {
         progressStep = 33.333333,
         status = 'is-active';
 
-  btnNext.click(function (e) { 
+  btnNext.click(function (e) {
     e.preventDefault();
     let step = btnNext.data('quiz-step');
-    
+
     if (step == 1 && $('[name=quiz-debt]').is(':checked')) {
       module_1.removeClass(status).next().addClass(status);
       btnNext.data('quiz-step', 2);
@@ -289,7 +297,7 @@ jQuery(function ($) {
       progressText.next().addClass(status);
       progressFill.css('transform', 'translateX(' + progressStep*2 + '%)');
     }
-    
+
     if (step == 2 && $('[name=quiz-debt-object]').is(':checked')) {
       module_2.removeClass(status).next().addClass(status);
       progress.hide();
@@ -332,55 +340,55 @@ jQuery(function ($) {
   if ($('.js-video').length) {
     function findVideos() {
       let videos = document.querySelectorAll('.js-video');
-    
+
       for (let i = 0; i < videos.length; i++) {
         setupVideo(videos[i]);
       }
     }
-    
+
     function setupVideo(video) {
       let link = video.querySelector('.video__link');
       let media = video.querySelector('.video__media');
       let button = video.querySelector('.video__button');
       let id = parseMediaURL(media);
-    
+
       video.addEventListener('click', () => {
         let iframe = createIframe(id);
-    
+
         link.remove();
         button.remove();
         video.appendChild(iframe);
       });
-    
+
       link.removeAttribute('href');
       video.classList.add('video--enabled');
     }
-    
+
     function parseMediaURL(media) {
       let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
       let url = media.src;
       let match = url.match(regexp);
-    
+
       return match[1];
     }
-    
+
     function createIframe(id) {
       let iframe = document.createElement('iframe');
-    
+
       iframe.setAttribute('allowfullscreen', '');
       iframe.setAttribute('allow', 'autoplay');
       iframe.setAttribute('src', generateURL(id));
       iframe.classList.add('video__media');
-    
+
       return iframe;
     }
-    
+
     function generateURL(id) {
       let query = '?rel=0&showinfo=0&autoplay=1';
-    
+
       return 'https://www.youtube.com/embed/' + id + query;
     }
-    
+
     findVideos();
   }
 });

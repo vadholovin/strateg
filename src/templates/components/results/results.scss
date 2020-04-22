@@ -7,7 +7,6 @@
   padding-bottom: 680px;
   @include background;
   background-color: $color-bg-dark;
-  background-image: url('../assets/img/backgrounds/bg-2.png');
 }
 
 .results-block {
@@ -19,6 +18,25 @@
   top: 0;
   right: 0;
   transform: translate(58%, -60%);
+}
+
+.results-slider__wrap {
+  position: relative;
+  padding-right: 33.33333%;
+}
+
+.results-slider {
+  width: calc(100% - 15px);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.results-thumbs-slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: calc(33.33333% - 15px);
 }
 
 .results-slide {
@@ -120,12 +138,16 @@
   }
 }
 
+.results-thumbs-slider {
+  max-height: 100%;
+}
+
 .results-thumb {
   padding: 25px 30px;
   background-color: #fff;
   overflow: hidden;
 
-  &.swiper-slide-active {
+  &.swiper-slide-thumb-active {
     background-color: $color-bg-brand;
   }
 }

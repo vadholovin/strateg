@@ -89,6 +89,7 @@
 .questions-slider__wrap {
 
   .swiper-button-prev {
+    top: 40%;
     left: -50px;
 
     @include mq($from: xl) {
@@ -97,6 +98,7 @@
   }
 
   .swiper-button-next {
+    top: 40%;
     right: -50px;
 
     @include mq($from: xl) {

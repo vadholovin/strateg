@@ -12,49 +12,45 @@ section.results
 
     .results-block
       img.results-block__img-top(src="assets/img/content/dots-angle.svg", alt="")
-      +grid().results-block__grid
-        +col({md: 8}).results-block__cell
-          .results-slider.swiper-container#results-slider
-            .swiper-wrapper
-              each item, index in [1, 2, 3]
-                .swiper-slide.results-slide
-                  .results-slide__body
-                    h3.results-slide__title.
-                      Помогли избежать налоговых отчислений<br>
-                      на сумму в 30 млн. рублей
-                    h4.results-slide__subtitle Задача
-                    p.results-slide__desc.
-                      Процедура выездной проверки началась до банкротства. Предполагаемая сумма начислений 
-                      30 млн. Осуществлялось сопровождение полное юридическое и бухгалтерское сопровождение 
-                      проверки в банкротстве, параллельно форсировалась сама процедура банкротства.
-                    h4.results-slide__subtitle Решение
-                    p.results-slide__desc.
-                      Банкротство завершено до вступления акта выездной налоговой проверки в законную силу.
-                      Налоговая не являлась стороной в деле о банкротстве и как следствие отсутствуют основания 
-                      для привлечения к субсидиарной ответственности бывшего руководителя на сумму указанную 
-                      в акте выездной налоговой проверки
-                  hr
-                  .results-slide__foot
-                    a.results-slide__btn.btn.btn--primary(href='') Узнать подробности
-                    .results-slide__foot-info
-                      .results-slide__foot-text Дело: А40-244711/2017
-                      .results-slide__foot-text Заказчик: ООО «Союзпромтекстиль»
-
-            .swiper-buttons
-              .swiper-button-prev
-                +icon('chevron-left-o', 'stroked')
-              .swiper-button-next
-                +icon('chevron-right-o', 'stroked')
-
-        +col({md: 4}).results-block__cell
-          .results-slider.swiper-container#results-thumbs
-            .swiper-wrapper
-              each item, index in [1, 2, 3]
-                .swiper-slide.results-thumb
-                  .results-thumb__title ООО «Союзпромтекстиль»
-                  .results-thumb__desc.
-                    Помогли избежать налоговых отчислений 
+      .results-slider__wrap
+        .results-slider.swiper-container#results-slider
+          .swiper-wrapper
+            each item, index in [1, 2, 3, 4]
+              .swiper-slide.results-slide
+                .results-slide__body
+                  h3.results-slide__title.
+                    Помогли избежать налоговых отчислений<br>
                     на сумму в 30 млн. рублей
-                  .results-thumb__date 02.2020
+                  h4.results-slide__subtitle Задача
+                  p.results-slide__desc.
+                    Процедура выездной проверки началась до банкротства. Предполагаемая сумма начислений
+                    30 млн. Осуществлялось сопровождение полное юридическое и бухгалтерское сопровождение
+                    проверки в банкротстве, параллельно форсировалась сама процедура банкротства.
+                  h4.results-slide__subtitle Решение
+                  p.results-slide__desc.
+                    Банкротство завершено до вступления акта выездной налоговой проверки в законную силу.
+                    Налоговая не являлась стороной в деле о банкротстве и как следствие отсутствуют основания
+                    для привлечения к субсидиарной ответственности бывшего руководителя на сумму указанную
+                    в акте выездной налоговой проверки
+                hr
+                .results-slide__foot
+                  a.results-slide__btn.btn.btn--primary(href='') Узнать подробности
+                  .results-slide__foot-info
+                    .results-slide__foot-text Дело: А40-244711/2017
+                    .results-slide__foot-text Заказчик: ООО «Союзпромтекстиль»
 
+          .swiper-buttons
+            .swiper-button-prev
+              +icon('chevron-left-o', 'stroked')
+            .swiper-button-next
+              +icon('chevron-right-o', 'stroked')
+
+        .results-thumbs-slider.swiper-container#results-thumbs
+          .swiper-wrapper
+            each item, index in [1, 2, 3, 4]
+              .swiper-slide.results-thumb
+                .results-thumb__title ООО «Союзпромтекстиль»
+                .results-thumb__desc.
+                  Помогли избежать налоговых отчислений
+                  на сумму в 30 млн. рублей
 

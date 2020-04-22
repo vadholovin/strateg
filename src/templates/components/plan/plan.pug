@@ -1,6 +1,6 @@
 include ./plan.data.pug
 
-section.plan
+section.plan(class=(bodyClass == 'home-page') ? 'plan--home' : '')
   .container
     .plan__heading.heading
       .heading__module

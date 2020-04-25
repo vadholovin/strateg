@@ -1,0 +1,82 @@
+/* ==========================================================================
+   #DROPDOWN
+   ========================================================================== */
+
+.dropdown-wrap {
+  position: relative;
+}
+
+.dropdown {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  // margin-top: 12px;
+  padding: 12px 0;
+  background-color: white;
+  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, .15);
+  opacity: 0;
+  pointer-events: none;
+  // font-size: rem(14px);
+
+  @include basic-transition((opacity));
+
+  $b: &;
+
+  &.is-active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &_position_top {
+    top: auto;
+    bottom: 100%;
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+}
+
+.dropdown--full {
+  width: 100%;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%; // For `<button>`s
+  padding: 8px 16px;
+  clear: both;
+  text-align: inherit; // For `<button>`s
+  white-space: nowrap; // prevent links from randomly breaking onto new lines
+  background-color: transparent; // For `<button>`s
+  border: 0; // For `<button>`s
+  text-decoration: none;
+}
+
+.dropdown-btn {
+  @extend .input;
+
+  position: relative;
+  display: block;
+  max-width: 100%;
+  padding-right: 40px;
+  appearance: none;
+  text-align: left;
+
+  &::before {
+    @include pseudo(true);
+    width: 9px;
+    height: 5px;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    background-image: url("data:image/svg+xml,%3Csvg width='9' height='5' viewBox='0 0 9 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 0.5L4.5 4L8 0.5' stroke='%23000' stroke-width='1.2'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+
+    @include basic-transition((transform));
+  }
+
+  &.is-active::before {
+    transform: translateY(-50%) rotate(-0.5turn);
+  }
+}

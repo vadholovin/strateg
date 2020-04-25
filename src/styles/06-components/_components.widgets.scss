@@ -26,6 +26,12 @@
   }
 }
 
+.small-post img {
+  width: 125px;
+  height: 80px;
+  object-fit: cover;
+}
+
 .small-post__title {
   margin-bottom: 12px;
   font-weight: normal;
@@ -70,6 +76,20 @@
 
 .cat-item + .cat-item {
   margin-top: 16px;
+}
+
+.cats-dropdown {
+
+  .dropdown-item {
+    padding-left: 25px;
+    font-size: rem(14px);
+    color: $color-body-secondary;
+
+    @include on-event {
+      color: $color-body;
+      background-color: $color-primary;
+    }
+  }
 }
 
 .show-more {

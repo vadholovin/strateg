@@ -1,29 +1,63 @@
 .posts
   .container
-    .top-search
-      .top-search__inner
-        +inputbox.select-inputbox
-          +label.hidden-visually(for='search-filter') Выбрать отрасль
-          +input-wrapper
-            select.select#search-filter(name="")
-              option(value="") Выбрать отрасль
-              option(value="Отрасль-1") Отрасль-1
-              option(value="Отрасль-2") Отрасль-2
+    //- .top-search
+    //-   .top-search__inner
+    //-     +inputbox.select-inputbox
+    //-       +label.hidden-visually(for='search-filter') Выбрать отрасль
+    //-       +input-wrapper
+    //-         select.select#search-filter(name="")
+    //-           option(value="") Выбрать отрасль
+    //-           option(value="Отрасль-1") Отрасль-1
+    //-           option(value="Отрасль-2") Отрасль-2
 
-        +form().search-form#searchform(role="search" method='get' action='/')
-          +inputbox
-            +label.hidden-visually(for='search-input') Искать
-            +input-wrapper
-              +input.input--search(
-                type="search"
-                name="s"
-                id="search-input"
-                placeholder="Кейсы какой отрасли вас интересуют?"
-                required
-              )
-            button.btn-search(type='submit')
-              span.hidden-visually Поиск
-              +icon('search', '', true)(width='13' height='13')
+    //-     +form().search-form#searchform(role="search" method='get' action='/')
+    //-       +inputbox
+    //-         +label.hidden-visually(for='search-input') Искать
+    //-         +input-wrapper
+    //-           +input.input--search(
+    //-             type="search"
+    //-             name="s"
+    //-             id="search-input"
+    //-             placeholder="Кейсы какой отрасли вас интересуют?"
+    //-             required
+    //-           )
+    //-         button.btn-search(type='submit')
+    //-           span.hidden-visually Поиск
+    //-           +icon('search', '', true)(width='13' height='13')
+
+    +grid().posts__grid.posts__grid--top
+      +col({md: 8})
+        +grid().posts__grid
+          each item in [1,2]
+            +col({md: 6}).posts__cell
+              a.post-card.post-card--case.card(href='')
+                figure.card-img-wrap
+                  img.card-img.lozad(data-src='assets/img/content/case-img.jpg', alt="")
+                .card-body
+                  h3.card-title Cпасти репутацию и имущество клиента стоимостью 70 млн руб.
+                  p.card-text Как избежать субсидиарной ответственности после продажи бизнеса. <span class='card-text-ending'>[...]</span>
+                  hr
+                  .card-link читать полностью
+
+      +col({md: 4})
+        .sidebar.sidebar--sm
+          .sidebar-widget
+            .dropdown-wrap.cats-dropdown
+              button.dropdown-btn.js-dropdown-toggle Категории
+              +dropdown.dropdown--full
+                a.dropdown-item(href='#') Банкротство
+                a.dropdown-item(href='#') Помощь бизнесу
+                a.dropdown-item(href='#') Арест имущества
+
+          .sidebar-widget
+            .tags
+              a(href="") #Помощь бизнесу
+              a(href="") #Субсидарная ответственность
+              a(href="") #Налоги
+              a(href="") #Банкротство
+              a(href="") #Арест имущества
+              a(href="") #Субсидарная ответственность
+              a(href="") #Помощь бизнесу
 
     +grid().posts__grid
       each item in [1,2,3,4,5,6,7,8,9]

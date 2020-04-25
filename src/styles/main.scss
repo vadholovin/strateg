@@ -30,7 +30,7 @@
 @import '02-tools/tools.triangle';
 
 // 03. Generic
-@import '03-generic/generic.fonts';
+// @import '03-generic/generic.fonts';
 @import '03-generic/generic.box-sizing';
 @import 'normalize.css/normalize';
 @import '03-generic/generic.reset';
@@ -62,6 +62,7 @@
 @import '../modules/breadcrumbs/breadcrumbs';
 @import '../modules/burger/burger';
 @import '../modules/content-zone/content-zone';
+@import '../modules/dropdown/dropdown';
 @import '../modules/flag/flag';
 @import '../modules/icon/icon';
 @import '../modules/form/form';
@@ -80,6 +81,7 @@
 @import '06-components/components.card';
 @import '06-components/components.contact-list';
 @import '06-components/components.dots';
+// @import '06-components/components.dropdown';
 @import '06-components/components.embed';
 @import '06-components/components.figure-text';
 // @import '06-components/components.hamburger';

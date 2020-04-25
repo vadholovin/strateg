@@ -2,12 +2,8 @@
    #SIDEBAR
    ========================================================================== */
 
-// .sidebar {
-  
-// }
-
-.sidebar-widget {
-  margin-bottom: 60px;
+.sidebar-widget + .sidebar-widget {
+  margin-top: 60px;
 }
 
 .sidebar-widget h6 {
@@ -16,4 +12,11 @@
   font-size: rem(16px);
   line-height: 1.2;
   text-transform: uppercase;
+}
+
+.sidebar--sm {
+  
+  .sidebar-widget + .sidebar-widget {
+    margin-top: 40px;
+  }
 }

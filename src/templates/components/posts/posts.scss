@@ -15,7 +15,7 @@
 
 .posts__grid {
   margin-top: -50px;
-  
+
   &:not(:last-child) {
     margin-bottom: 60px;
   }
@@ -24,14 +24,19 @@
     margin-left: -25px;
     margin-right: -25px;
   }
+}
 
-  .posts__cell {
-    margin-top: 50px;
-  
-    @include mq($from: xl) {
-      padding-left: 25px;
-      padding-right: 25px;
-    }
+.posts__grid--top {
+  margin-top: 0;
+}
+
+
+.posts__cell {
+  margin-top: 50px;
+
+  @include mq($from: xl) {
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
 

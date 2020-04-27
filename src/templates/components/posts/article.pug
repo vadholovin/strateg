@@ -29,8 +29,7 @@
                 a.post-tag(href="") Налоги;
           if pageTitle == 'Статья'
             .comments-area
-              .comments-head
-                h5.comments-title 21 комментариев
+              h3.comment-reply-title 21 комментариев
               ol.comments-list
                 li.comment
                   article.comment-content.flag.flag--top
@@ -45,7 +44,7 @@
                           Integer malesuada nunc vel risus commodo viverra maecenas accumsan. Odio euismod lacinia at quis risus.
                         p.
                           Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Amet est placerat in egestas erat imperdiet sed. Massa ultricies mi quis hendrerit dolor magna.
-                  ol.comments-list.comments-list--children
+                  ol.children
                     li.comment
                       article.comment-content.flag.flag--top
                         .flag__img
@@ -57,7 +56,7 @@
                           .comment-body.content-zone
                             p.
                               Integer malesuada nunc vel risus commodo viverra maecenas accumsan. Odio euismod lacinia at quis risus.
-                
+
                 li.comment
                   article.comment-content.flag.flag--top
                     .flag__img
@@ -70,9 +69,8 @@
                         p.
                           Integer malesuada nunc vel risus commodo viverra maecenas accumsan. Odio euismod lacinia at quis risus. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Amet est placerat in egestas erat imperdiet sed. Massa ultricies mi quis hendrerit dolor magna.
 
-              .comments-head
-                h5.comments-title Оставить комментарий
-              +form().comments-form
+              h3.comment-reply-title Оставить комментарий
+              +form().comment-form
                 .form__row
                   +inputbox
                     +label.hidden-visually(for='form-name') Ваше полное имя
@@ -83,7 +81,7 @@
                         id='form-name'
                         autocomplete='off'
                         placeholder="Ваше полное имя*")
-                  
+
                   +inputbox
                     +label.hidden-visually(for='form-phone') E-mail
                     +input-wrapper
@@ -92,7 +90,7 @@
                         name='form-email'
                         id='form-email'
                         placeholder="E-mail*")
-                
+
                 +inputbox
                   +label.hidden-visually(for='form-message') Ваш комментарий
                   +input-wrapper

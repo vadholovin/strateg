@@ -26,7 +26,7 @@
   line-height: 1.15;
   color: $color-body-secondary;
 
-  a {
+  > * {
     display: inline-block;
     margin-left: 12px;
     color: $color-primary;
@@ -68,13 +68,20 @@
   .flag__img {
     padding-right: 20px;
   }
+
+  img {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 }
 
 .answer-author__title {
   margin-bottom: 8px;
   font-weight: 600;
   font-size: rem(16px);
-  
+
 }
 
 .answer-author__subtitle {

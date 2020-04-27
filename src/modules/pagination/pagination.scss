@@ -48,15 +48,16 @@
       }
     }
 
-    &--active {
+    &.current {
       color: $color-body;
       border-color: $color-bg-brand;
       background-color: $color-bg-brand;
     }
 
-    &--arrow {
-      border-color: transparent;
-    }
+    // &.next,
+    // &.prev {
+    //   border-color: transparent;
+    // }
 
     .icon {
       font-size: rem(10px);

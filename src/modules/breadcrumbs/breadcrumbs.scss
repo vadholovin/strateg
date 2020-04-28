@@ -9,7 +9,7 @@ $breadpadding: 20px;
   margin-top: 50px;
 }
 
-.breadcrumbs__item {
+.breadcrumbs > li {
   display: inline-block;
   position: relative;
   font-size: 14px;
@@ -34,12 +34,9 @@ $breadpadding: 20px;
     }
   }
 
-  &:last-child {
-    
-  }
 }
 
-.breadcrumbs__link {
+.breadcrumbs a {
   line-height: 1.5;
   color: #888;
   text-decoration: none;

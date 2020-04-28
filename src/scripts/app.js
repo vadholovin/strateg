@@ -15,7 +15,7 @@ jQuery(function ($) {
   const SHOWN = 'dropdown/hidden';
   const BEFORE_SHOW = 'dropdown/beforeshow';
   const BEFORE_HIDE = 'dropdown/beforehide';
-  
+
   /**
    *
    * @param {jQuery Element} dropdown
@@ -389,6 +389,16 @@ jQuery(function ($) {
 
   });
 
+  $('[name=quiz-debt]').change(function (e) {
+    let value = $('[name=quiz-debt]:checked').val();
+
+    if (value == 'a') {
+      $('#quiz-result-text-3, #quiz-result-dot-3').addClass('is-active');
+    } else if ('bcdef'.indexOf(value) != -1) {
+      $('#quiz-result-text-4, #quiz-result-dot-4').addClass('is-active');
+    }
+  });
+
 });
 
 
@@ -498,3 +508,65 @@ jQuery(function ($) {
   }
 });
 
+
+/**
+ * FORM RESPOND
+ */
+jQuery(function ($) {
+  document.addEventListener( 'wpcf7mailsent', function( event ) {
+    setTimeout(() => {
+      $('.wpcf7-response-output').removeAttr('style');
+    }, 5000);
+  }, false );
+
+  document.addEventListener( 'wpcf7mailfailed', function( event ) {
+    setTimeout(() => {
+      $('.wpcf7-response-output').removeAttr('style');
+    }, 5000);
+  }, false );
+});
+
+
+/**
+ * COUNTUP
+ */
+jQuery(function ($) {
+  "use strict";
+
+  var counterUp = window.counterUp["default"]; // import counterUp from "counterup2"
+
+  var counters = $(".js-counter");
+
+  counters.each(function (ignore, counter) {
+    new Waypoint({
+      element: counter,
+      handler: function() {
+        counterUp(counter, {
+          duration: 1500,
+          delay: 16
+        });
+        this.destroy();
+      },
+      offset: 'bottom-in-view',
+    });
+  });
+});
+
+
+/**
+ * MARQUEE
+ */
+jQuery(function ($) {
+  $('.js-marquee').marquee({
+    //duration in milliseconds of the marquee
+    duration: 10000,
+    //gap in pixels between the tickers
+    gap: 50,
+    //time in milliseconds before the marquee will start animating
+    delayBeforeStart: 0,
+    //'left' or 'right'
+    direction: 'left',
+    //true or false - should the marquee be duplicated to show an effect of continues flow
+    duplicated: true
+  });
+});

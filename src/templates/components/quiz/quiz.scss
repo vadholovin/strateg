@@ -259,6 +259,10 @@
   left: 70%;
 }
 
+.quiz-result-dot.is-active {
+  fill: $color-primary;
+}
+
 .b-quiz-form__wrap {
   position: relative;
   padding-top: 60px;

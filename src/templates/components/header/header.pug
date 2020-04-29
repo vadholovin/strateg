@@ -1,8 +1,10 @@
+include ./mobile-nav
+
 header.header(class= (bodyClass == 'home-page') ? 'header--abs header--transparent' : '')
   .header__top
     .container.header__inner
       .header__top-left
-        .area.area--header
+        .area
           span.area-text Работаем по всей России
           +icon('flag', '', '', true)
 
@@ -60,25 +62,28 @@ header.header(class= (bodyClass == 'home-page') ? 'header--abs header--transpare
           li.main-menu__item
             a(href="") Контакты
 
-      +messengers.header__messengers.header__messengers--bottom
-        +messengers-item
-          +icon('email')
-        +messengers-item
-          +icon('telegram')
-        +messengers-item
-          +icon('phone-call')
-        +messengers-item
-          +icon('whatsapp')
-        +messengers-item
-          +icon('messenger')
+      .header__main-controls
+        +messengers.header__messengers.header__messengers--bottom
+          +messengers-item
+            +icon('email')
+          +messengers-item
+            +icon('telegram')
+          +messengers-item
+            +icon('phone-call')
+          +messengers-item
+            +icon('whatsapp')
+          +messengers-item
+            +icon('messenger')
 
-      ul.header__contact-list.header__contact-list--bottom.contact-list
-        li.contact-item
-          +icon('phone')
-          a.contact-item__text(href="tel:+7 (499) 123-45-67") +7 (499) 123-45-67
+        ul.header__contact-list.header__contact-list--bottom.contact-list
+          li.contact-item
+            +icon('phone')
+            a.contact-item__text(href="tel:+7 (499) 123-45-67") +7 (499) 123-45-67
 
-      button.header__main-btn(data-tippy-content='Задать вопрос стратегу')
-        +icon('question', '', true)(width='24' height='24')
+        button.header__main-btn(data-tippy-content='Задать вопрос стратегу')
+          +icon('question', '', true)(width='24' height='24')
+        button.burger.header__burger#burger(aria-label='Показать главное меню')
+          span.burger__bar
 
 
 

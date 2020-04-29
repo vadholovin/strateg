@@ -3,63 +3,95 @@
    ========================================================================== */
 
 .mobile-nav {
-  @include basic-transition((transform));
-  display: block;
+  z-index: 1000;
+}
+
+.mobile-nav__content {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 268px;
-  height: 100vh;
-  max-height: 100vh;
-  transform: translate3d(-280px, 0, 0);
-  font-size: rem(16);
-  background-color: #fff;
-  box-shadow:
-    0 1px 2px 0 rgba(60, 64, 67, .3),
-    0 2px 6px 2px rgba(60, 64, 67, .15);
-  overflow-x: hidden;
+  width: 78%;
+  height: 100%;
+  max-width: 300px;
   overflow-y: auto;
-  z-index: 9999;
+  z-index: 2;
+  background-color: #fff;
+
+  .mobile-nav.is-closed & {
+    transform: translateX(-100%);
+    transition: transform .25s ease-out;
+  }
+
+  .mobile-nav.is-open & {
+    transform: translateX(0);
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.05);
+    transition: transform .4s ease-out;
+  }
 }
 
-.mobile-nav.is-open {
-  transform: translate3d(0, 0, 0);
-  box-shadow:
-    0 1px 2px 0 rgba(60, 64, 67, .3),
-    0 2px 6px 2px rgba(60, 64, 67, .15);
-  will-change: transform;
+.mobile-nav__overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  opacity: .7;
+  z-index: 1;
+
+  .mobile-nav.is-closed & {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 0ms ease-out .3s, opacity .3s linear;
+  }
+
+  .mobile-nav.is-open & {
+    opacity: .7;
+    transform: translateX(0);
+    transition: opacity .3s linear;
+  }
 }
 
-.mobile-nav__inner {
-  padding: 3rem 1rem;
+.mobile-nav__body {
+  padding: 0 1rem 2rem 1rem;
+  font-size: 14px;
+
+  >*:not(:last-child) {
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $color-border-brand;
+  }
 }
 
-.mobile-nav__module {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+.mobile-nav__head {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: .5rem 1rem .5rem 1rem;
 }
 
-.mobile-nav__module + .mobile-nav__module {
-  border-top: 1px solid $color-grey-100;
+.mobile-logo {
+  width: 130px;
+
+  svg path {
+    fill: #222;
+  }
 }
 
-.mobile-menu {
-  list-style: none;
-}
-
-.mobile-menu__item + .mobile-menu__item {
-  margin-top: 12px;
-}
-
-.mobile-menu__item a {
+.mobile-menu a {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
   color: inherit;
   text-decoration: none;
 }
 
-.mobile__contact {
-  font-weight: 500;
-  color: inherit;
-  text-decoration: none;
+.mobile-menu li > a {
+  position: relative;
+  padding-right: 12px;
+}
+
+.mobile-contact-list {
+
+  li + li {
+    margin-top: 8px;
+  }
 }
 
 .mobile-nav__close {

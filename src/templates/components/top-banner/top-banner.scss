@@ -5,8 +5,12 @@
 .top-banner {
   position: relative;
   padding-top: 180px;
-  padding-bottom: 190px;
+  padding-bottom: 200px;
   @include background;
+
+  @include mq($from: sm) {
+    padding-bottom: 190px;
+  }
 
   &:before {
     @include pseudo(true);
@@ -24,13 +28,24 @@
   }
 }
 
+.top-banner__col-right {
+  display: none;
+
+  @include mq($from: md) {
+    display: block;
+  }
+}
+
 .top-banner__title {
   margin-bottom: 30px;
   font-weight: 600;
-  font-size: rem(48px);
+  font-size: rem(40px);
   line-height: 1.1;
   color: #ffffff;
 
+  @include mq($from: xs) {
+    font-size: rem(48px);
+  }
   @include mq($from: md) {
     font-size: rem(56px);
   }
@@ -43,15 +58,23 @@
 }
 
 .top-banner__list {
-  margin-bottom: 60px;
+  margin-bottom: 3rem;
+
+  @include mq($from: sm) {
+    margin-bottom: 60px;
+  }
   
   li {
     margin-bottom: 15px;
-    font-size: rem(18px);
+    font-size: rem(16px);
     color: #ffffff;
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    @include mq($from: xs) {
+      font-size: rem(18px);
     }
   }
 }
@@ -66,13 +89,18 @@
 
 .top-banner__card {
   position: relative;
-  margin-bottom: 35px;
-  padding: 25px 38px;
+  margin-bottom: 28px;
+  padding: 20px 32px;
   color: #fff;
   background: rgba(#fff, 0.1);
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @include mq($from: lg) {
+    margin-bottom: 35px;
+    padding: 25px 38px;
   }
 }
 
@@ -113,33 +141,66 @@
 .top-banner__foot-inner {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
+  margin-top: -12px;
+
+  @include mq($from: lg) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
-.top-banner__foot-left {
-  margin-right: auto;
+.top-banner__foot-left,
+.top-banner__foot-right {
+  width: 100%;
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq($from: sm) {
+    flex-direction: row;
+    width: auto;
+  }
+
+  > * + * {
+    @include mq($until: sm) {
+      margin-top: 12px;
+    }
+  }
 }
 
 .top-banner__foot-message {
+  width: 100%;
   max-width: 550px;
-  margin-right: 15px;
   font-weight: 600;
-  font-size: rem(14px);
+  font-size: rem(13px);
   line-height: 1.2;
   color: #FFFFFF;
   overflow: hidden;
+  // white-space: nowrap;
+
+  @include mq($from: sm) {
+    margin-right: 15px;
+    font-size: rem(14px);
+  }
 }
 
 .top-banner__foot-note {
-  margin-right: 30px;
   font-weight: 500;
-  font-size: rem(16px);
+  font-size: rem(13px);
   line-height: 1.2;
   color: rgba(255,255,255,.6);
+
+  @include mq($from: sm) {
+    margin-right: 30px;
+    font-size: rem(16px);
+  }
 }
 
 .lamp {
-  margin-right: auto;
   padding: 6px 12px;
   border-radius: 150px;
   font-weight: 600;

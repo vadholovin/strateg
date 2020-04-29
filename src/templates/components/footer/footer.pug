@@ -1,7 +1,7 @@
 footer.footer
   .container
-    +grid()
-      +col({md: 3})
+    +grid().footer__grid
+      +col({md: 3, xs: 6})
         a.logo-wrap.footer__logo-wrap(href="")
           img.logo.logo--footer(src="assets/img/general/logo.svg", alt="")
         .footer__copyright © 2020 Все права защищены.
@@ -17,7 +17,7 @@ footer.footer
           +messengers-item
             +icon('messenger')
 
-      +col({md: 3})
+      +col({md: 3, x: 6})
         ul.footer__contact-list.contact-list
           li.contact-item
             +icon('phone')
@@ -33,7 +33,7 @@ footer.footer
               ММДЦ «Москва Сити»,<br>
               Башня Федерация-Восток, 16&nbsp;этаж
 
-      +col({md: 3})
+      +col({md: 3, x: 6})
         ul.footer-menu
           li.footer-menu__item
             a(href="") Политика конфиденциальности
@@ -44,7 +44,7 @@ footer.footer
           li.footer-menu__item
             a(href="") Блог
 
-      +col({md: 3})
+      +col({md: 3, xs: 6})
         .footer__actions
           button.btn.btn--primary.btn--upper.btn--fz-sm() Спросить стратега
           button.btn.btn--light.btn--upper.btn--fz-sm() Обратный звонок

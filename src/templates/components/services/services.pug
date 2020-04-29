@@ -14,7 +14,7 @@ section.services
     
     +grid().services-list
       each item in services
-        +col({md: 4}).services-list__cell
+        +col({sm: 4}).services-list__cell
           .services-tile.services-tile--accent
             .services-tile__inner
               .services-tile__head
@@ -23,8 +23,9 @@ section.services
                   +icon(item.icon)
                 .services-tile__subheading!= item.subheading
               button.services-tile__btn.services-tile__btn--more.js-services-more
-                | Полные условия
+                | Подробнее
                 +icon('plus', 'stroked')
+                +icon('minus', 'stroked')
               .services-tile__info
                 .services-tile__body.js-services-body
                   .services-tile__body-main

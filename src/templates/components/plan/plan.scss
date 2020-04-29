@@ -3,11 +3,20 @@
    ========================================================================== */
 
 .plan {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @include mq($from: lg) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 
   &--home {
-    padding-top: 200px;
+    padding-top: 160px;
+
+    @include mq($from: lg) {
+      padding-top: 200px;
+    }
   }
 }
 
@@ -36,12 +45,16 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 45px 35px;
+  padding: 36px 20px;
   background-color: #fff;
   box-shadow: $global-shadow;
 
   &:hover {
     box-shadow: none;
+  }
+
+  @include mq($from: sm) {
+    padding: 45px 35px;
   }
 }
 
@@ -52,14 +65,17 @@
 
 .steps-tile__head-left {
   flex-grow: 1;
-  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .steps-tile__title {
   font-weight: 600;
-  font-size: rem(22px);
+  font-size: rem(18px);
   line-height: 120%;
 
+  @include mq($from: lg) {
+    font-size: rem(24px);
+  }
   @include mq($from: xl) {
     font-size: rem(28px);
   }
@@ -84,13 +100,21 @@
 .steps-tile__count {
   position: relative;
   display: block;
-  margin-top: -30px;
+  margin-top: -20px;
   font-weight: 800;
-  font-size: 100px;
+  font-size: 70px;
   line-height: 1.15;
   color: rgba(0,0,0,0.1);
 
+  @include mq($from: xs) {
+    font-size: 70px;
+  }
+  @include mq($from: sm) {
+    margin-top: -20px;
+    font-size: 80px;
+  }
   @include mq($from: lg) {
+    margin-top: -30px;
     font-size: 110px;
   }
   @include mq($from: xl) {
@@ -99,6 +123,7 @@
 }
 
 .steps-tile__note {
+  margin-top: auto;
   color: $color-body-secondary;
 
   .icon {
@@ -116,7 +141,7 @@
   height: 100%;
   padding: 40px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 13px;
   background-color: $color-bg-brand;
   background-image: url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 150 150' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.1' d='M143.478 103.234H114.316V23.3297C114.316 10.4657 103.85 0 90.986 0H23.3297C10.4657 0 0 10.4657 0 23.3297V29.1622C0 32.3834 2.61118 34.9946 5.83244 34.9946H17.4973V125.981C17.4973 138.845 27.963 149.31 40.827 149.31H125.981C138.845 149.31 149.31 138.845 149.31 125.981V109.067C149.31 105.845 146.699 103.234 143.478 103.234ZM11.6649 23.3297C11.6649 16.8977 16.8977 11.6649 23.3297 11.6649H70.7871C68.7968 15.0981 67.6562 19.0834 67.6562 23.3297H11.6649ZM40.827 137.645C34.395 137.645 29.1622 132.413 29.1622 125.981V34.9946H73.4887C76.7099 34.9946 79.3211 32.3834 79.3211 29.1622V23.3297C79.3211 16.8977 84.554 11.6649 90.986 11.6649C97.418 11.6649 102.651 16.8977 102.651 23.3297V125.981C102.651 130.228 103.798 134.211 105.79 137.645H40.827ZM137.645 125.981C137.645 132.413 132.413 137.645 125.981 137.645C119.549 137.645 114.316 132.413 114.316 125.981V114.899H137.645V125.981ZM90.986 55.7969C90.986 59.0181 88.3748 61.6293 85.1536 61.6293H46.6595C43.4382 61.6293 40.827 59.0181 40.827 55.7969C40.827 52.5756 43.4382 49.9644 46.6595 49.9644H85.1536C88.3748 49.9644 90.986 52.5756 90.986 55.7969ZM90.986 82.4318C90.986 85.6531 88.3748 88.2643 85.1536 88.2643H46.6595C43.4382 88.2643 40.827 85.6531 40.827 82.4318C40.827 79.2106 43.4382 76.5994 46.6595 76.5994H85.1536C88.3748 76.5994 90.986 79.2106 90.986 82.4318ZM71.739 109.067C71.739 112.288 69.1278 114.899 65.9065 114.899H46.6595C43.4382 114.899 40.827 112.288 40.827 109.067C40.827 105.845 43.4382 103.234 46.6595 103.234H65.9065C69.1278 103.234 71.739 105.845 71.739 109.067Z' fill='%23222222'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
@@ -126,6 +151,10 @@
   z-index: -1;
 
   @include basic-transition((opacity, visibility));
+
+  @include mq($from: lg) {
+    font-size: 16px;
+  }
 
   .steps-tile:hover & {
     visibility: visible;
@@ -173,6 +202,7 @@
   width: 50px;
   height: 50px;
   line-height: 50px;
+  flex-shrink: 0;
   text-align: center;
   background-color: #525252;
   border-radius: $global-radius;

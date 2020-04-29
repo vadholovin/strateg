@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
       },
       1024: {
         slidesPerView: 4,
-        spaceBetween: 28
+        spaceBetween: 20
       },
       1800: {
         slidesPerView: 5,
@@ -259,7 +259,6 @@ document.addEventListener('DOMContentLoaded', function() {
     direction: 'vertical',
     touchRatio: 0.2,
     slideToClickedSlide: true,
-    // centeredSlides: true,
     freeMode: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
@@ -267,8 +266,8 @@ document.addEventListener('DOMContentLoaded', function() {
       enabled: true,
     },
     breakpoints: {
-      320: {
-        slidesPerView: 3,
+      768: {
+        slidesPerView: 4,
         spaceBetween: 8
       },
       1024: {
@@ -302,10 +301,14 @@ jQuery(function ($) {
   $('.js-services-more').click(function (e) {
     e.preventDefault();
     const button = $(this);
-    const block = button.parents('.services-tile').find('.js-services-body');
+    const icon = $(this).find('.icon-plus');
+    const block = button.parents('.services-tile');
+    const info = button.parents('.services-tile').find('.js-services-body');
 
     button.toggleClass('is-active');
-    block.slideToggle();
+    icon.toggle();
+    block.toggleClass('is-expanded');
+    info.slideToggle();
 
   });
 });

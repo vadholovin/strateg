@@ -15,7 +15,7 @@ section.plan(class=(bodyClass == 'home-page') ? 'plan--home' : '')
     +grid().steps-grid
       each item, index in steps
         if index == 0
-          +col({md: 4}).steps-grid__cell
+          +col({md: 4, sm: 6}).steps-grid__cell
             .steps-tile.steps-tile--accent
               .steps-tile__head
                 .steps-tile__head-left
@@ -41,7 +41,7 @@ section.plan(class=(bodyClass == 'home-page') ? 'plan--home' : '')
                 p.form__note!= item.agreement
 
         else
-          +col({md: 4}).steps-grid__cell
+          +col({md: 4, sm: 6}).steps-grid__cell
             .steps-tile
               .steps-tile__head
                 .steps-tile__head-left

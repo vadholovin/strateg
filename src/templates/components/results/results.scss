@@ -3,10 +3,14 @@
    ========================================================================== */
 
 .results {
-  padding-top: 110px;
+  padding-top: 80px;
   padding-bottom: 680px;
   @include background;
   background-color: $color-bg-dark;
+
+  @include mq($from: lg) {
+    padding-top: 110px;
+  }
 }
 
 .results-block {
@@ -22,35 +26,43 @@
 
 .results-slider__wrap {
   position: relative;
-  padding-right: 33.33333%;
+
+  @include mq($from: sm) {
+    padding-right: 33.33333%;
+  }
 }
 
 .results-slider {
-  width: calc(100% - 15px);
+  width: 100%;
   margin-left: 0;
   margin-right: 0;
-}
 
-.results-thumbs-slider {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: calc(33.33333% - 15px);
+  @include mq($from: sm) {
+    width: calc(100% - 15px);
+  }
 }
 
 .results-slide {
-  padding: 36px;
+  padding: 1.5rem;
   background-color: #fff;
 
+  @include mq($from: xs) {
+    padding: 36px;
+  }
   @include mq($from: xl) {
     padding: 45px 55px;
   }
 
   hr {
-    margin-top: 40px;
-    margin-bottom: 35px;
-    border-top: 0.5px solid rgba(#222222, .2);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 0;
+    border-top: 1px solid rgba(#222222, .2);
+
+    @include mq($from: md) {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -59,11 +71,18 @@
 }
 
 .results-slide__title {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   font-weight: 500;
-  font-size: rem(24px);
+  font-size: rem(18px);
   line-height: 130%;
 
+  @include mq($from: xs) {
+    font-size: rem(20px);
+  }
+  @include mq($from: lg) {
+    margin-bottom: 32px;
+    font-size: rem(24px);
+  }
   @include mq($from: xl) {
     margin-bottom: 40px;
     font-size: rem(30px);
@@ -78,14 +97,18 @@
 }
 
 .results-slide__desc {
-  margin-bottom: 24px;
-  font-size: rem(14px);
+  margin-bottom: 16px;
+  font-size: rem(13px);
   line-height: 140%;
 
   &:last-child {
     margin-bottom: 0;
   }
 
+  @include mq($from: md) {
+    margin-bottom: 24px;
+    font-size: rem(14px);
+  }
   @include mq($from: xl) {
     margin-bottom: 30px;
   }
@@ -99,10 +122,16 @@
 }
 
 .results-slide__btn {
-  margin-right: 36px;
-  padding: 15px 25px;
+  margin-bottom: 10px;
+  padding: 15px 20px;
   font-size: rem(14px);
+  white-space: nowrap;
 
+  @include mq($from: xs) {
+    margin-right: 36px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
   @include mq($from: xl) {
     margin-right: 50px;
   }
@@ -115,8 +144,8 @@
 
 .results-slide__foot-text {
   margin-right: 36px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 6px;
+  margin-bottom: 6px;
   font-size: 14px;
 
   @include mq($from: xl) {
@@ -133,19 +162,37 @@
 
   .swiper-buttons {
     position: absolute;
-    right: 60px;
+    right: 36px;
     bottom: 55px;
+
+    @include mq($from: lg) {
+      right: 60px;
+    }
   }
 }
 
 .results-thumbs-slider {
-  max-height: 100%;
+  display: none;
+
+  @include mq($from: sm) {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: calc(33.33333% - 15px);
+    max-height: 100%;
+  }
 }
 
 .results-thumb {
-  padding: 25px 30px;
+  padding: 20px;
   background-color: #fff;
   overflow: hidden;
+
+  @include mq($from: md) {
+    padding: 25px 30px;
+  }
 
   &.swiper-slide-thumb-active {
     background-color: $color-bg-brand;
@@ -153,16 +200,28 @@
 }
 
 .results-thumb__title {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.15;
+
+  @include mq($from: md) {
+    font-size: 16px;
+  }
+  @include mq($from: lg) {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
 }
 
 .results-thumb__desc,
 .results-thumb__date {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 13px;
+
+  @include mq($from: lg) {
+    font-size: 14px;
+  }
 }
 
 .results-thumb__desc {

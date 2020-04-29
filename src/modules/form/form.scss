@@ -16,6 +16,10 @@
 }
 
 .form__note {
-  font-size: rem(14px);
+  font-size: rem(13px);
   line-height: 1.4;
+
+  @include mq($from: xs) {
+    font-size: rem(14px);
+  }
 }

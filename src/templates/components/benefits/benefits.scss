@@ -6,15 +6,32 @@
 .benefits {
   position: relative;
   margin-top: -165px;
-  padding-top: 285px;
+  padding-top: 260px;
   padding-bottom: 540px;
   @include background;
   background-color: $color-bg-dark;
+
+  @include mq($from: lg) {
+    padding-top: 285px;
+  }
 }
 
 .benefits-block {
   position: relative;
   background-color: rgba(0,0,0,.5);
+
+  @include mq($until: xs) {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
+
+.benefits-block__img-top,
+.benefits-block__img-bottom {
+
+  @include mq($until: md) {
+    display: none;
+  }
 }
 
 .benefits-block__img-top {
@@ -34,12 +51,14 @@
 .benefits-block__top {
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .benefits-block__top-left {
   width: 100%;
-  width: 54%;
+
+  @include mq($from: md) {
+    width: 54%;
+  }
 }
 
 .benefits-block__top-right {
@@ -47,18 +66,26 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  width: 46%;
-  padding: 40px;
+  padding: 40px 20px;
+
+  @include mq($from: md) {
+    width: 46%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .benefits-block__top-text {
-  max-width: 80%;
+  max-width: 95%;
   font-weight: 500;
-  font-size: rem(28px);
   line-height: 130%;
   color: #FFFFFF;
 
+  @include mq($from: xs) {
+    font-size: rem(18px);
+  }
   @include mq($from: lg) {
+    max-width: 80%;
     font-size: rem(24px);
   }
   @include mq($from: xl) {
@@ -68,11 +95,27 @@
 }
 
 .benefits-block__main {
-  padding: 60px 80px;
+  padding: 40px 1rem 60px 1rem;
+
+  @include mq($from: xs) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @include mq($from: md) {
+    padding-right: 60px;
+  }
+  @include mq($from: lg) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 }
 
 .benefits-block__list {
-  margin-top: -70px;
+  margin-top: -40px;
+
+  @include mq($from: sm) {
+    margin-top: -70px;
+  }
 
   @include mq($from: xl) {
     margin-left: -36px;
@@ -82,7 +125,7 @@
   > * {
     display: flex;
     flex-direction: column;
-    
+
     @include mq($from: xl) {
       padding-left: 36px;
       padding-right: 36px;
@@ -96,7 +139,11 @@
   height: 100%;
   position: relative;
   padding-left: 36px;
-  margin-top: 70px;
+  margin-top: 40px;
+
+  @include mq($from: sm) {
+    margin-top: 70px;
+  }
 
   &::before {
     @include pseudo(true);

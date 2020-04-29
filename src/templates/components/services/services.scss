@@ -5,10 +5,15 @@
 .services {
   position: relative;
   margin-top: -540px;
-  padding-top: 120px;
+  padding-top: 80px;
+
+  @include mq($from: lg) {
+    padding-top: 120px;
+  }
 }
 
 .services-list {
+  margin-top: -80px;
 
   @include mq($from: xl) {
     margin-left: -36px;
@@ -17,12 +22,21 @@
 }
 
 .services-list__cell {
+  position: relative;
   display: flex;
   flex-direction: column;
+  margin-top: 80px;
 
   @include mq($from: xl) {
     padding-left: 36px;
     padding-right: 36px;
+  }
+
+  &:nth-child(1) {
+    z-index: 20;
+  }
+  &:nth-child(2) {
+    z-index: 10;
   }
 }
 
@@ -42,9 +56,20 @@
 
 .services-tile__head {
   position: relative;
-  padding: 40px 50px 32px 40px;
+  padding: 24px 40px 16px 20px;
   z-index: 5;
   @include basic-transition((color));
+
+  @include mq($from: sm) {
+    padding-right: 20px;
+  }
+  @include mq($from: md) {
+    padding: 40px 30px 30px 30px;
+  }
+  @include mq($from: lg) {
+    padding-left: 40px;
+    padding-right: 50px;
+  }
 }
 
 .services-tile__heading {
@@ -52,34 +77,51 @@
   margin-bottom: 22px;
 
   .icon {
-    font-size: 60px;
+    flex-shrink: 0;
+    font-size: 40px;
+
+    @include mq($from: lg) {
+      font-size: 60px;
+    }
   }
 }
 
 .services-tile__title {
   margin-right: auto;
-  padding-right: 32px;
+  padding-right: 16px;
   font-weight: 600;
-  font-size: rem(28px);
+  font-size: rem(18px);
   line-height: 110%;
+
+  @include mq($from: md) {
+    font-size: rem(24px);
+  }
+  @include mq($from: lg) {
+    padding-right: 32px;
+    font-size: rem(28px);
+  }
 }
 
 .services-tile__subheading {
   font-weight: 500;
-  font-size: rem(14px);
+  font-size: rem(13px);
   line-height: 140%;
+
+  @include mq($from: md) {
+    font-size: rem(14px);
+  }
 }
 
 .services-tile__btn {
   position: relative;
   display: block;
   width: 100%;
-  height: 70px;
-  padding: 0 40px;
+  height: 50px;
+  padding: 0 24px;
   border-top: 0.5px solid rgba(#222222, .2);
   font-weight: 600;
-  font-size: 14px;
-  line-height: 70px;
+  font-size: 12px;
+  line-height: 50px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   text-align: center;
@@ -89,6 +131,18 @@
 
   &:focus {
     outline: none;
+  }
+
+  @include mq($from: md) {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 14px;
+    line-height: 70px;
+    height: 70px;
+  }
+  @include mq($from: lg) {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
@@ -133,12 +187,21 @@ button.services-tile__btn {
 
 .services-tile__body-main,
 .services-tile__body-foot {
-  font-size: 14px;
+  font-size: rem(13px);
   line-height: 140%;
+
+  @include mq($from: md) {
+    font-size: rem(14px);
+  }
 }
 
 .services-tile__body-main {
-  padding: 30px 30px 20px 40px;
+  padding: 30px 20px 20px 20px;
+
+  @include mq($from: lg) {
+    padding-left: 40px;
+    padding-right: 30px;
+  }
   
   li + li {
     margin-top: 22px;
@@ -185,6 +248,14 @@ button.services-tile__btn {
   .services-tile__btn--more {
     color: #fff;
     background-color: $color-bg-danger;
+  }
+}
+
+.services-tile__btn--choose {
+
+  .is-expanded & {
+    color: #fff !important;
+    background-color: $color-bg-danger !important;
   }
 }
 

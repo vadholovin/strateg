@@ -4,12 +4,16 @@
 
 .heading {
   display: flex;
-  margin-left: -15px;
-  margin-right: -15px;
-  margin-bottom: 80px;
+  margin: -24px -15px 80px -15px;
+
+  @include mq($until: sm) {
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
 }
 
 .heading__module {
+  margin-top: 24px;
   padding-left: 15px;
   padding-right: 15px;
 
@@ -19,8 +23,16 @@
 }
 
 .heading__module + .heading__module {
-  margin-left: 100px;
 
+  @include mq($from: sm) {
+    margin-left: 30px;
+  }
+  @include mq($from: md) {
+    margin-left: 50px;
+  }
+  @include mq($from: lg) {
+    margin-left: 80px;
+  }
   @include mq($from: xl) {
     margin-left: 150px;
   }
@@ -36,8 +48,12 @@
 
 .heading__title {
   font-weight: normal;
-  font-size: rem(32px);
+  font-size: rem(24px);
   line-height: 1.15;
+
+  @include mq($from: md) {
+    font-size: rem(32px);
+  }
 }
 
 .heading__desc {
@@ -45,6 +61,10 @@
   width: 100%;
   max-width: 450px;
   padding-left: 20px;
+
+  @include mq($until: md) {
+    font-size: rem(14px);
+  }
 
   &::before {
     @include pseudo(true);

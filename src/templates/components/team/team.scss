@@ -5,17 +5,35 @@
 .team {
   position: relative;
   margin-top: -680px;
-  padding-top: 120px;
+  padding-top: 80px;
+
+  @include mq($from: lg) {
+    padding-top: 120px;
+  }
 }
 
 .team-tile {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   position: relative;
   overflow: hidden;
+  background-color: #fff;
 }
 
 .team-tile__picture {
   position: relative;
-  height: 413px;
+  height: 220px;
+
+  @include mq($from: xs) {
+    height: 300px;
+  }
+  @include mq($from: sm) {
+    height: 340px;
+  }
+  @include mq($from: lg) {
+    height: 415px;
+  }
 
   img {
     position: absolute;
@@ -29,23 +47,54 @@
 }
 
 .team-tile__body {
-  padding: 25px 30px 30px 36px;
+  padding: 20px 15px;
   background-color: #fff;
+
+  @include mq($from: xs) {
+    padding: 25px;
+  }
+  @include mq($from: sm) {
+    padding: 25px 30px;
+  }
+  @include mq($from: lg) {
+    padding: 25px 30px 30px 36px;
+  }
 }
 
 .team-tile__title {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-weight: normal;
-  font-size: 22px;
+  font-size: 13px;
   line-height: 125%;
+
+  @include mq($from: xs) {
+    font-size: 14px;
+  }
+  @include mq($from: sm) {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  @include mq($from: md) {
+    font-size: 18px;
+  }
+  @include mq($from: lg) {
+    font-size: 22px;
+  }
 }
 
 .team-tile__subtitle,
 .team-tile__info-about {
-  font-size: 12px;
+  font-size: 8px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #888888;
+
+  @include mq($from: xs) {
+    font-size: 10px;
+  }
+  @include mq($from: md) {
+    font-size: 12px;
+  }
 }
 
 .team-tile__info {
@@ -67,14 +116,32 @@
 }
 
 .team-tile__info-body {
-  padding: 30px 30px 40px 36px;
+  padding: 20px 15px;
+
+  @include mq($from: xs) {
+    padding: 25px;
+  }
+  @include mq($from: sm) {
+    padding: 25px 30px;
+  }
+
+  @include mq($from: md) {
+    padding: 30px 30px 40px 36px;
+  }
 }
 
 .team-tile__info-name {
   margin-bottom: 10px;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 125%;
+
+  @include mq($from: xs) {
+    font-size: 14px;
+  }
+  @include mq($from: sm) {
+    font-size: 16px;
+  }
 }
 
 .team-tile__info-about {
@@ -121,13 +188,24 @@
 
 .team-slider {
   padding-bottom: 20px;
+
+  .swiper-wrapper {
+    align-items: stretch;
+  }
 }
 
 .team-slide {
-  box-shadow: 0px 2.12866px 4.88341px rgba(0, 0, 0, 0.015), 0px 17px 39px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.015), 0px 17px 39px rgba(0, 0, 0, 0.03);
 }
 
 .team-slide:first-child {
+
+  .team-tile {
+    background-color: $color-bg-dark;
+  }
 
   .team-tile__body {
     color: #fff;

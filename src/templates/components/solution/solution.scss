@@ -4,7 +4,11 @@
 
 .solution {
   min-height: 535px;
-  padding-top: 120px;
+  padding-top: 80px;
+
+  @include mq($from: lg) {
+    padding-top: 120px;
+  }
 }
 
 .solution__heading {
@@ -24,9 +28,13 @@
   .swiper-slide{
     height: auto;
   }
-  
+
   .swiper-buttons {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
+
+    @include mq($from: sm) {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -54,25 +62,49 @@
   }
 
   .card-body {
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 8px;
+    padding-right: 8px;
     background-color: #fff;
     @include basic-transition((background-color));
+
+    @include mq($from: xs) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    @include mq($from: md) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
   }
 
   .card-meta {
     font-size: rem(12px);
+
+    @include mq($until: md) {
+      margin-bottom: 16px;
+    }
   }
 
   .card-title {
     font-weight: bold;
-    font-size: rem(16px);
+    font-size: rem(12px);
     text-transform: uppercase;
+
+    @include mq($from: xs) {
+      font-size: rem(14px);
+    }
+    @include mq($from: md) {
+      font-size: rem(16px);
+    }
   }
 
   .card-text {
-    font-size: rem(14px);
+    font-size: rem(12px);
     line-height: 140%;
+
+    @include mq($from: md) {
+      font-size: rem(14px);
+    }
   }
 
 }
@@ -86,7 +118,7 @@
   .card-img {
     filter: grayscale(0) contrast(1);
   }
-  
+
   .card-body {
     background-color: $color-bg-brand;
   }

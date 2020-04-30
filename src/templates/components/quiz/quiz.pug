@@ -1,7 +1,7 @@
 section.quiz.lozad(data-background-image='assets/img/backgrounds/bg-chess-05.png')
   .container
     +grid().quiz__grid
-      +col({md: 6}).quiz__cell
+      +col({lg: 6}).quiz__cell
         .quiz__heading.heading.heading--invert
           .heading__module
             p.heading__subtitle онлайн-решение
@@ -84,7 +84,7 @@ section.quiz.lozad(data-background-image='assets/img/backgrounds/bg-chess-05.png
 
             .b-quiz-module#quiz-module-3
               figure.b-quiz-result
-                <svg class="b-quiz-result__img" width="393" height="196" viewBox="0 0 393 196" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="b-quiz-result__img" viewBox="0 0 393 196" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M391 196C391 88.8568 303.919 2 196.5 2C89.0806 2 2 88.8568 2 196" stroke="url(#paint0_linear)" stroke-width="3"/>
                 <path d="M3 196C3 119.74 47.0011 53.7575 111 22.0552" stroke="url(#paint1_linear)" stroke-width="4"/>
                 <circle cx="110" cy="22" r="9" fill="#EAC58D"/>
@@ -103,7 +103,7 @@ section.quiz.lozad(data-background-image='assets/img/backgrounds/bg-chess-05.png
                 </defs>
                 </svg>
 
-                figcaption.b-quiz-result__caption 40%
+                figcaption.b-quiz-result__caption <span id="quiz-result-value">40</span>%
                   .b-quiz-result__caption--sm проблем у фирмы
                 .b-quiz-result__statuses
                   span.b-quiz-result__text.text-right#quiz-result-text-1 Бизнес <br> в порядке
@@ -139,7 +139,7 @@ section.quiz.lozad(data-background-image='assets/img/backgrounds/bg-chess-05.png
           button.b-quiz__btn.btn.btn--primary.btn--lg#quiz-next(data-quiz-step='1') Следующий шаг
 
 
-      +col({md: 6}).quiz__cell
+      +col({lg: 6}).quiz__cell
         figure.quiz-picture.figure-text
           img(src="assets/img/content/dmitri.png", alt="")
           figcaption.quiz-picture__caption.figure-text__caption

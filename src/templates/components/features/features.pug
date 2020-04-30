@@ -19,7 +19,7 @@ section.features.lozad(data-background-image="assets/img/backgrounds/bg-chess-02
     h3.features__subheading Как делаем мы
     +grid().features__grid
       each item, index in features1
-        +col({md: 3}).features__cell
+        +col({md: 3, sm: 6}).features__cell
           .features-tile
             +icon('plus-circle-o', 'stroked')
             .features-text!= item.text
@@ -27,7 +27,7 @@ section.features.lozad(data-background-image="assets/img/backgrounds/bg-chess-02
     h3.features__subheading С чем вы можете столкнуться
     +grid().features__grid
       each item, index in features1
-        +col({md: 3}).features__cell
+        +col({md: 3, sm: 6}).features__cell
           .features-tile
             +icon('minus-circle-o', 'stroked')
             .features-text!= item.text

@@ -9,6 +9,10 @@ section(class=(bodyClass == 'home-page') ? 'questions questions--home' : 'questi
           Мы знаем, как много вопросов возникает при необходимости банкротства. Мы создали специальный раздел, где вы можете получить ответ от наших экспертов
 
     .questions-slider__wrap.swiper-block#questions-slider-wrap
+      .swiper-button-prev.swiper-button-lg
+        +icon('chevron-left-slim-o', 'stroked')
+      .swiper-button-next.swiper-button-lg
+        +icon('chevron-right-slim-o', 'stroked')
       .questions-slider.swiper-container#questions-slider
         .swiper-wrapper
           each item, index in [1,1,1,1,1]
@@ -20,20 +24,10 @@ section(class=(bodyClass == 'home-page') ? 'questions questions--home' : 'questi
                   else
                     h3.questions-tile__title Можно ли остановить?
                   p.questions-tile__text.
-                    Очевидно, что Юпитер гасит вращательный 
-                    зенит. Годовой параллакс последовательно 
+                    Очевидно, что Юпитер гасит вращательный
+                    зенит. Годовой параллакс последовательно
                     представляет собой непреложный перигей. [...]
                 .questions-tile__foot
                   .questions-tile__link Читать ответ
 
-      .swiper-button-prev.swiper-button-lg
-        +icon('chevron-left-slim-o', 'stroked')
-      .swiper-button-next.swiper-button-lg
-        +icon('chevron-right-slim-o', 'stroked')
-
     button.btn.btn--wide Задать свой вопрос
-        
-
-
-
-

@@ -4,12 +4,13 @@
 
 .results {
   padding-top: 80px;
-  padding-bottom: 680px;
+  padding-bottom: 80px;
   @include background;
   background-color: $color-bg-dark;
 
   @include mq($from: lg) {
     padding-top: 110px;
+    padding-bottom: 600px;
   }
 }
 
@@ -22,6 +23,10 @@
   top: 0;
   right: 0;
   transform: translate(58%, -60%);
+
+  @include mq($until: md) {
+    display: none;
+  }
 }
 
 .results-slider__wrap {

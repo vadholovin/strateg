@@ -3,8 +3,12 @@
    ========================================================================== */
 
 .guarantees {
-  padding-top: 120px;
+  padding-top: 80px;
   padding-bottom: 60px;
+
+  @include mq($from: lg) {
+    padding-top: 120px;
+  }
 }
 
 .guarantees__grid {
@@ -22,7 +26,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 40px 30px;
+  padding: 30px;
   background-color: #fff;
   box-shadow: $global-shadow;
   @include basic-transition((background-color, color));
@@ -31,15 +35,23 @@
     color: #fff;
     background-color: $color-bg-dark;
   }
+
+  @include mq($from: lg) {
+    padding: 40px 30px;
+  }
 }
 
 .guarantees-tile__title {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   padding-right: 25px;
   font-weight: 600;
   font-size: rem(18px);
   line-height: 120%;
+
+  @include mq($from: sm) {
+    margin-bottom: 20px;
+  }
 
   &::after {
     @include pseudo(true);
@@ -52,8 +64,20 @@
   }
 }
 
+.guarantees-tile__text,
+.guarantees-tile__note {
+
+  @include mq($until: xs) {
+    font-size: rem(14px);
+  }
+}
+
 .guarantees-tile__text {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+
+  @include mq($from: sm) {
+    margin-bottom: 20px;
+  }
 }
 
 .guarantees-tile__note {

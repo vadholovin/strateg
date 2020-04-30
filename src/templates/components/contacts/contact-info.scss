@@ -7,7 +7,7 @@
 }
 
 .contact-info__grid {
-  margin-top: -40px;
+  margin-top: -36px;
 
   @include mq($from: xl) {
     margin-left: -18px;
@@ -18,7 +18,7 @@
 .contact-info__cell {
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
+  margin-top: 36px;
 
   @include mq($from: xl) {
     padding-left: 18px;
@@ -28,17 +28,31 @@
 
 .contact-info-tile {
   height: 100%;
-  padding: 40px;
+  padding: 32px 24px;
   background: #FFFFFF;
-  box-shadow: 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0287542), 0px 100px 80px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 42px 33px rgba(0, 0, 0, 0.0287542), 0px 100px 80px rgba(0, 0, 0, 0.04);
+
+  @include mq($from: sm) {
+    padding: 32px;
+  }
+  @include mq($from: lg) {
+    padding: 40px;
+  }
 }
 
 .contact-info-tile__title {
   margin-bottom: 28px;
   font-weight: 600;
-  font-size: rem(18px);
+  font-size: rem(14px);
   line-height: 1.15;
   text-transform: uppercase;
+
+  @include mq($from: sm) {
+    font-size: rem(16px);
+  }
+  @include mq($from: lg) {
+    font-size: rem(18px);
+  }
 }
 
 .contact-info-tile a {
@@ -78,10 +92,14 @@
 
 
   .messengers__item {
-    margin-right: 22px;
-  
+    margin-right: 12px;
+
     &:last-child {
       margin-right: 0;
+    }
+
+    @include mq($from: lg) {
+      margin-right: 22px;
     }
   }
 
@@ -92,7 +110,7 @@
     font-size: 20px;
     border-color: #D3D3D3;
     color: $color-body;
-    
+
     @include on-event {
       color: #fff;
       border-color: $color-border-brand;
@@ -100,6 +118,17 @@
   }
 }
 
-.contact-info__flag .flag__body {
-  font-size: rem(14px);
+.contact-info__flag {
+
+  img {
+    width: 60px;
+
+    @include mq($from: lg) {
+      width: 90px;
+    }
+  }
+
+  .flag__body {
+    font-size: rem(14px);
+  }
 }

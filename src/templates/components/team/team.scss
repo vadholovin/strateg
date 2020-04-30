@@ -4,11 +4,22 @@
 
 .team {
   position: relative;
-  margin-top: -680px;
   padding-top: 80px;
 
   @include mq($from: lg) {
+    margin-top: -680px;
     padding-top: 120px;
+  }
+}
+
+.team__heading {
+
+  .heading__title,
+  .heading__subtitle,
+  .heading__desc {
+    @include mq($until: lg) {
+      color: $color-body;
+    }
   }
 }
 
@@ -23,7 +34,7 @@
 
 .team-tile__picture {
   position: relative;
-  height: 220px;
+  height: 190px;
 
   @include mq($from: xs) {
     height: 300px;
@@ -47,11 +58,11 @@
 }
 
 .team-tile__body {
-  padding: 20px 15px;
+  padding: 15px 12px;
   background-color: #fff;
 
   @include mq($from: xs) {
-    padding: 25px;
+    padding: 20px 15px;
   }
   @include mq($from: sm) {
     padding: 25px 30px;
@@ -116,27 +127,28 @@
 }
 
 .team-tile__info-body {
-  padding: 20px 15px;
+  padding: 15px 12px;
 
   @include mq($from: xs) {
-    padding: 25px;
+    padding: 20px 15px;
   }
   @include mq($from: sm) {
     padding: 25px 30px;
   }
 
-  @include mq($from: md) {
+  @include mq($from: lg) {
     padding: 30px 30px 40px 36px;
   }
 }
 
 .team-tile__info-name {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   font-weight: 600;
   font-size: 13px;
   line-height: 125%;
 
   @include mq($from: xs) {
+    margin-bottom: 10px;
     font-size: 14px;
   }
   @include mq($from: sm) {
@@ -145,45 +157,78 @@
 }
 
 .team-tile__info-about {
-  margin-bottom: 28px;
+  margin-bottom: 16px;
+
+  @include mq($from: sm) {
+    margin-bottom: 28px;
+  }
 }
 
 .team-tile__contacts {
 
   > * + * {
-    margin-top: 25px;
+    margin-top: 12px;
+
+    @include mq($from: sm) {
+      margin-top: 24px;
+    }
   }
 }
 
 .team-tile__contact {
-
-  span {
-    display: inline-block;
-  }
+  line-height: 1;
 }
 
 .team-tile__contact-label {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   font-weight: 600;
   font-size: 10px;
   line-height: 150%;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #888888;
+
+  @include mq($from: sm) {
+    margin-bottom: 8px;
+  }
 }
 
+.team-tile__contact span,
 .team-tile__contact-link {
   display: inline-block;
-  font-size: 14px;
+  font-size: 10px;
   line-height: 125%;
   text-decoration: none;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-all;
+
+  @include mq($from: xs) {
+    font-size: 11px;
+  }
+  @include mq($from: sm) {
+    font-size: 12px;
+  }
+  @include mq($from: lg) {
+    font-size: 14px;
+  }
 }
 
 .team-tile__btn {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 16px 8px;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 11px;
+  border-radius: 0;
+
+  @include mq($from: xs) {
+    padding: 20px 12px;
+    font-size: 13px;
+  }
+  @include mq($from: sm) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 16px;
+  }
 }
 
 .team-slider {
@@ -215,17 +260,31 @@
 
 .team-slider__wrap {
 
-  .swiper-button-prev {
-    left: -50px;
+  .swiper-button-prev,
+  .swiper-button-next {
 
+    @include mq($until: lg) {
+      position: static;
+      margin-bottom: 36px;
+      font-size: 18px;
+    }
+  }
+
+  .swiper-button-prev {
+
+    @include mq($from: lg) {
+      left: -50px;
+    }
     @include mq($from: xl) {
       left: -110px;
     }
   }
 
   .swiper-button-next {
-    right: -50px;
 
+    @include mq($from: lg) {
+      right: -50px;
+    }
     @include mq($from: xl) {
       right: -110px;
     }
@@ -236,6 +295,9 @@
 
   .swiper-button-prev .icon,
   .swiper-button-next .icon {
-    color: #fff;
+
+    @include mq($from: lg) {
+      color: #fff;
+    }
   }
 }

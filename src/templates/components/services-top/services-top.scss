@@ -3,34 +3,57 @@
    ========================================================================== */
 
 .services-top {
-  
+
   .container {
-    // padding-top: 50px;
-    padding-bottom: 150px;
+    padding-bottom: 80px;
+
+    @include mq($from: lg) {
+      padding-bottom: 150px;
+    }
   }
 }
 
 .services-top__head {
+  margin-top: -40px;
   align-items: center;
   margin-bottom: 60px;
+
+  > * {
+    margin-top: 40px;
+  }
 }
 
 .services-top__cite {
-  font-size: 32px;
+  font-size: rem(20px);
   line-height: 130%;
+
+  @include mq($from: sm) {
+    font-size: rem(24px);
+  }
+  @include mq($from: md) {
+    font-size: rem(28px);
+  }
+  @include mq($from: lg) {
+    font-size: rem(32px);
+  }
 }
 
 .services-top__list {
   display: flex;
   flex-wrap: wrap;
+  margin-top: -36px;
   margin-left: -15px;
   margin-right: -15px;
 
   li {
-    width: 100%;
-    width: 50%;
-    padding-left: 15px;
-    padding-right: 15px;
+    width: calc(100% - 30px);
+    margin-top: 36px;
+    margin-left: 15px;
+    margin-right: 15px;
+
+    @include mq($from: xs) {
+      width: calc(50% - 30px);
+    }
   }
 }
 
@@ -53,10 +76,14 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 34px 40px;
+  padding: 34px 0;
   border-top: 0.5px solid rgba(#888888, .5);
   border-radius: $global-radius;
 
+  @include mq($from: xs) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
   @include mq($from: xl) {
     padding-left: 80px;
     padding-right: 80px;
@@ -68,11 +95,22 @@
 }
 
 .services-pro-cons__item-head {
-  width: 14%;
+  width: 100%;
+  margin-bottom: 36px;
+
+  @include mq($from: md) {
+    width: 14%;
+    margin-bottom: 0;
+  }
 }
 
 .services-pro-cons__icon {
   display: block;
+
+  @include mq($until: sm) {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .services-pro-cons__item:last-child .services-pro-cons__icon {
@@ -82,15 +120,24 @@
 .services-pro-cons__list {
   display: flex;
   flex-wrap: wrap;
-  width: 86%;
+  width: 100%;
+  margin-top: -36px;
   margin-left: -15px;
   margin-right: -15px;
 
+  @include mq($from: md) {
+    width: 86%;
+  }
+
   li {
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 33.333333%;
+    width: calc(100% - 30px);
+    margin-top: 36px;
+    margin-left: 15px;
+    margin-right: 15px;
+
+    @include mq($from: md) {
+      width: calc(33.333333% - 30px);
+    }
   }
 }
 

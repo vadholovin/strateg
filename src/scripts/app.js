@@ -369,6 +369,7 @@ jQuery(function ($) {
         progressDot = $('#quiz-steps-dot-1'),
         progressText = $('#quiz-steps-text-1'),
         progressStep = 33.333333,
+        percent = $('#quiz-result-value'),
         status = 'is-active';
 
   btnNext.click(function (e) {
@@ -398,6 +399,7 @@ jQuery(function ($) {
       $('#quiz-result-text-3, #quiz-result-dot-3').addClass('is-active');
     } else if ('bcdef'.indexOf(value) != -1) {
       $('#quiz-result-text-4, #quiz-result-dot-4').addClass('is-active');
+      percent.text('90');
     }
   });
 

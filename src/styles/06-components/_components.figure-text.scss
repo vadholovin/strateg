@@ -8,20 +8,42 @@
 
 .figure-text__caption {
   position: absolute;
-  top: 42px;
-  max-width: 250px;
+  top: 0;
+  width: 100%;
+  max-width: 37.9%;
   z-index: 1;
+
+  @include mq($from: xs) {
+    top: 24px;
+  }
+  @include mq($from: md) {
+    top: 42px;
+  }
 }
 
 .figure-text__title {
   margin-bottom: 15px;
-  font-size: 22px;
+  font-size: 13px;
   line-height: 125%;
+
+  @include mq($from: sm) {
+    font-size: 18px;
+  }
+  @include mq($from: lg) {
+    font-size: 22px;
+  }
 }
 
 .figure-text__subtitle {
-  font-size: 12px;
+  font-size: 8px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   opacity: 0.5;
+
+  @include mq($from: sm) {
+    font-size: 9px;
+  }
+  @include mq($from: lg) {
+    font-size: 12px;
+  }
 }

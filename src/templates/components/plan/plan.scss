@@ -54,6 +54,9 @@
   }
 
   @include mq($from: sm) {
+    padding: 36px 24px;
+  }
+  @include mq($from: lg) {
     padding: 45px 35px;
   }
 }

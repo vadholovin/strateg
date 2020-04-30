@@ -21,9 +21,10 @@
 }
 
 .quiz__cell:first-child {
-  padding-top: 40px;
-  // display: flex;
-  // flex-direction: column;
+
+  @include mq($from: lg) {
+    padding-top: 40px;
+  }
 }
 
 .quiz__cell:last-child {
@@ -34,6 +35,10 @@
 .quiz-picture {
   margin-top: auto;
   z-index: 5;
+
+  @include mq($until: lg) {
+    display: none;
+  }
 }
 
 .quiz-picture__caption {
@@ -42,11 +47,17 @@
 }
 
 .b-quiz__btn {
-  margin-top: 60px;
+  margin-top: 40px;
   margin-bottom: 95px;
+
+  @include mq($from: md) {
+    margin-top: 60px;
+  }
 }
 
 .b-quiz-progress {
+  width: 100%;
+  max-width: 600px;
   position: relative;
   display: flex;
   justify-content: space-around;
@@ -124,8 +135,12 @@
 
 .b-quiz-module__title {
   margin-bottom: 48px;
-  font-size: rem(24px);
+  font-size: rem(20px);
   line-height: 120%;
+
+  @include mq($from: md) {
+    font-size: rem(24px);
+  }
 }
 
 .b-quiz-answers {
@@ -192,9 +207,14 @@
   max-width: 600px;
   margin-bottom: 25px;
   padding-top: 30px;
-  padding-left: 88px;
-  padding-right: 88px;
+  padding-left: 75px;
+  padding-right: 75px;
   color: #6F6F6F;
+
+  @include mq($from: xs) {
+    padding-left: 88px;
+    padding-right: 88px;
+  }
 }
 
 .b-quiz-result__img {
@@ -205,28 +225,41 @@
 
 .b-quiz-result__caption {
   position: absolute;
-  bottom: 15%;
+  bottom: 0%;
   left: 50%;
   transform: translateX(-50%);
   font-weight: 300;
-  font-size: 50px;
+  font-size: 36px;
   line-height: 120%;
   text-align: center;
+
+  @include mq($from: sm) {
+    bottom: 15%;
+    font-size: 50px;
+  }
 
   &--sm {
     margin-top: 5px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 13px;
     line-height: 100%;
+
+    @include mq($from: sm) {
+      font-size: 16px;
+    }
   }
 }
 
 .b-quiz-result__text {
   position: absolute;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 11px;
   line-height: 120%;
   white-space: nowrap;
+
+  @include mq($from: sm) {
+    font-size: 14px;
+  }
 
   &.is-active {
     color: $color-primary;
@@ -244,19 +277,41 @@
 }
 
 .b-quiz-result__text:nth-child(1) {
-  right: 86%;
+  right: 78%;
+
+  @include mq($from: xs) {
+    right: 80%;
+  }
+  @include mq($from: sm) {
+    right: 86%;
+  }
 }
 
 .b-quiz-result__text:nth-child(4) {
-  left: 86%;
+  left: 78%;
+
+  @include mq($from: xs) {
+    left: 80%;
+  }
+  @include mq($from: sm) {
+    left: 86%;
+  }
 }
 
 .b-quiz-result__text:nth-child(2) {
-  right: 70%;
+  right: 62%;
+
+  @include mq($from: sm) {
+    right: 70%;
+  }
 }
 
 .b-quiz-result__text:nth-child(3) {
-  left: 70%;
+  left: 62%;
+
+  @include mq($from: sm) {
+    left: 70%;
+  }
 }
 
 .quiz-result-dot.is-active {
@@ -318,7 +373,7 @@
 
   .form__note {
     color: $color-body-secondary;
-    
+
     a {
       text-decoration: underline;
 

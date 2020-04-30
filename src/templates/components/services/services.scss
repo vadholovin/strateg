@@ -204,13 +204,22 @@ button.services-tile__btn {
   }
   
   li + li {
-    margin-top: 22px;
+    margin-top: 16px;
+
+    @include mq($from: lg) {
+      margin-top: 22px;
+    }
   }
 }
 
 .services-tile__body-foot {
-  padding: 30px 30px 30px 40px;
+  padding: 30px 20px 20px 20px;
   border-top: 0.5px solid rgba(#222222, .2);
+
+  @include mq($from: lg) {
+    padding-left: 40px;
+    padding-right: 30px;
+  }
 
   h4 {
     margin-bottom: 10px;

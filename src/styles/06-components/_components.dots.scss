@@ -4,6 +4,10 @@
 
 .dots {
   position: absolute;
+
+  @include mq($until: md) {
+    display: none;
+  }
 }
 
 .dots-top {

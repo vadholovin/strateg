@@ -17,28 +17,58 @@
 
 .action-picture {
   margin-top: auto;
+
+  img {
+    @include mq($until: lg) {
+      max-height: 450px;
+    }
+  }
 }
 
 .action-picture__caption {
-  left: 4%;
+  left: 0%;
+
+  @include mq($from: lg) {
+    left: 4%;
+  }
 }
 
 .action__title {
   margin-bottom: 30px;
-  padding-top: 24px;
-  font-size: rem(48px);
+  padding-top: 48px;
+  font-size: rem(24px);
   line-height: 120%;
+
+  @include mq($from: xs) {
+    font-size: rem(32px);
+  }
+  @include mq($from: md) {
+    font-size: rem(40px);
+  }
+  @include mq($from: lg) {
+    padding-top: 24px;
+    font-size: rem(48px);
+  }
 }
 
 .action__desc {
-  margin-bottom: 60px;
+  margin-bottom: 3rem;
+
+  @include mq($from: md) {
+    margin-bottom: 60px;
+  }
 
   p + p {
     margin-top: 20px;
   }
 }
 
-.action .btn {
+.action__controls {
+  margin-top: -16px;
+}
+
+.action__controls .btn {
+  margin-top: 16px;
   margin-right: 30px;
   
   &:last-child {

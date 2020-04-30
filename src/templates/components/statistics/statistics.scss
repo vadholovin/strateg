@@ -3,8 +3,12 @@
    ========================================================================== */
 
 .statistics {
-  padding-top: 60px;
+  padding-top: 2rem;
   padding-bottom: 60px;
+
+  @include mq($from: md) {
+    padding-top: 60px;
+  }
 }
 
 .statistics__grid {
@@ -28,12 +32,26 @@
 
 .statistics-item__title {
   font-weight: bold;
-  font-size: 64px;
+  font-size: 36px;
   line-height: 1.15;
   color: $color-primary;
+  white-space: nowrap;
+
+  @include mq($from: sm) {
+    font-size: 40px;
+  }
+  @include mq($from: md) {
+    font-size: 48px;
+  }
+  @include mq($from: lg) {
+    font-size: 64px;
+  }
 }
 
 .statistics-item__text {
   font-weight: 500;
-  font-size: rem(16px);
+
+  @include mq($until: xs) {
+    font-size: rem(14px);
+  }
 }

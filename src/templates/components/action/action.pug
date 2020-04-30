@@ -1,7 +1,7 @@
 .action
   .container
     +grid().action__grid
-      +col({md: 6}).action__cell
+      +col({lg: 6}).action__cell
         figure.action-picture.figure-text
           img(src="assets/img/content/oleg.png", alt="")
           figcaption.action-picture__caption.figure-text__caption
@@ -10,7 +10,7 @@
               руководитель юридического<br>
               департамента
       
-      +col({md: 6}).action__cell
+      +col({lg: 6}).action__cell
         .action__title.
           Важно действовать.<br>
           Пока не поздно.
@@ -30,6 +30,6 @@
             с вами пожизненно.
             А если арбитражный управляющий увидит признаки 
             преднамеренного банкротства, то добавиться и уголовное дело
-        
-        button.btn.btn--primary.btn--lg() Результаты нашей работы
-        button.btn.btn--lg() Начать банкротство
+        .action__controls
+          button.btn.btn--primary.btn--lg() Результаты нашей работы
+          button.btn.btn--lg() Начать банкротство

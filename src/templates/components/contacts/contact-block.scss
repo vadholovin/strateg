@@ -25,29 +25,48 @@
 }
 
 .contact-block__title {
-  margin-bottom: 56px;
+  margin-bottom: 3rem;
   font-weight: normal;
   font-size: rem(32px);
   line-height: 1.15;
+
+  @include mq($from: md) {
+    margin-bottom: 56px;
+  }
 }
 
 .contact-block__form {
 
   .inputbox {
     width: 100%;
-    margin-top: 28px;
+    margin-top: 24px;
+
+    @include mq($from: md) {
+      margin-top: 28px;
+    }
   }
 
   .form__row {
-    margin-top: -28px;
+    margin-top: -24px;
     margin-left: -14px;
     margin-right: -14px;
 
+    @include mq($until: xs) {
+      flex-direction: column;
+    }
+    @include mq($from: md) {
+      margin-top: -28px;
+    }
+
+
     .inputbox {
       width: 100%;
-      width: 50%;
       padding-left: 14px;
       padding-right: 14px;
+
+      @include mq($from: xs) {
+        width: 50%;
+      }
     }
   }
 

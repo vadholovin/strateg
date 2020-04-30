@@ -13,13 +13,17 @@ section.team
           не один десяток дел.
 
     .team-slider__wrap.swiper-block#team-slider-wrap
+      .swiper-button-prev.swiper-button-lg
+        +icon('chevron-left-slim-o', 'stroked')
+      .swiper-button-next.swiper-button-lg
+        +icon('chevron-right-slim-o', 'stroked')
       .team-slider.swiper-container#team-slider
         .swiper-wrapper
           each item, index in team
             .swiper-slide.team-slide
               .team-tile
                 figure.team-tile__picture
-                  img.swiper-lazy(data-src=item.img, alt='Дмитрий Краснощёк')
+                  img.swiper-lazy(data-src=item.img, alt='')
                 .team-tile__body
                   h3.team-tile__title Дмитрий Краснощёк
                   .team-tile__subtitle= item.subtitle
@@ -33,13 +37,8 @@ section.team
                         a.team-tile__contact-link(href="mailto:d.krasnoshchek@strateg.moscow") d.krasnoshchek@strateg.moscow
                       li.team-tile__contact
                         .team-tile__contact-label телефон
-                        a.team-tile__contact-link(href="tel:+7 (495) 255-25-25") +7 (495) 255-25-25
-                        span , доб. (222)
+                        a.team-tile__contact-link(href="tel:+7 (495) 255-25-25") +7 (495) 255-25-25,
+                        span доб. (222)
                   button.team-tile__btn.btn.btn--primary.btn--block(
                     data-form-subject= item.subject
                   ) Написать сообщение
-
-      .swiper-button-prev.swiper-button-lg
-        +icon('chevron-left-slim-o', 'stroked')
-      .swiper-button-next.swiper-button-lg
-        +icon('chevron-right-slim-o', 'stroked')

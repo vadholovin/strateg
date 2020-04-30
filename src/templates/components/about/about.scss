@@ -6,9 +6,20 @@
   padding-bottom: 60px;
 }
 
+.about__grid {
+  margin-top: -3rem;
+
+  > * {
+    margin-top: 3rem;
+  }
+}
+
 .about-content {
-  padding-left: 36px;
-  padding-right: 36px;
+
+  @include mq($from: md) {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
   
   p + p {
     margin-top: 20px;
@@ -25,8 +36,12 @@
 
 .about__title {
   font-weight: 600;
-  font-size: rem(32px);
+  font-size: rem(28px);
   line-height: 120%;
+
+  @include mq($from: sm) {
+    font-size: rem(32px);
+  }
 }
 
 .about__subtitle {

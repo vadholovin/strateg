@@ -35,8 +35,12 @@
 .small-post__title {
   margin-bottom: 12px;
   font-weight: normal;
-  font-size: rem(18px);
+  font-size: rem(16px);
   line-height: 1.2;
+
+  @include mq($from: lg) {
+    font-size: rem(18px);
+  }
 }
 
 .small-post__link {

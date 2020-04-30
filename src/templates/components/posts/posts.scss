@@ -3,23 +3,44 @@
    ========================================================================== */
 
 .layout-with-aside {
-  margin-left: -40px;
-  margin-right: -40px;
+  margin-top: -50px;
+  
+
+
+  @include mq($from: md) {
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+  @include mq($from: lg) {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
 
   .layout__main-col,
   .layout__aside-col  {
-    padding-left: 40px;
-    padding-right: 40px;
+    margin-top: 50px;
+
+    @include mq($from: md) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    @include mq($from: lg) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
   }
 }
 
 .posts__grid {
-  margin-top: -50px;
+  margin-top: -36px;
 
   &:not(:last-child) {
     margin-bottom: 60px;
   }
 
+  @include mq($from: lg) {
+    margin-top: -50px;
+  }
   @include mq($from: xl) {
     margin-left: -25px;
     margin-right: -25px;
@@ -32,7 +53,11 @@
 
 
 .posts__cell {
-  margin-top: 50px;
+  margin-top: 36px;
+
+  @include mq($from: lg) {
+    margin-top: 50px;
+  }
 
   @include mq($from: xl) {
     padding-left: 25px;
@@ -75,14 +100,17 @@
 
   .card-title {
     font-weight: 500;
-    font-size: rem(18px);
+    font-size: rem(16px);
     line-height: 145%;
+
+    @include mq($from: xs) {
+      font-size: rem(18px);
+    }
   }
 
   .card-text {
-    font-size: 14px;
+    font-size: rem(14px);
     color: $color-body-secondary;
-
   }
 
   .card-text-ending {

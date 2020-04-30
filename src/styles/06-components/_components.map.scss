@@ -5,15 +5,9 @@
 .map {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 350px;
   overflow: hidden;
 
-  background-image: url('../assets/img/backgrounds/map.png');
-  @include background;
-
-  @include mq($from: xl)  {
-    height: 350px;
-  }
   @include mq($from: lg)  {
     height: 450px;
   }

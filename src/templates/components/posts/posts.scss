@@ -3,9 +3,7 @@
    ========================================================================== */
 
 .layout-with-aside {
-  margin-top: -50px;
-  
-
+  margin-top: -80px;
 
   @include mq($from: md) {
     margin-left: -24px;
@@ -18,7 +16,7 @@
 
   .layout__main-col,
   .layout__aside-col  {
-    margin-top: 50px;
+    margin-top: 80px;
 
     @include mq($from: md) {
       padding-left: 24px;

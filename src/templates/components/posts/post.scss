@@ -106,8 +106,11 @@
 
 .comments-list .children {
   margin-bottom: 0;
-  padding-left: 40px;
+  padding-left: 30px;
 
+  @include mq($from: xs) {
+    padding-left: 40px;
+  }
   @include mq($from: xl) {
     padding-left: 100px;
   }
@@ -125,7 +128,11 @@
   }
 
   .flag__img {
-    padding-right: 30px;
+    padding-right: 20px;
+
+    @include mq($from: xs) {
+      padding-right: 30px;
+    }
 
     img {
       width: 70px;
@@ -150,6 +157,10 @@
   font-weight: 600;
   font-size: rem(16px);
   text-transform: uppercase;
+
+  @include mq($until: sm) {
+    font-size: rem(14px);
+  }
 }
 
 .comment-meta {
@@ -158,10 +169,18 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $color-body-secondary;
+
+  @include mq($until: sm) {
+    font-size: rem(10px);
+  }
 }
 
 .comment-body {
   color: $color-body-secondary;
+
+  @include mq($until: sm) {
+    font-size: rem(14px);
+  }
 }
 
 .comment-form {
@@ -178,9 +197,12 @@
 
     .inputbox {
       width: 100%;
-      width: 50%;
       padding-left: 14px;
       padding-right: 14px;
+
+      @include mq($from: xs) {
+        width: 50%;
+      }
     }
   }
 

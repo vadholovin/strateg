@@ -15,7 +15,11 @@
 }
 
 .sidebar--sm {
-  
+
+  @include mq($until: md) {
+    margin-top: 60px;
+  }
+
   .sidebar-widget + .sidebar-widget {
     margin-top: 40px;
   }

@@ -29,7 +29,7 @@
       +col({md: 8})
         +grid().posts__grid
           each item in [1,2]
-            +col({md: 6}).posts__cell
+            +col({sm: 6}).posts__cell
               a.post-card.post-card--case.card(href='')
                 figure.card-img-wrap
                   img.card-img.lozad(data-src='assets/img/content/case-img.jpg', alt="")
@@ -39,7 +39,7 @@
                   hr
                   .card-link читать полностью
 
-      +col({md: 4})
+      +col({md: 4, sm: 6})
         .sidebar.sidebar--sm
           .sidebar-widget
             .dropdown-wrap.cats-dropdown
@@ -61,7 +61,7 @@
 
     +grid().posts__grid
       each item in [1,2,3,4,5,6,7,8,9]
-        +col({md: 4}).posts__cell
+        +col({md: 4, sm: 6}).posts__cell
           a.post-card.post-card--case.card(href='')
             figure.card-img-wrap
               img.card-img.lozad(data-src='assets/img/content/case-img.jpg', alt="")

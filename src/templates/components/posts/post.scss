@@ -269,8 +269,12 @@
 .post-related-tile__title {
   margin-bottom: 15px;
   font-weight: 600;
-  font-size: 20px;
+  font-size: rem(16px);
   line-height: 130%;
+
+  @include mq($from: md) {
+    font-size: rem(20px);
+  }
 }
 
 .post-related-tile__text {
@@ -282,9 +286,14 @@
   height: 0;
   border: 0;
   border-top: 1px solid #D3D3D3;
-  margin-top: 25px;
-  margin-bottom: 30px;
+  margin-top: 16px;
+  margin-bottom: 20px;
   opacity: 0.5;
+
+  @include mq($from: xs) {
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
 }
 
 .post-related-tile__link {

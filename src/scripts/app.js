@@ -574,3 +574,32 @@ jQuery(function ($) {
     duplicated: true
   });
 });
+
+
+/**
+ * HIDE MESSAGE
+ */
+jQuery(function ($) {
+  const box = document.querySelector('#top-banner-foot'),
+        timer = document.querySelector('#top-banner-timer'),
+        time = 10;
+
+  new Waypoint({
+    element: box,
+    handler: function() {
+      let timeleft = time;
+      const downloadTimer = setInterval(function() {
+        if (timeleft <= 0){
+          clearInterval(downloadTimer);
+          timer.textContent = timeleft;
+          box.remove();
+        } else {
+          timer.textContent = timeleft;
+        }
+        timeleft -= 1;
+
+      }, 1000);
+    },
+    offset: 'bottom-in-view',
+  });
+});

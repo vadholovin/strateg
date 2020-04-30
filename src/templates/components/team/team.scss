@@ -258,39 +258,6 @@
   }
 }
 
-.team-slider__wrap {
-
-  .swiper-button-prev,
-  .swiper-button-next {
-
-    @include mq($until: lg) {
-      position: static;
-      margin-bottom: 36px;
-      font-size: 18px;
-    }
-  }
-
-  .swiper-button-prev {
-
-    @include mq($from: lg) {
-      left: -50px;
-    }
-    @include mq($from: xl) {
-      left: -110px;
-    }
-  }
-
-  .swiper-button-next {
-
-    @include mq($from: lg) {
-      right: -50px;
-    }
-    @include mq($from: xl) {
-      right: -110px;
-    }
-  }
-}
-
 .team .team-slider__wrap {
 
   .swiper-button-prev .icon,

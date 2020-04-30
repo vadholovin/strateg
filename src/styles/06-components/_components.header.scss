@@ -46,7 +46,7 @@
 .header__top-left {
   margin-right: auto;
 
-  @include mq($until: xs) {
+  @include mq($until: md) {
     width: 100%;
     margin-right: 0;
     flex-direction: column;
@@ -55,7 +55,7 @@
 
 .header__top-right {
 
-  @include mq($until: xs) {
+  @include mq($until: md) {
     display: none;
   }
 }
@@ -219,7 +219,7 @@
     color: $color-primary;
   }
 
-  @include mq($from: xs) {
+  @include mq($from: md) {
     display: none;
   }
 }
@@ -292,9 +292,8 @@
   }
 
   .header__messengers--bottom {
-    margin-right: 20px;
 
-    @include mq($from: xs) {
+    @include mq($from: lg) {
       display: flex;
     }
     @include mq($from: lg) {
@@ -328,7 +327,6 @@
   .header__main-btn {
     display: inline-block;
     color: $color-body;
-    // color: $color-danger;
   }
 
   .burger__bar,

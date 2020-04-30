@@ -51,3 +51,39 @@
 .swiper-button-lg {
   font-size: 30px;
 }
+
+
+.swiper-block {
+
+  .swiper-button-prev.swiper-button-lg,
+  .swiper-button-next.swiper-button-lg {
+
+    @include mq($until: lg) {
+      position: static;
+      margin-bottom: 36px;
+      font-size: 18px;
+    }
+  }
+
+  .swiper-button-prev.swiper-button-lg {
+
+    @include mq($from: lg) {
+      top: 40%;
+      left: -50px;
+    }
+    @include mq($from: xl) {
+      left: -110px;
+    }
+  }
+
+  .swiper-button-next.swiper-button-lg {
+
+    @include mq($from: lg) {
+      top: 40%;
+      right: -50px;
+    }
+    @include mq($from: xl) {
+      right: -110px;
+    }
+  }
+}

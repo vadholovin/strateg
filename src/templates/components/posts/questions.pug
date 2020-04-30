@@ -5,7 +5,7 @@
       +col({md: 8})
         +grid().questions__grid.questions__grid--inner
           each item in [1,2]
-            +col({md: 6}).questions__cell
+            +col({sm: 6}).questions__cell
               a.questions-tile(href="" target='_blank')
                 .questions-tile__body
                   h3.questions-tile__title Можно ли остановить начисление пени и задолженность?
@@ -17,7 +17,7 @@
                   .questions-tile__link Читать ответ
                   .questions-tile__date 20.02.2020
 
-      +col({md: 4})
+      +col({md: 4, sm: 6})
         .questions__widget
           +form().search-form#searchform(role="search" method='get' action='/')
             +inputbox
@@ -48,7 +48,7 @@
 
     +grid().questions__grid
       each item, index in [1,2,3,4,5,6,7,8,9]
-        +col({md: 4}).questions__cell
+        +col({md: 4, sm: 6}).questions__cell
           a.questions-tile(href="" target='_blank')
             .questions-tile__body
               if index%2

@@ -5,6 +5,10 @@
     else
       h2.post-related__title Похожие вопросы
     .post-related-slider__wrap.swiper-block#post-related-slider-wrap
+      .swiper-button-prev.swiper-button-lg
+        +icon('chevron-left-slim-o', 'stroked')
+      .swiper-button-next.swiper-button-lg
+        +icon('chevron-right-slim-o', 'stroked')
       .post-related-slider.swiper-container#post-related-slider
         .swiper-wrapper
           each item, index in [1,1,1,1,1]
@@ -20,8 +24,3 @@
                 hr
                 .post-related-tile__foot
                   .post-related-tile__link читать полностью
-
-      .swiper-button-prev.swiper-button-lg
-        +icon('chevron-left-slim-o', 'stroked')
-      .swiper-button-next.swiper-button-lg
-        +icon('chevron-right-slim-o', 'stroked')

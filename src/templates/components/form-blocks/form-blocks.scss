@@ -18,10 +18,14 @@
 .form--shadow { box-shadow: $global-shadow; }
 
 .form-block .form {
-  padding: 56px 40px;
+  padding: 40px 30px;
   border: 1px solid $color-border-brand;
   text-align: center;
   background-color: #fff;
+
+  @include mq($from: md) {
+    padding: 56px 40px;
+  }
 }
 
 .form__head {
@@ -62,19 +66,25 @@
     flex-direction: row;
     flex-wrap: nowrap;
   }
+
+  > * {
+    margin-top: 28px;
+  }
+
+  .btn {
+
+    @include mq($until: md) {
+      margin-top: 40px;
+    }
+  }
 }
 
 .form-block .inputbox {
   width: 100%;
   max-width: 300px;
-  margin-bottom: 24px;
-
-  &:last-of-type {
-    margin-bottom: 40px;
-  }
+  
 
   @include mq($from: md) {
-    margin-top: 0;
     margin-right: 25px;
   }
 }

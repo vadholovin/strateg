@@ -130,42 +130,6 @@
   font-size: 16px;
 }
 
-.questions-slider__wrap {
-
-  .swiper-button-prev,
-  .swiper-button-next {
-
-    @include mq($until: lg) {
-      position: static;
-      margin-bottom: 36px;
-      font-size: 18px;
-    }
-  }
-
-  .swiper-button-prev {
-
-    @include mq($from: lg) {
-      top: 40%;
-      left: -50px;
-    }
-    @include mq($from: xl) {
-      left: -110px;
-    }
-  }
-
-  .swiper-button-next {
-
-    @include mq($from: lg) {
-      top: 40%;
-      right: -50px;
-    }
-    @include mq($from: xl) {
-      right: -110px;
-    }
-  }
-}
-
-
 .questions__grid-top {
   margin-top: -36px;
   margin-bottom: 36px;

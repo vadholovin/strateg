@@ -38,6 +38,10 @@
 
 .case-short-desc {
   color: $color-body-secondary;
+
+  @include mq($until: xs) {
+    font-size: rem(14px);
+  }
 }
 
 .case-doc {

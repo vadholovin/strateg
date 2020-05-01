@@ -300,10 +300,10 @@ document.addEventListener('DOMContentLoaded', function() {
 jQuery(function ($) {
   $('.js-services-more').click(function (e) {
     e.preventDefault();
-    const button = $(this);
-    const icon = $(this).find('.icon-plus');
-    const block = button.parents('.services-tile');
-    const info = button.parents('.services-tile').find('.js-services-body');
+    const button = $(this),
+          icon = $(this).find('.icon-plus'),
+          block = button.parents('.services-tile'),
+          info = button.parents('.services-tile').find('.js-services-body');
 
     button.toggleClass('is-active');
     icon.toggle();
@@ -495,8 +495,9 @@ jQuery(function ($) {
  * POPUPS
  */
 jQuery(function ($) {
-  if($('.js-img-pop[href*=".jpg"], .js-img-pop[href*=".jpeg"], .js-img-pop[href*=".png"]').length){
-    let links = $('.js-img-pop[href*=".jpg"], .js-img-pop[href*=".jpeg"], .js-img-pop[href*=".png"]');
+  const links = $('.js-img-pop[href*=".jpg"], .js-img-pop[href*=".jpeg"], .js-img-pop[href*=".png"]');
+  
+  if(links.length){
 
 		links.magnificPopup({
 			type: 'image',
@@ -510,6 +511,32 @@ jQuery(function ($) {
 			}
 		});
   }
+
+  const triggers = {
+    '.js-popup-call': '#popup-call',
+    '.js-popup-question': '#popup-question',
+    '.js-popup-conversation': '#popup-conversation'
+  };
+
+  for (const trigger in triggers) {
+    $(trigger).magnificPopup({
+      removalDelay: 300,
+      items: {
+        src: triggers[trigger]
+      },
+      fixedContentPos: false,
+      autoFocusLast: false,
+      callbacks: {
+        open: function () {
+          $('body').addClass('is-modal-open');
+        },
+        close: function () {
+          $('body').removeClass('is-modal-open');
+        }
+      },
+    });
+  }
+
 });
 
 
@@ -517,13 +544,13 @@ jQuery(function ($) {
  * FORM RESPOND
  */
 jQuery(function ($) {
-  document.addEventListener( 'wpcf7mailsent', function( event ) {
+  document.addEventListener( 'wpcf7mailsent', function(e) {
     setTimeout(() => {
       $('.wpcf7-response-output').removeAttr('style');
     }, 5000);
   }, false );
 
-  document.addEventListener( 'wpcf7mailfailed', function( event ) {
+  document.addEventListener( 'wpcf7mailfailed', function(e) {
     setTimeout(() => {
       $('.wpcf7-response-output').removeAttr('style');
     }, 5000);
@@ -535,11 +562,11 @@ jQuery(function ($) {
  * COUNTUP
  */
 jQuery(function ($) {
-  "use strict";
+  'use strict';
 
-  var counterUp = window.counterUp["default"]; // import counterUp from "counterup2"
+  var counterUp = window.counterUp['default']; // import counterUp from 'counterup2'
 
-  var counters = $(".js-counter");
+  var counters = $('.js-counter');
 
   counters.each(function (ignore, counter) {
     new Waypoint({
@@ -581,25 +608,25 @@ jQuery(function ($) {
  */
 jQuery(function ($) {
   const box = document.querySelector('#top-banner-foot'),
-        timer = document.querySelector('#top-banner-timer'),
-        time = 10;
+        timer = document.querySelector('#top-banner-timer');
+  let time = 10;
 
-  new Waypoint({
-    element: box,
-    handler: function() {
-      let timeleft = time;
-      const downloadTimer = setInterval(function() {
-        if (timeleft <= 0){
-          clearInterval(downloadTimer);
-          timer.textContent = timeleft;
-          box.remove();
-        } else {
-          timer.textContent = timeleft;
-        }
-        timeleft -= 1;
-
-      }, 1000);
-    },
-    offset: 'bottom-in-view',
-  });
+  if (typeof(box) != 'undefined' && box != null) {
+    new Waypoint({
+      element: box,
+      handler: () => {
+        const hideMessage = setInterval(() => {
+          if (time <= 0) {
+            clearInterval(hideMessage);
+            timer.textContent = time;
+            box.remove();
+          } else {
+            timer.textContent = time;
+          }
+          time -= 1;
+        }, 1000);
+      },
+      offset: 'bottom-in-view',
+    });
+  }
 });

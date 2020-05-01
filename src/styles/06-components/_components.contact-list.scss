@@ -7,7 +7,7 @@
   padding-left: 30px;
 }
 
-.contact-item .icon {
+.contact-item > .icon {
   position: absolute;
   top: 1px;
   left: 0;
@@ -15,6 +15,12 @@
 
 .contact-item__text {
   text-decoration: none;
+
+  > .icon {
+    color: inherit !important;
+    margin-left: 6px;
+    vertical-align: baseline;
+  }
 }
 
 a.contact-item__text {

@@ -1,0 +1,90 @@
+
+.modal-wrapper.mfp-hide#popup-call
+  .modal-inner
+    +form().modal-form
+      .form__head
+        .form__title Заказать бесплатный звонок
+      +inputbox
+        +label.hidden-visually(for='popup-call-phone') Номер телефона
+        +input-wrapper
+          +input.input--icon-phone.js-input-phone(
+            type='tel'
+            name='popup-call-phone'
+            id='popup-call-phone'
+            autocomplete='off'
+            placeholder="+7 999 999-99-99*")
+
+
+      button.btn.btn--primary.btn--block(type='submit') Отправить
+      p.form__note.
+        Нажимая на кнопку, вы даете согласие на обработку своих персональных данных.
+
+
+.modal-wrapper.mfp-hide#popup-question
+  .modal-inner
+    +form().modal-form
+      .form__head
+        .form__title Спросить стратега
+      +inputbox
+        +label.hidden-visually(for='popup-question-name') Ваше имя
+        +input-wrapper
+          +input(
+            type='tel'
+            name='popup-question-name'
+            id='popup-question-name'
+            autocomplete='off'
+            placeholder="Ваше имя*")
+      +inputbox
+        +label.hidden-visually(for='popup-question-phone') Номер телефона
+        +input-wrapper
+          +input.input--icon-phone.js-input-phone(
+            type='tel'
+            name='popup-question-phone'
+            id='popup-question-phone'
+            autocomplete='off'
+            placeholder="+7 999 999-99-99*")
+
+
+      button.btn.btn--primary.btn--block(type='submit') Отправить
+      p.form__note.
+        Нажимая на кнопку, вы даете согласие на обработку своих персональных данных.
+
+
+.modal-wrapper.mfp-hide#popup-conversation
+  .modal-inner
+    +form().modal-form
+      .form__head
+        .form__title Какой-то заголовок
+      +inputbox
+        +label.hidden-visually(for='popup-conversation-name') Ваше имя
+        +input-wrapper
+          +input(
+            type='text'
+            name='popup-conversation-name'
+            id='popup-conversation-name'
+            placeholder="Ваше имя*")
+      +inputbox
+        +label.hidden-visually(for='popup-conversation-phone') Номер телефона
+        +input-wrapper
+          +input.input--icon-phone.js-input-phone(
+            type='tel'
+            name='popup-conversation-phone'
+            id='popup-conversation-phone'
+            autocomplete='off'
+            placeholder="+7 999 999-99-99*")
+      +inputbox
+        +label.hidden-visually(for='popup-conversation-email') Email
+        +input-wrapper
+          +input(
+            type='email'
+            name='popup-conversation-email'
+            id='popup-conversation-email'
+            placeholder="Email")
+
+
+      button.btn.btn--primary.btn--block(type='submit') Отправить
+      p.form__note.
+        Нажимая на кнопку, вы даете согласие на обработку своих персональных данных.
+
+
+

@@ -29,7 +29,7 @@ header.header(class= (bodyClass == 'home-page') ? 'header--abs header--transpare
             +icon('phone-o', 'stroked')
             a.contact-item__text(href="tel:+7 (499) 123-45-67") +7 (499) 123-45-67
 
-        button.btn.btn--primary.btn--fz-xs() Задать вопрос стратегу
+        button.btn.btn--primary.btn--fz-xs.js-popup-question() Задать вопрос стратегу
 
   .header__main
     .container.header__inner
@@ -80,7 +80,7 @@ header.header(class= (bodyClass == 'home-page') ? 'header--abs header--transpare
             +icon('phone')
             a.contact-item__text(href="tel:+7 (499) 123-45-67") +7 (499) 123-45-67
 
-        button.header__main-btn(data-tippy-content='Задать вопрос стратегу')
+        button.header__main-btn.js-popup-question(data-tippy-content='Задать вопрос стратегу')
           +icon('question', '', true)(width='24' height='24')
         button.burger.header__burger#burger(aria-label='Показать главное меню')
           span.burger__bar

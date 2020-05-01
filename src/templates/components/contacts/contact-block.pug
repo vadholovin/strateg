@@ -52,11 +52,15 @@
             a.contact-item__text(href="mailto:info@strateg.moscow") info@strateg.moscow
           li.contact-item
             +icon('placemark-fat')
-            .contact-item__text.
-              123112, Россия, Москва,<br>
-              Пресненская наб., 12,<br>
-              ММДЦ «Москва Сити»,<br>
-              Башня Федерация-Восток, 16&nbsp;этаж
+            a.contact-item__text(
+              data-tippy-content='Перейти в Яндекс.Карты',
+              href="yandexmaps://maps.yandex.ru/?ll=37.62,55.75&z=16"
+            )
+              | 123112, Россия, Москва,<br>
+              | Пресненская наб., 12,<br>
+              | ММДЦ «Москва Сити»,<br>
+              | Башня Федерация-Восток, 16&nbsp;этаж
+              +icon('external-link-o', 'stroked')
           li.contact-item
             +icon('metro')(style="font-size: 19px;")
             .contact-item__text Динамо

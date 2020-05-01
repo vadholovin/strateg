@@ -15,16 +15,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 
-  &.is-header-scrolled {
-    padding-top: 64px;
-  }
-
-  &.is-modal-open {
+  &.is-modal-open,
+  &.is-nav-mobile-open {
     overflow: hidden;
   }
 
   &.is-nav-mobile-open {
-    overflow: hidden;
 
     @include mq($from: md) {
       overflow: visible;

@@ -1,0 +1,79 @@
+/* ==========================================================================
+   #MODALS
+   ========================================================================== */
+
+.modal-wrapper {
+  position: relative;
+  display: flex;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: $global-radius;
+  background-color: #fff;
+
+  @include mq($from: xs) {
+    width: 100%;
+    max-width: 450px;
+  }
+}
+
+
+.modal-wrapper .mfp-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 44px;
+  height: 44px;
+  font-size: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.0952 1L6.04762 6.04762M1 11.0952L6.04762 6.04762M6.04762 6.04762L11.0952 11.0952L1 1' stroke='%23222222' stroke-width='1.2'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.modal-inner {
+  padding: 50px 40px 36px 40px;
+}
+
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  .form__head {
+    margin-bottom: 30px;
+  }
+
+  .inputbox {
+    margin-bottom: 20px;
+
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
+  }
+
+  .inputbox,
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .input,
+  .btn {
+    height: 45px;
+  }
+
+  .btn {
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 45px;
+  }
+
+  .form__note {
+    margin-top: 24px;
+  }
+}
+
+
